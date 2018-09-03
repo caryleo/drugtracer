@@ -1,11 +1,11 @@
 {
   "contractName": "Customer",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058209fbedeb6b157a64f7811112f4492d7a3fc91dfe8a08418b472cadceca0295a150029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058209fbedeb6b157a64f7811112f4492d7a3fc91dfe8a08418b472cadceca0295a150029",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058205c67564b751b436f506e9baf817d71021d562f2e6b6fcfebef3fa6965dc9d11f0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058205c67564b751b436f506e9baf817d71021d562f2e6b6fcfebef3fa6965dc9d11f0029",
   "sourceMap": "41:334:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;41:334:1;;;;;;;",
   "deployedSourceMap": "41:334:1:-;;;;;",
-  "source": "pragma solidity ^0.4.0;\r\n//消费者类\r\ncontract Customer {\r\n    \r\n    //举报信息\r\n    struct ReportDetail {\r\n        string  saleNumber; //交易单号\r\n        string  reportDate; //举报日期\r\n        string  report;     //举报内容\r\n        bool    state;      //受理状态\r\n    }\r\n\r\n    //举报信息映射\r\n    mapping (string=>ReportDetail) ReportList;\r\n}",
+  "source": "pragma solidity ^0.4.0;\r\n//消费者类\r\ncontract Customer {\r\n    \r\n    //举报信息\r\n    struct ReportDetail {\r\n        string  saleNumber; //交易单号\r\n        string  reportDate; //举报日期\r\n        string  report;     //举报内容\r\n        bool    state;      //受理状态\r\n    }\r\n\r\n    //举报信息映射\r\n    mapping (string=>ReportDetail) reportList;\r\n}",
   "sourcePath": "D:\\Affair2018\\小学期\\应用\\drugtracer\\contracts\\Customer.sol",
   "ast": {
     "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Customer.sol",
@@ -159,7 +159,7 @@
           {
             "constant": false,
             "id": 26,
-            "name": "ReportList",
+            "name": "reportList",
             "nodeType": "VariableDeclaration",
             "scope": 27,
             "src": "330:41:1",
@@ -362,7 +362,7 @@
           {
             "constant": false,
             "id": 26,
-            "name": "ReportList",
+            "name": "reportList",
             "nodeType": "VariableDeclaration",
             "scope": 27,
             "src": "330:41:1",
@@ -419,5 +419,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-03T12:04:09.222Z"
+  "updatedAt": "2018-09-03T13:46:56.097Z"
 }

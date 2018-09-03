@@ -1,24 +1,24 @@
 {
   "contractName": "Producer",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058200ee52fc3dde43ea8145db08f2d75e3ca36c0efdc4e4b92a3600efa91d709905d0029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058200ee52fc3dde43ea8145db08f2d75e3ca36c0efdc4e4b92a3600efa91d709905d0029",
-  "sourceMap": "38:745:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;38:745:5;;;;;;;",
-  "deployedSourceMap": "38:745:5:-;;;;;",
-  "source": "pragma solidity ^0.4.0;\r\n//药厂类\r\ncontract Producer {\r\n\r\n    //出厂信息\r\n    struct ProduceDetail {\r\n        string  drug;           //药品名称\r\n        bool    state;          //合格状态\r\n        address prodecerCode;   //厂商地址\r\n        string  producer;       //厂商名称\r\n        string  producerDate;   //出厂日期\r\n    }\r\n\r\n    //出厂信息映射\r\n    mapping (uint => ProduceDetail) ProduceList;\r\n\r\n    //流入市场信息\r\n    struct InflowDetail {\r\n        uint    drugCode;   //药品批号\r\n        uint    volume;     //交易量\r\n        address to;         //销售商地址\r\n    }\r\n\r\n    //流入市场信息映射\r\n    mapping (string => InflowDetail) InflowList;\r\n\r\n    //流入记录\r\n    mapping (uint => string) SimpleInflowList;\r\n}\r\n",
-  "sourcePath": "D:\\Affair2018\\小学期\\应用\\drugtracer\\contracts\\Producer.sol",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058205a54e9e3ef83eafb3365a85f02ea754ac1cb364bb6f4705487252edb0592da360029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058205a54e9e3ef83eafb3365a85f02ea754ac1cb364bb6f4705487252edb0592da360029",
+  "sourceMap": "36:687:6:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:687:6;;;;;;;",
+  "deployedSourceMap": "36:687:6:-;;;;;",
+  "source": "pragma solidity ^0.4.0;\n//药厂类\ncontract Producer {\n\n    //出厂信息\n    struct ProduceDetail {\n        string  drug;           //药品名称\n        bool    state;          //合格状态\n        address producerCode;   //厂商地址\n        string  produceDate;   //出厂日期\n    }\n\n    //出厂信息映射\n    mapping (string => ProduceDetail) produceList;\n\n    //流入市场信息\n    struct InflowDetail {\n        string  drugCode;   //药品批号\n        uint    volume;     //交易量\n        address toMerchant;         //销售商地址\n    }\n\n    //流入市场信息映射\n    mapping (string => InflowDetail) inflowList;\n\n    //流入记录\n    mapping (address => string[]) simpleInflowList;\n\n}\n",
+  "sourcePath": "D:\\Affair2018\\小学期\\应用\\drugtracer\\contracts\\producer.sol",
   "ast": {
-    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Producer.sol",
+    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/producer.sol",
     "exportedSymbols": {
       "Producer": [
-        157
+        145
       ]
     },
-    "id": 158,
+    "id": 146,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 126,
+        "id": 115,
         "literals": [
           "solidity",
           "^",
@@ -26,7 +26,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:5"
+        "src": "0:23:6"
       },
       {
         "baseContracts": [],
@@ -34,24 +34,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 157,
+        "id": 145,
         "linearizedBaseContracts": [
-          157
+          145
         ],
         "name": "Producer",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Producer.ProduceDetail",
-            "id": 137,
+            "id": 124,
             "members": [
               {
                 "constant": false,
-                "id": 128,
+                "id": 117,
                 "name": "drug",
                 "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "117:12:5",
+                "scope": 124,
+                "src": "111:12:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -59,10 +59,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 127,
+                  "id": 116,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "117:6:5",
+                  "src": "111:6:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -73,11 +73,11 @@
               },
               {
                 "constant": false,
-                "id": 130,
+                "id": 119,
                 "name": "state",
                 "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "165:13:5",
+                "scope": 124,
+                "src": "158:13:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -85,10 +85,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 129,
+                  "id": 118,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "165:4:5",
+                  "src": "158:4:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -99,11 +99,11 @@
               },
               {
                 "constant": false,
-                "id": 132,
-                "name": "prodecerCode",
+                "id": 121,
+                "name": "producerCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "213:20:5",
+                "scope": 124,
+                "src": "205:20:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -111,10 +111,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 131,
+                  "id": 120,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "213:7:5",
+                  "src": "205:7:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
@@ -125,11 +125,11 @@
               },
               {
                 "constant": false,
-                "id": 134,
-                "name": "producer",
+                "id": 123,
+                "name": "produceDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "261:16:5",
+                "scope": 124,
+                "src": "252:19:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -137,36 +137,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 133,
+                  "id": 122,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "261:6:5",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 136,
-                "name": "producerDate",
-                "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "309:20:5",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
-                },
-                "typeName": {
-                  "id": 135,
-                  "name": "string",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "309:6:5",
+                  "src": "252:6:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -178,50 +152,50 @@
             ],
             "name": "ProduceDetail",
             "nodeType": "StructDefinition",
-            "scope": 157,
-            "src": "85:269:5",
+            "scope": 145,
+            "src": "80:215:6",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 141,
-            "name": "ProduceList",
+            "id": 128,
+            "name": "produceList",
             "nodeType": "VariableDeclaration",
-            "scope": 157,
-            "src": "388:43:5",
+            "scope": 145,
+            "src": "326:45:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProduceDetail_$137_storage_$",
-              "typeString": "mapping(uint256 => struct Producer.ProduceDetail)"
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$124_storage_$",
+              "typeString": "mapping(string => struct Producer.ProduceDetail)"
             },
             "typeName": {
-              "id": 140,
+              "id": 127,
               "keyType": {
-                "id": 138,
-                "name": "uint",
+                "id": 125,
+                "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "397:4:5",
+                "src": "335:6:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "388:31:5",
+              "src": "326:33:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProduceDetail_$137_storage_$",
-                "typeString": "mapping(uint256 => struct Producer.ProduceDetail)"
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$124_storage_$",
+                "typeString": "mapping(string => struct Producer.ProduceDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 139,
+                "id": 126,
                 "name": "ProduceDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 137,
-                "src": "405:13:5",
+                "referencedDeclaration": 124,
+                "src": "345:13:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_ProduceDetail_$137_storage_ptr",
+                  "typeIdentifier": "t_struct$_ProduceDetail_$124_storage_ptr",
                   "typeString": "struct Producer.ProduceDetail"
                 }
               }
@@ -231,29 +205,29 @@
           },
           {
             "canonicalName": "Producer.InflowDetail",
-            "id": 148,
+            "id": 135,
             "members": [
               {
                 "constant": false,
-                "id": 143,
+                "id": 130,
                 "name": "drugCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 148,
-                "src": "497:16:5",
+                "scope": 135,
+                "src": "433:16:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 },
                 "typeName": {
-                  "id": 142,
-                  "name": "uint",
+                  "id": 129,
+                  "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "497:4:5",
+                  "src": "433:6:6",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
                 "value": null,
@@ -261,11 +235,11 @@
               },
               {
                 "constant": false,
-                "id": 145,
+                "id": 132,
                 "name": "volume",
                 "nodeType": "VariableDeclaration",
-                "scope": 148,
-                "src": "541:14:5",
+                "scope": 135,
+                "src": "476:14:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -273,10 +247,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 144,
+                  "id": 131,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "541:4:5",
+                  "src": "476:4:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -287,11 +261,11 @@
               },
               {
                 "constant": false,
-                "id": 147,
-                "name": "to",
+                "id": 134,
+                "name": "toMerchant",
                 "nodeType": "VariableDeclaration",
-                "scope": 148,
-                "src": "582:10:5",
+                "scope": 135,
+                "src": "516:18:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -299,10 +273,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 146,
+                  "id": 133,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "582:7:5",
+                  "src": "516:7:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
@@ -314,50 +288,50 @@
             ],
             "name": "InflowDetail",
             "nodeType": "StructDefinition",
-            "scope": 157,
-            "src": "466:160:5",
+            "scope": 145,
+            "src": "403:164:6",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 152,
-            "name": "InflowList",
+            "id": 139,
+            "name": "inflowList",
             "nodeType": "VariableDeclaration",
-            "scope": 157,
-            "src": "666:43:5",
+            "scope": 145,
+            "src": "604:43:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$148_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$135_storage_$",
               "typeString": "mapping(string => struct Producer.InflowDetail)"
             },
             "typeName": {
-              "id": 151,
+              "id": 138,
               "keyType": {
-                "id": 149,
+                "id": 136,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "675:6:5",
+                "src": "613:6:6",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "666:32:5",
+              "src": "604:32:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$148_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$135_storage_$",
                 "typeString": "mapping(string => struct Producer.InflowDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 150,
+                "id": 137,
                 "name": "InflowDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 148,
-                "src": "685:12:5",
+                "referencedDeclaration": 135,
+                "src": "623:12:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_InflowDetail_$148_storage_ptr",
+                  "typeIdentifier": "t_struct$_InflowDetail_$135_storage_ptr",
                   "typeString": "struct Producer.InflowDetail"
                 }
               }
@@ -367,43 +341,53 @@
           },
           {
             "constant": false,
-            "id": 156,
-            "name": "SimpleInflowList",
+            "id": 144,
+            "name": "simpleInflowList",
             "nodeType": "VariableDeclaration",
-            "scope": 157,
-            "src": "738:41:5",
+            "scope": 145,
+            "src": "673:46:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
-              "typeString": "mapping(uint256 => string)"
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
             },
             "typeName": {
-              "id": 155,
+              "id": 143,
               "keyType": {
-                "id": 153,
-                "name": "uint",
+                "id": 140,
+                "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "747:4:5",
+                "src": "682:7:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "738:24:5",
+              "src": "673:29:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
-                "typeString": "mapping(uint256 => string)"
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
               },
               "valueType": {
-                "id": 154,
-                "name": "string",
-                "nodeType": "ElementaryTypeName",
-                "src": "755:6:5",
+                "baseType": {
+                  "id": 141,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "693:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 142,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "693:8:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
                 }
               }
             },
@@ -411,24 +395,24 @@
             "visibility": "internal"
           }
         ],
-        "scope": 158,
-        "src": "38:745:5"
+        "scope": 146,
+        "src": "36:687:6"
       }
     ],
-    "src": "0:785:5"
+    "src": "0:724:6"
   },
   "legacyAST": {
-    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Producer.sol",
+    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/producer.sol",
     "exportedSymbols": {
       "Producer": [
-        157
+        145
       ]
     },
-    "id": 158,
+    "id": 146,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 126,
+        "id": 115,
         "literals": [
           "solidity",
           "^",
@@ -436,7 +420,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:5"
+        "src": "0:23:6"
       },
       {
         "baseContracts": [],
@@ -444,24 +428,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 157,
+        "id": 145,
         "linearizedBaseContracts": [
-          157
+          145
         ],
         "name": "Producer",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Producer.ProduceDetail",
-            "id": 137,
+            "id": 124,
             "members": [
               {
                 "constant": false,
-                "id": 128,
+                "id": 117,
                 "name": "drug",
                 "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "117:12:5",
+                "scope": 124,
+                "src": "111:12:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -469,10 +453,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 127,
+                  "id": 116,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "117:6:5",
+                  "src": "111:6:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -483,11 +467,11 @@
               },
               {
                 "constant": false,
-                "id": 130,
+                "id": 119,
                 "name": "state",
                 "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "165:13:5",
+                "scope": 124,
+                "src": "158:13:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -495,10 +479,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 129,
+                  "id": 118,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "165:4:5",
+                  "src": "158:4:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -509,11 +493,11 @@
               },
               {
                 "constant": false,
-                "id": 132,
-                "name": "prodecerCode",
+                "id": 121,
+                "name": "producerCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "213:20:5",
+                "scope": 124,
+                "src": "205:20:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -521,10 +505,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 131,
+                  "id": 120,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "213:7:5",
+                  "src": "205:7:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
@@ -535,11 +519,11 @@
               },
               {
                 "constant": false,
-                "id": 134,
-                "name": "producer",
+                "id": 123,
+                "name": "produceDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "261:16:5",
+                "scope": 124,
+                "src": "252:19:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -547,36 +531,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 133,
+                  "id": 122,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "261:6:5",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 136,
-                "name": "producerDate",
-                "nodeType": "VariableDeclaration",
-                "scope": 137,
-                "src": "309:20:5",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
-                },
-                "typeName": {
-                  "id": 135,
-                  "name": "string",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "309:6:5",
+                  "src": "252:6:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -588,50 +546,50 @@
             ],
             "name": "ProduceDetail",
             "nodeType": "StructDefinition",
-            "scope": 157,
-            "src": "85:269:5",
+            "scope": 145,
+            "src": "80:215:6",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 141,
-            "name": "ProduceList",
+            "id": 128,
+            "name": "produceList",
             "nodeType": "VariableDeclaration",
-            "scope": 157,
-            "src": "388:43:5",
+            "scope": 145,
+            "src": "326:45:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProduceDetail_$137_storage_$",
-              "typeString": "mapping(uint256 => struct Producer.ProduceDetail)"
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$124_storage_$",
+              "typeString": "mapping(string => struct Producer.ProduceDetail)"
             },
             "typeName": {
-              "id": 140,
+              "id": 127,
               "keyType": {
-                "id": 138,
-                "name": "uint",
+                "id": 125,
+                "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "397:4:5",
+                "src": "335:6:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "388:31:5",
+              "src": "326:33:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProduceDetail_$137_storage_$",
-                "typeString": "mapping(uint256 => struct Producer.ProduceDetail)"
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$124_storage_$",
+                "typeString": "mapping(string => struct Producer.ProduceDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 139,
+                "id": 126,
                 "name": "ProduceDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 137,
-                "src": "405:13:5",
+                "referencedDeclaration": 124,
+                "src": "345:13:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_ProduceDetail_$137_storage_ptr",
+                  "typeIdentifier": "t_struct$_ProduceDetail_$124_storage_ptr",
                   "typeString": "struct Producer.ProduceDetail"
                 }
               }
@@ -641,29 +599,29 @@
           },
           {
             "canonicalName": "Producer.InflowDetail",
-            "id": 148,
+            "id": 135,
             "members": [
               {
                 "constant": false,
-                "id": 143,
+                "id": 130,
                 "name": "drugCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 148,
-                "src": "497:16:5",
+                "scope": 135,
+                "src": "433:16:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 },
                 "typeName": {
-                  "id": 142,
-                  "name": "uint",
+                  "id": 129,
+                  "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "497:4:5",
+                  "src": "433:6:6",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
                 "value": null,
@@ -671,11 +629,11 @@
               },
               {
                 "constant": false,
-                "id": 145,
+                "id": 132,
                 "name": "volume",
                 "nodeType": "VariableDeclaration",
-                "scope": 148,
-                "src": "541:14:5",
+                "scope": 135,
+                "src": "476:14:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -683,10 +641,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 144,
+                  "id": 131,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "541:4:5",
+                  "src": "476:4:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -697,11 +655,11 @@
               },
               {
                 "constant": false,
-                "id": 147,
-                "name": "to",
+                "id": 134,
+                "name": "toMerchant",
                 "nodeType": "VariableDeclaration",
-                "scope": 148,
-                "src": "582:10:5",
+                "scope": 135,
+                "src": "516:18:6",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -709,10 +667,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 146,
+                  "id": 133,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "582:7:5",
+                  "src": "516:7:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
@@ -724,50 +682,50 @@
             ],
             "name": "InflowDetail",
             "nodeType": "StructDefinition",
-            "scope": 157,
-            "src": "466:160:5",
+            "scope": 145,
+            "src": "403:164:6",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 152,
-            "name": "InflowList",
+            "id": 139,
+            "name": "inflowList",
             "nodeType": "VariableDeclaration",
-            "scope": 157,
-            "src": "666:43:5",
+            "scope": 145,
+            "src": "604:43:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$148_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$135_storage_$",
               "typeString": "mapping(string => struct Producer.InflowDetail)"
             },
             "typeName": {
-              "id": 151,
+              "id": 138,
               "keyType": {
-                "id": 149,
+                "id": 136,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "675:6:5",
+                "src": "613:6:6",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "666:32:5",
+              "src": "604:32:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$148_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$135_storage_$",
                 "typeString": "mapping(string => struct Producer.InflowDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 150,
+                "id": 137,
                 "name": "InflowDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 148,
-                "src": "685:12:5",
+                "referencedDeclaration": 135,
+                "src": "623:12:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_InflowDetail_$148_storage_ptr",
+                  "typeIdentifier": "t_struct$_InflowDetail_$135_storage_ptr",
                   "typeString": "struct Producer.InflowDetail"
                 }
               }
@@ -777,43 +735,53 @@
           },
           {
             "constant": false,
-            "id": 156,
-            "name": "SimpleInflowList",
+            "id": 144,
+            "name": "simpleInflowList",
             "nodeType": "VariableDeclaration",
-            "scope": 157,
-            "src": "738:41:5",
+            "scope": 145,
+            "src": "673:46:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
-              "typeString": "mapping(uint256 => string)"
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
             },
             "typeName": {
-              "id": 155,
+              "id": 143,
               "keyType": {
-                "id": 153,
-                "name": "uint",
+                "id": 140,
+                "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "747:4:5",
+                "src": "682:7:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "738:24:5",
+              "src": "673:29:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
-                "typeString": "mapping(uint256 => string)"
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
               },
               "valueType": {
-                "id": 154,
-                "name": "string",
-                "nodeType": "ElementaryTypeName",
-                "src": "755:6:5",
+                "baseType": {
+                  "id": 141,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "693:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 142,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "693:8:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
                 }
               }
             },
@@ -821,11 +789,11 @@
             "visibility": "internal"
           }
         ],
-        "scope": 158,
-        "src": "38:745:5"
+        "scope": 146,
+        "src": "36:687:6"
       }
     ],
-    "src": "0:785:5"
+    "src": "0:724:6"
   },
   "compiler": {
     "name": "solc",
@@ -833,5 +801,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-03T12:04:09.222Z"
+  "updatedAt": "2018-09-03T13:46:56.097Z"
 }

@@ -1,11 +1,11 @@
 {
   "contractName": "Drugstore",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820077315eb89503adb2b0045174772f768fea393252249500da1f6c031a91f61930029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820077315eb89503adb2b0045174772f768fea393252249500da1f6c031a91f61930029",
-  "sourceMap": "38:440:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;38:440:2;;;;;;;",
-  "deployedSourceMap": "38:440:2:-;;;;;",
-  "source": "pragma solidity ^0.4.0;\r\n//药店类\r\ncontract Drugstore {\r\n\r\n    //销售信息\r\n    struct SaleDetail {\r\n        string  circulateNumber;    //流出交易单号\r\n        address customerNumber;     //消费者编号\r\n        uint    volume;             //交易量\r\n        string  saleDate;           //销售日期  \r\n    }\r\n\r\n    //销售信息映射\r\n    mapping (string=>SaleDetail) SaleList;\r\n\r\n    //简化销售记录\r\n    mapping (address=>string) SimpleSaleList;\r\n}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058201b416d32fef955c53a4be7e0c71da3e1d1af17b67064414a7983c8ad5b3e32340029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058201b416d32fef955c53a4be7e0c71da3e1d1af17b67064414a7983c8ad5b3e32340029",
+  "sourceMap": "36:425:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:425:2;;;;;;;",
+  "deployedSourceMap": "36:425:2:-;;;;;",
+  "source": "pragma solidity ^0.4.0;\n//药店类\ncontract Drugstore {\n\n    //销售信息\n    struct SaleDetail {\n        string  circulateNumber;    //流出交易单号\n        address customerNumber;     //消费者编号\n        uint    volume;             //交易量\n        string  saleDate;           //销售日期  \n    }\n\n    //销售信息映射\n    mapping (string=>SaleDetail) saleList;\n\n    //简化销售记录\n    mapping (address=>string) simpleSaleList;\n}",
   "sourcePath": "D:\\Affair2018\\小学期\\应用\\drugtracer\\contracts\\Drugstore.sol",
   "ast": {
     "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Drugstore.sol",
@@ -51,7 +51,7 @@
                 "name": "circulateNumber",
                 "nodeType": "VariableDeclaration",
                 "scope": 38,
-                "src": "115:23:2",
+                "src": "109:23:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -62,7 +62,7 @@
                   "id": 30,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "115:6:2",
+                  "src": "109:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -77,7 +77,7 @@
                 "name": "customerNumber",
                 "nodeType": "VariableDeclaration",
                 "scope": 38,
-                "src": "173:22:2",
+                "src": "166:22:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -88,7 +88,7 @@
                   "id": 32,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "173:7:2",
+                  "src": "166:7:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
@@ -103,7 +103,7 @@
                 "name": "volume",
                 "nodeType": "VariableDeclaration",
                 "scope": 38,
-                "src": "228:14:2",
+                "src": "220:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -114,7 +114,7 @@
                   "id": 34,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "228:4:2",
+                  "src": "220:4:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -129,7 +129,7 @@
                 "name": "saleDate",
                 "nodeType": "VariableDeclaration",
                 "scope": 38,
-                "src": "277:16:2",
+                "src": "268:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -140,7 +140,7 @@
                   "id": 36,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "277:6:2",
+                  "src": "268:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -153,16 +153,16 @@
             "name": "SaleDetail",
             "nodeType": "StructDefinition",
             "scope": 47,
-            "src": "86:242:2",
+            "src": "81:237:2",
             "visibility": "public"
           },
           {
             "constant": false,
             "id": 42,
-            "name": "SaleList",
+            "name": "saleList",
             "nodeType": "VariableDeclaration",
             "scope": 47,
-            "src": "362:37:2",
+            "src": "349:37:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -175,14 +175,14 @@
                 "id": 39,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "371:6:2",
+                "src": "358:6:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "362:28:2",
+              "src": "349:28:2",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_SaleDetail_$38_storage_$",
                 "typeString": "mapping(string => struct Drugstore.SaleDetail)"
@@ -193,7 +193,7 @@
                 "name": "SaleDetail",
                 "nodeType": "UserDefinedTypeName",
                 "referencedDeclaration": 38,
-                "src": "379:10:2",
+                "src": "366:10:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_SaleDetail_$38_storage_ptr",
                   "typeString": "struct Drugstore.SaleDetail"
@@ -206,10 +206,10 @@
           {
             "constant": false,
             "id": 46,
-            "name": "SimpleSaleList",
+            "name": "simpleSaleList",
             "nodeType": "VariableDeclaration",
             "scope": 47,
-            "src": "434:40:2",
+            "src": "418:40:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -222,14 +222,14 @@
                 "id": 43,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "443:7:2",
+                "src": "427:7:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "434:25:2",
+              "src": "418:25:2",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
                 "typeString": "mapping(address => string)"
@@ -238,7 +238,7 @@
                 "id": 44,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "452:6:2",
+                "src": "436:6:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
@@ -250,10 +250,10 @@
           }
         ],
         "scope": 48,
-        "src": "38:440:2"
+        "src": "36:425:2"
       }
     ],
-    "src": "0:478:2"
+    "src": "0:461:2"
   },
   "legacyAST": {
     "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Drugstore.sol",
@@ -299,7 +299,7 @@
                 "name": "circulateNumber",
                 "nodeType": "VariableDeclaration",
                 "scope": 38,
-                "src": "115:23:2",
+                "src": "109:23:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -310,7 +310,7 @@
                   "id": 30,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "115:6:2",
+                  "src": "109:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -325,7 +325,7 @@
                 "name": "customerNumber",
                 "nodeType": "VariableDeclaration",
                 "scope": 38,
-                "src": "173:22:2",
+                "src": "166:22:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -336,7 +336,7 @@
                   "id": 32,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "173:7:2",
+                  "src": "166:7:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
@@ -351,7 +351,7 @@
                 "name": "volume",
                 "nodeType": "VariableDeclaration",
                 "scope": 38,
-                "src": "228:14:2",
+                "src": "220:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -362,7 +362,7 @@
                   "id": 34,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "228:4:2",
+                  "src": "220:4:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -377,7 +377,7 @@
                 "name": "saleDate",
                 "nodeType": "VariableDeclaration",
                 "scope": 38,
-                "src": "277:16:2",
+                "src": "268:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -388,7 +388,7 @@
                   "id": 36,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "277:6:2",
+                  "src": "268:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -401,16 +401,16 @@
             "name": "SaleDetail",
             "nodeType": "StructDefinition",
             "scope": 47,
-            "src": "86:242:2",
+            "src": "81:237:2",
             "visibility": "public"
           },
           {
             "constant": false,
             "id": 42,
-            "name": "SaleList",
+            "name": "saleList",
             "nodeType": "VariableDeclaration",
             "scope": 47,
-            "src": "362:37:2",
+            "src": "349:37:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -423,14 +423,14 @@
                 "id": 39,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "371:6:2",
+                "src": "358:6:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "362:28:2",
+              "src": "349:28:2",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_SaleDetail_$38_storage_$",
                 "typeString": "mapping(string => struct Drugstore.SaleDetail)"
@@ -441,7 +441,7 @@
                 "name": "SaleDetail",
                 "nodeType": "UserDefinedTypeName",
                 "referencedDeclaration": 38,
-                "src": "379:10:2",
+                "src": "366:10:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_SaleDetail_$38_storage_ptr",
                   "typeString": "struct Drugstore.SaleDetail"
@@ -454,10 +454,10 @@
           {
             "constant": false,
             "id": 46,
-            "name": "SimpleSaleList",
+            "name": "simpleSaleList",
             "nodeType": "VariableDeclaration",
             "scope": 47,
-            "src": "434:40:2",
+            "src": "418:40:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -470,14 +470,14 @@
                 "id": 43,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "443:7:2",
+                "src": "427:7:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "434:25:2",
+              "src": "418:25:2",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
                 "typeString": "mapping(address => string)"
@@ -486,7 +486,7 @@
                 "id": 44,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "452:6:2",
+                "src": "436:6:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
@@ -498,10 +498,10 @@
           }
         ],
         "scope": 48,
-        "src": "38:440:2"
+        "src": "36:425:2"
       }
     ],
-    "src": "0:478:2"
+    "src": "0:461:2"
   },
   "compiler": {
     "name": "solc",
@@ -509,5 +509,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-03T12:04:09.222Z"
+  "updatedAt": "2018-09-03T13:46:56.097Z"
 }
