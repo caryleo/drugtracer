@@ -12,7 +12,7 @@ contract Producer {
     }
 
     //出厂信息映射
-    mapping (uint => ProduceDetail) ProduceList;
+    mapping (uint => ProduceDetail) produceList;
 
     //流入市场信息
     struct InflowDetail {
@@ -22,8 +22,10 @@ contract Producer {
     }
 
     //流入市场信息映射
-    mapping (string => InflowDetail) InflowList;
+    mapping (string => InflowDetail) inflowList;
 
     //流入记录
-    mapping (uint => string) SimpleInflowList;
+    mapping (uint => string) simpleInflowList;
+
+    
 }

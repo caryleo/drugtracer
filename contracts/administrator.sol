@@ -9,5 +9,5 @@ contract Administrator {
     }
 
     //受理信息映射
-    mapping (string=>DealDetail) DealList;
+    mapping (string=>DealDetail) dealList;
 }
