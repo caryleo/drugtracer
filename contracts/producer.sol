@@ -26,4 +26,13 @@ contract Producer {
 
     //流入记录
     mapping (uint => string) SimpleInflowList;
+    
+    function set(uint number) returns(string nuber){
+        
+
+        
+    }
+    
+
+
 }
