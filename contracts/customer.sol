@@ -11,5 +11,5 @@ contract Customer {
     }
 
     //举报信息映射
-    mapping (string=>ReportDetail) ReportList;
+    mapping (string=>ReportDetail) reportList;
 }

@@ -1,0 +1,837 @@
+{
+  "contractName": "Producer",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058200ee52fc3dde43ea8145db08f2d75e3ca36c0efdc4e4b92a3600efa91d709905d0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058200ee52fc3dde43ea8145db08f2d75e3ca36c0efdc4e4b92a3600efa91d709905d0029",
+  "sourceMap": "38:745:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;38:745:5;;;;;;;",
+  "deployedSourceMap": "38:745:5:-;;;;;",
+  "source": "pragma solidity ^0.4.0;\r\n//药厂类\r\ncontract Producer {\r\n\r\n    //出厂信息\r\n    struct ProduceDetail {\r\n        string  drug;           //药品名称\r\n        bool    state;          //合格状态\r\n        address prodecerCode;   //厂商地址\r\n        string  producer;       //厂商名称\r\n        string  producerDate;   //出厂日期\r\n    }\r\n\r\n    //出厂信息映射\r\n    mapping (uint => ProduceDetail) ProduceList;\r\n\r\n    //流入市场信息\r\n    struct InflowDetail {\r\n        uint    drugCode;   //药品批号\r\n        uint    volume;     //交易量\r\n        address to;         //销售商地址\r\n    }\r\n\r\n    //流入市场信息映射\r\n    mapping (string => InflowDetail) InflowList;\r\n\r\n    //流入记录\r\n    mapping (uint => string) SimpleInflowList;\r\n}\r\n",
+  "sourcePath": "D:\\Affair2018\\小学期\\应用\\drugtracer\\contracts\\Producer.sol",
+  "ast": {
+    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Producer.sol",
+    "exportedSymbols": {
+      "Producer": [
+        157
+      ]
+    },
+    "id": 158,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 126,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 157,
+        "linearizedBaseContracts": [
+          157
+        ],
+        "name": "Producer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Producer.ProduceDetail",
+            "id": 137,
+            "members": [
+              {
+                "constant": false,
+                "id": 128,
+                "name": "drug",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "117:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 127,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "117:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 130,
+                "name": "state",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "165:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 129,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 132,
+                "name": "prodecerCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "213:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 131,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "213:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 134,
+                "name": "producer",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "261:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 133,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "261:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 136,
+                "name": "producerDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "309:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 135,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "309:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ProduceDetail",
+            "nodeType": "StructDefinition",
+            "scope": 157,
+            "src": "85:269:5",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 141,
+            "name": "ProduceList",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "388:43:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProduceDetail_$137_storage_$",
+              "typeString": "mapping(uint256 => struct Producer.ProduceDetail)"
+            },
+            "typeName": {
+              "id": 140,
+              "keyType": {
+                "id": 138,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "397:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "388:31:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProduceDetail_$137_storage_$",
+                "typeString": "mapping(uint256 => struct Producer.ProduceDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 139,
+                "name": "ProduceDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 137,
+                "src": "405:13:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ProduceDetail_$137_storage_ptr",
+                  "typeString": "struct Producer.ProduceDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "Producer.InflowDetail",
+            "id": 148,
+            "members": [
+              {
+                "constant": false,
+                "id": 143,
+                "name": "drugCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 148,
+                "src": "497:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 142,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "497:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 145,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 148,
+                "src": "541:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 144,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "541:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 147,
+                "name": "to",
+                "nodeType": "VariableDeclaration",
+                "scope": 148,
+                "src": "582:10:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 146,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "582:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "InflowDetail",
+            "nodeType": "StructDefinition",
+            "scope": 157,
+            "src": "466:160:5",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 152,
+            "name": "InflowList",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "666:43:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$148_storage_$",
+              "typeString": "mapping(string => struct Producer.InflowDetail)"
+            },
+            "typeName": {
+              "id": 151,
+              "keyType": {
+                "id": 149,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "675:6:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "666:32:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$148_storage_$",
+                "typeString": "mapping(string => struct Producer.InflowDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 150,
+                "name": "InflowDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 148,
+                "src": "685:12:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_InflowDetail_$148_storage_ptr",
+                  "typeString": "struct Producer.InflowDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 156,
+            "name": "SimpleInflowList",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "738:41:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
+              "typeString": "mapping(uint256 => string)"
+            },
+            "typeName": {
+              "id": 155,
+              "keyType": {
+                "id": 153,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "747:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "738:24:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
+                "typeString": "mapping(uint256 => string)"
+              },
+              "valueType": {
+                "id": 154,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "755:6:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 158,
+        "src": "38:745:5"
+      }
+    ],
+    "src": "0:785:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Producer.sol",
+    "exportedSymbols": {
+      "Producer": [
+        157
+      ]
+    },
+    "id": 158,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 126,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 157,
+        "linearizedBaseContracts": [
+          157
+        ],
+        "name": "Producer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Producer.ProduceDetail",
+            "id": 137,
+            "members": [
+              {
+                "constant": false,
+                "id": 128,
+                "name": "drug",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "117:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 127,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "117:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 130,
+                "name": "state",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "165:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 129,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 132,
+                "name": "prodecerCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "213:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 131,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "213:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 134,
+                "name": "producer",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "261:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 133,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "261:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 136,
+                "name": "producerDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 137,
+                "src": "309:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 135,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "309:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ProduceDetail",
+            "nodeType": "StructDefinition",
+            "scope": 157,
+            "src": "85:269:5",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 141,
+            "name": "ProduceList",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "388:43:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProduceDetail_$137_storage_$",
+              "typeString": "mapping(uint256 => struct Producer.ProduceDetail)"
+            },
+            "typeName": {
+              "id": 140,
+              "keyType": {
+                "id": 138,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "397:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "388:31:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ProduceDetail_$137_storage_$",
+                "typeString": "mapping(uint256 => struct Producer.ProduceDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 139,
+                "name": "ProduceDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 137,
+                "src": "405:13:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ProduceDetail_$137_storage_ptr",
+                  "typeString": "struct Producer.ProduceDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "Producer.InflowDetail",
+            "id": 148,
+            "members": [
+              {
+                "constant": false,
+                "id": 143,
+                "name": "drugCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 148,
+                "src": "497:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 142,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "497:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 145,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 148,
+                "src": "541:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 144,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "541:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 147,
+                "name": "to",
+                "nodeType": "VariableDeclaration",
+                "scope": 148,
+                "src": "582:10:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 146,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "582:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "InflowDetail",
+            "nodeType": "StructDefinition",
+            "scope": 157,
+            "src": "466:160:5",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 152,
+            "name": "InflowList",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "666:43:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$148_storage_$",
+              "typeString": "mapping(string => struct Producer.InflowDetail)"
+            },
+            "typeName": {
+              "id": 151,
+              "keyType": {
+                "id": 149,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "675:6:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "666:32:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$148_storage_$",
+                "typeString": "mapping(string => struct Producer.InflowDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 150,
+                "name": "InflowDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 148,
+                "src": "685:12:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_InflowDetail_$148_storage_ptr",
+                  "typeString": "struct Producer.InflowDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 156,
+            "name": "SimpleInflowList",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "738:41:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
+              "typeString": "mapping(uint256 => string)"
+            },
+            "typeName": {
+              "id": 155,
+              "keyType": {
+                "id": 153,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "747:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "738:24:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_string_storage_$",
+                "typeString": "mapping(uint256 => string)"
+              },
+              "valueType": {
+                "id": 154,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "755:6:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 158,
+        "src": "38:745:5"
+      }
+    ],
+    "src": "0:785:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-03T12:04:09.222Z"
+}

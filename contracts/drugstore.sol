@@ -11,8 +11,8 @@ contract Drugstore {
     }
 
     //销售信息映射
-    mapping (string=>SaleDetail) SaleList;
+    mapping (string=>SaleDetail) saleList;
 
     //简化销售记录
-    mapping (address=>string) SimpleSaleList;
+    mapping (address=>string) simpleSaleList;
 }
