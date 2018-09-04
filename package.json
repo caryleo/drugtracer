@@ -19,5 +19,8 @@
   "homepage": "https://github.com/caryleo/drugtracer#readme",
   "devDependencies": {
     "lite-server": "^2.4.0"
+  },
+  "dependencies": {
+    "web3": "^0.19.1"
   }
 }
