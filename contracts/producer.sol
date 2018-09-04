@@ -33,7 +33,7 @@ contract Producer {
     //producer:厂商编号
     //produceDate:出厂日期
     //return 返回函数执行成功的bool值
-    function setProduce(string drugCode,string drug,address producer,string produceDate) public  returns(bool){
+    function setProduce(string drugCode,string drug,address producer,string produceDate) public constant returns(bool){
 
         ProduceDetail druginfo;
         druginfo.drug = drug;
@@ -43,5 +43,7 @@ contract Producer {
 
     }
     fun
-    function setInflow(string number , string drugCode , uint volume , address toMerchan) public returns{}
+    function setInflow(string number , string drugCode , uint volume , address toMerchan) public returns(bool){
+
+    }
 }
