@@ -1,6 +1,8 @@
 pragma solidity ^0.4.0;
-//药厂类
-contract Producer {
+
+contract DrugTracer {
+
+    //------------------------------------------
 
     //出厂信息
     struct ProduceDetail {
@@ -25,6 +27,70 @@ contract Producer {
 
     //流入记录
     mapping (address => string[]) simpleInflowList;
+
+    //-------------------------------------------
+
+    //流通信息
+    struct RollDetail {
+        string  inflowNumber;   //流入交易单号
+        string  circulateDate;  //流通日期
+        uint    volume;         //流通量
+        address toDrugstore;    //药店编号
+    }
+
+    //流通信息映射
+    mapping (string=>RollDetail) rollList;
+
+    //简化流出记录
+    mapping (address=>string[]) simpleRollList;
+
+    //---------------------------------------------
+
+    //销售信息
+    struct SaleDetail {
+        string  circulateNumber;    //流出交易单号
+        address customerNumber;     //消费者编号
+        uint    volume;             //交易量
+        string  saleDate;           //销售日期
+    }
+
+    //销售信息映射
+    mapping (string=>SaleDetail) saleList;
+
+    //简化销售记录
+    mapping (address=>string[]) simpleSaleList;
+
+    //---------------------------------------------
+
+    //举报信息
+    struct ReportDetail {
+        string  saleNumber; //交易单号
+        string  reportDate; //举报日期
+        string  report;     //举报内容
+        bool    state;      //受理状态
+    }
+
+    //举报信息映射
+    mapping (string=>ReportDetail) reportList;
+
+    //简单举报信息映射
+    mapping (address=>string[]) simplereportList;
+
+    //---------------------------------------------
+
+    //受理信息
+    struct DealDetail {
+        string  dealDate;   //受理日期
+        bool    result;     //受理结果
+    }
+
+    //受理信息映射
+    mapping (string=>DealDetail) dealList;
+
+    //举报记录
+    string[] reports;
+
+    //---------------------------------------------
 
     //插入出厂记录，state默认true，药品批号由前端生成，返回处理结果（布尔值）
     //drugCode:药品批号
@@ -64,4 +130,8 @@ contract Producer {
     function setSimpleInflow (address to, string number) internal {
         simpleInflowList[to].push(number);
     }
+
+    //------------------------------------------------
+
+    
 }

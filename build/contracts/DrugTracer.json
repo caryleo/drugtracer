@@ -1,0 +1,4558 @@
+{
+  "contractName": "DrugTracer",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "drugCode",
+          "type": "string"
+        },
+        {
+          "name": "drug",
+          "type": "string"
+        },
+        {
+          "name": "producer",
+          "type": "address"
+        },
+        {
+          "name": "produceDate",
+          "type": "string"
+        }
+      ],
+      "name": "setProduce",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "name": "drugCode",
+          "type": "string"
+        },
+        {
+          "name": "volume",
+          "type": "uint256"
+        },
+        {
+          "name": "toMerchant",
+          "type": "address"
+        }
+      ],
+      "name": "setInflow",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5061074f806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638117919b14610051578063adb7f3a814610142575b600080fd5b34801561005d57600080fd5b50610128600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061026f565b604051808215151515815260200191505060405180910390f35b34801561014e57600080fd5b50610255600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091929192905050506103a1565b604051808215151515815260200191505060405180910390f35b6000610279610585565b6060604051908101604052808681526020018581526020018473ffffffffffffffffffffffffffffffffffffffff168152509050806001876040518082805190602001908083835b6020831015156102e657805182526020820191506020810190506020830392506102c1565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060008201518160000190805190602001906103359291906105bd565b506020820151816001015560408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050506103948387610505565b6001915050949350505050565b60006103ab61063d565b6080604051908101604052808681526020016001151581526020018573ffffffffffffffffffffffffffffffffffffffff168152602001848152509050806000876040518082805190602001908083835b60208310151561042157805182526020820191506020810190506020830392506103fc565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060008201518160000190805190602001906104709291906105bd565b5060208201518160010160006101000a81548160ff02191690831515021790555060408201518160010160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060608201518160020190805190602001906104f49291906105bd565b509050506001915050949350505050565b600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081908060018154018082558091505090600182039060005260206000200160009091929091909150908051906020019061057f92919061067e565b50505050565b6060604051908101604052806060815260200160008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105fe57805160ff191683800117855561062c565b8280016001018555821561062c579182015b8281111561062b578251825591602001919060010190610610565b5b50905061063991906106fe565b5090565b60806040519081016040528060608152602001600015158152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106106bf57805160ff19168380011785556106ed565b828001600101855582156106ed579182015b828111156106ec5782518255916020019190600101906106d1565b5b5090506106fa91906106fe565b5090565b61072091905b8082111561071c576000816000905550600101610704565b5090565b905600a165627a7a72305820a373e4189b1645b7fe447efdd5b9033c9f4f6cf5002b01e8fe869ae55579f3620029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638117919b14610051578063adb7f3a814610142575b600080fd5b34801561005d57600080fd5b50610128600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061026f565b604051808215151515815260200191505060405180910390f35b34801561014e57600080fd5b50610255600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091929192905050506103a1565b604051808215151515815260200191505060405180910390f35b6000610279610585565b6060604051908101604052808681526020018581526020018473ffffffffffffffffffffffffffffffffffffffff168152509050806001876040518082805190602001908083835b6020831015156102e657805182526020820191506020810190506020830392506102c1565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060008201518160000190805190602001906103359291906105bd565b506020820151816001015560408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050506103948387610505565b6001915050949350505050565b60006103ab61063d565b6080604051908101604052808681526020016001151581526020018573ffffffffffffffffffffffffffffffffffffffff168152602001848152509050806000876040518082805190602001908083835b60208310151561042157805182526020820191506020810190506020830392506103fc565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060008201518160000190805190602001906104709291906105bd565b5060208201518160010160006101000a81548160ff02191690831515021790555060408201518160010160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060608201518160020190805190602001906104f49291906105bd565b509050506001915050949350505050565b600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081908060018154018082558091505090600182039060005260206000200160009091929091909150908051906020019061057f92919061067e565b50505050565b6060604051908101604052806060815260200160008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105fe57805160ff191683800117855561062c565b8280016001018555821561062c579182015b8281111561062b578251825591602001919060010190610610565b5b50905061063991906106fe565b5090565b60806040519081016040528060608152602001600015158152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106106bf57805160ff19168380011785556106ed565b828001600101855582156106ed579182015b828111156106ec5782518255916020019190600101906106d1565b5b5090506106fa91906106fe565b5090565b61072091905b8082111561071c576000816000905550600101610704565b5090565b905600a165627a7a72305820a373e4189b1645b7fe447efdd5b9033c9f4f6cf5002b01e8fe869ae55579f3620029",
+  "sourceMap": "25:3938:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:3938:0;;;;;;;",
+  "deployedSourceMap": "25:3938:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3354:427;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3354:427:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2701:392;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2701:392:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3354:427;3576:4;3592:30;;:::i;:::-;3625:42;;;;;;;;;3638:8;3625:42;;;;3648:6;3625:42;;;;3656:10;3625:42;;;;;3592:75;;3698:10;3677;3688:6;3677:18;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;3677:18:0;;;;;;;;;;;;;;;;;;;;;:31;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3718:35;3734:10;3746:6;3718:15;:35::i;:::-;3770:4;3763:11;;3354:427;;;;;;;:::o;2701:392::-;2927:4;2943:29;;:::i;:::-;2975:48;;;;;;;;;2989:4;2975:48;;;;2995:4;2975:48;;;;;;3001:8;2975:48;;;;;;3011:11;2975:48;;;2943:80;;3057:8;3033:11;3045:8;3033:21;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;3033:21:0;;;;;;;;;;;;;;;;;;;;;:32;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;3082:4;3075:11;;2701:392;;;;;;;:::o;3787:112::-;3859:16;:20;3876:2;3859:20;;;;;;;;;;;;;;;3885:6;3859:33;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;3859:33:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;3787:112;;:::o;25:3938::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.0;\n\ncontract DrugTracer {\n\n    //------------------------------------------\n\n    //出厂信息\n    struct ProduceDetail {\n        string  drug;           //药品名称\n        bool    state;          //合格状态\n        address producerCode;   //厂商地址\n        string  produceDate;   //出厂日期\n    }\n\n    //出厂信息映射\n    mapping (string => ProduceDetail) produceList;\n\n    //流入市场信息\n    struct InflowDetail {\n        string  drugCode;   //药品批号\n        uint    volume;     //交易量\n        address toMerchant;         //销售商地址\n    }\n\n    //流入市场信息映射\n    mapping (string => InflowDetail) inflowList;\n\n    //流入记录\n    mapping (address => string[]) simpleInflowList;\n\n    //-------------------------------------------\n\n    //流通信息\n    struct RollDetail {\n        string  inflowNumber;   //流入交易单号\n        string  circulateDate;  //流通日期\n        uint    volume;         //流通量\n        address toDrugstore;    //药店编号\n    }\n\n    //流通信息映射\n    mapping (string=>RollDetail) rollList;\n\n    //简化流出记录\n    mapping (address=>string[]) simpleRollList;\n\n    //---------------------------------------------\n\n    //销售信息\n    struct SaleDetail {\n        string  circulateNumber;    //流出交易单号\n        address customerNumber;     //消费者编号\n        uint    volume;             //交易量\n        string  saleDate;           //销售日期\n    }\n\n    //销售信息映射\n    mapping (string=>SaleDetail) saleList;\n\n    //简化销售记录\n    mapping (address=>string[]) simpleSaleList;\n\n    //---------------------------------------------\n\n    //举报信息\n    struct ReportDetail {\n        string  saleNumber; //交易单号\n        string  reportDate; //举报日期\n        string  report;     //举报内容\n        bool    state;      //受理状态\n    }\n\n    //举报信息映射\n    mapping (string=>ReportDetail) reportList;\n\n    //简单举报信息映射\n    mapping (address=>string[]) simplereportList;\n\n    //---------------------------------------------\n\n    //受理信息\n    struct DealDetail {\n        string  dealDate;   //受理日期\n        bool    result;     //受理结果\n    }\n\n    //受理信息映射\n    mapping (string=>DealDetail) dealList;\n\n    //举报记录\n    string[] reports;\n\n    //---------------------------------------------\n\n    //插入出厂记录，state默认true，药品批号由前端生成，返回处理结果（布尔值）\n    //drugCode:药品批号\n    //drug:药品名称\n    //producer:厂商编号\n    //produceDate:出厂日期\n    //return:true成功，false失败\n    function setProduce (\n                        string drugCode,\n                        string drug,\n                        address producer,\n                        string produceDate)\n                        public returns (bool) {\n        ProduceDetail memory drugInfo = ProduceDetail(drug, true, producer, produceDate);\n        produceList[drugCode] = drugInfo;\n        return true;\n    }\n\n    //插入流入市场记录，交易单号为交易的hash值，返回处理结果（布尔值）\n    //number:流入交易单号\n    //drugCode:药品批号\n    //volume:交易量\n    //toMerchant:销售商地址\n    //return:true成功，false失败\n    function setInflow (\n                        string number,\n                        string drugCode,\n                        uint volume,\n                        address toMerchant)\n                        public returns (bool) {\n        InflowDetail memory inflowInfo = InflowDetail(drugCode, volume, toMerchant);\n        inflowList[number] = inflowInfo;\n        setSimpleInflow(toMerchant, number);\n        return true;\n    }\n\n    function setSimpleInflow (address to, string number) internal {\n        simpleInflowList[to].push(number);\n    }\n\n    //------------------------------------------------\n\n    \n}",
+  "sourcePath": "D:\\Affair2018\\小学期\\应用\\drugtracer\\contracts\\Drugtracer.sol",
+  "ast": {
+    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Drugtracer.sol",
+    "exportedSymbols": {
+      "DrugTracer": [
+        178
+      ]
+    },
+    "id": 179,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 178,
+        "linearizedBaseContracts": [
+          178
+        ],
+        "name": "DrugTracer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "DrugTracer.ProduceDetail",
+            "id": 10,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "drug",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "152:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "152:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "name": "state",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "199:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "199:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "name": "producerCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "246:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "246:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "produceDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "293:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "293:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ProduceDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "121:215:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14,
+            "name": "produceList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "367:45:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$10_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.ProduceDetail)"
+            },
+            "typeName": {
+              "id": 13,
+              "keyType": {
+                "id": 11,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "376:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "367:33:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$10_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.ProduceDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 12,
+                "name": "ProduceDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 10,
+                "src": "386:13:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ProduceDetail_$10_storage_ptr",
+                  "typeString": "struct DrugTracer.ProduceDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.InflowDetail",
+            "id": 21,
+            "members": [
+              {
+                "constant": false,
+                "id": 16,
+                "name": "drugCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "474:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "474:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "517:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 17,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "517:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 20,
+                "name": "toMerchant",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "557:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 19,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "557:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "InflowDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "444:164:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 25,
+            "name": "inflowList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "645:43:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$21_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.InflowDetail)"
+            },
+            "typeName": {
+              "id": 24,
+              "keyType": {
+                "id": 22,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "654:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "645:32:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$21_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.InflowDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 23,
+                "name": "InflowDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 21,
+                "src": "664:12:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_InflowDetail_$21_storage_ptr",
+                  "typeString": "struct DrugTracer.InflowDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 30,
+            "name": "simpleInflowList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "714:46:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
+            },
+            "typeName": {
+              "id": 29,
+              "keyType": {
+                "id": 26,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "723:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "714:29:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 27,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "734:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 28,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "734:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.RollDetail",
+            "id": 39,
+            "members": [
+              {
+                "constant": false,
+                "id": 32,
+                "name": "inflowNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 39,
+                "src": "865:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 31,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "865:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 34,
+                "name": "circulateDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 39,
+                "src": "918:21:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 33,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "918:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 39,
+                "src": "965:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 35,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "965:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38,
+                "name": "toDrugstore",
+                "nodeType": "VariableDeclaration",
+                "scope": 39,
+                "src": "1009:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 37,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1009:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "RollDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "837:216:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 43,
+            "name": "rollList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1084:37:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$39_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.RollDetail)"
+            },
+            "typeName": {
+              "id": 42,
+              "keyType": {
+                "id": 40,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1093:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1084:28:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$39_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.RollDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 41,
+                "name": "RollDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 39,
+                "src": "1101:10:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RollDetail_$39_storage_ptr",
+                  "typeString": "struct DrugTracer.RollDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 48,
+            "name": "simpleRollList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1153:42:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
+            },
+            "typeName": {
+              "id": 47,
+              "keyType": {
+                "id": 44,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1162:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1153:27:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 45,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1171:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 46,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1171:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.SaleDetail",
+            "id": 57,
+            "members": [
+              {
+                "constant": false,
+                "id": 50,
+                "name": "circulateNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 57,
+                "src": "1302:23:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 49,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1302:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 52,
+                "name": "customerNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 57,
+                "src": "1359:22:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 51,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1359:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 54,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 57,
+                "src": "1413:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 53,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1413:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 56,
+                "name": "saleDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 57,
+                "src": "1461:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 55,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1461:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "SaleDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "1274:235:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 61,
+            "name": "saleList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1540:37:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_SaleDetail_$57_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.SaleDetail)"
+            },
+            "typeName": {
+              "id": 60,
+              "keyType": {
+                "id": 58,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1549:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1540:28:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_SaleDetail_$57_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.SaleDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 59,
+                "name": "SaleDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 57,
+                "src": "1557:10:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_SaleDetail_$57_storage_ptr",
+                  "typeString": "struct DrugTracer.SaleDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 66,
+            "name": "simpleSaleList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1609:42:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
+            },
+            "typeName": {
+              "id": 65,
+              "keyType": {
+                "id": 62,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1618:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1609:27:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 63,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1627:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 64,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1627:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.ReportDetail",
+            "id": 75,
+            "members": [
+              {
+                "constant": false,
+                "id": 68,
+                "name": "saleNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 75,
+                "src": "1760:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 67,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1760:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 70,
+                "name": "reportDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 75,
+                "src": "1803:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 69,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1803:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 72,
+                "name": "report",
+                "nodeType": "VariableDeclaration",
+                "scope": 75,
+                "src": "1846:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 71,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1846:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 74,
+                "name": "state",
+                "nodeType": "VariableDeclaration",
+                "scope": 75,
+                "src": "1889:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 73,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1889:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ReportDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "1730:199:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 79,
+            "name": "reportList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1960:41:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$75_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.ReportDetail)"
+            },
+            "typeName": {
+              "id": 78,
+              "keyType": {
+                "id": 76,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1969:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1960:30:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$75_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.ReportDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 77,
+                "name": "ReportDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 75,
+                "src": "1977:12:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ReportDetail_$75_storage_ptr",
+                  "typeString": "struct DrugTracer.ReportDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 84,
+            "name": "simplereportList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "2039:44:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
+            },
+            "typeName": {
+              "id": 83,
+              "keyType": {
+                "id": 80,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2048:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2039:27:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 81,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2057:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 82,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "2057:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.DealDetail",
+            "id": 89,
+            "members": [
+              {
+                "constant": false,
+                "id": 86,
+                "name": "dealDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 89,
+                "src": "2190:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 85,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2190:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 88,
+                "name": "result",
+                "nodeType": "VariableDeclaration",
+                "scope": 89,
+                "src": "2233:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 87,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2233:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "DealDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "2162:111:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 93,
+            "name": "dealList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "2304:37:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$89_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.DealDetail)"
+            },
+            "typeName": {
+              "id": 92,
+              "keyType": {
+                "id": 90,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "2313:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2304:28:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$89_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.DealDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 91,
+                "name": "DealDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 89,
+                "src": "2321:10:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_DealDetail_$89_storage_ptr",
+                  "typeString": "struct DrugTracer.DealDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 96,
+            "name": "reports",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "2367:16:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 94,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "2367:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 95,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "2367:8:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 126,
+              "nodeType": "Block",
+              "src": "2933:160:0",
+              "statements": [
+                {
+                  "assignments": [
+                    110
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 110,
+                      "name": "drugInfo",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 127,
+                      "src": "2943:29:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ProduceDetail_$10_memory_ptr",
+                        "typeString": "struct DrugTracer.ProduceDetail"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 109,
+                        "name": "ProduceDetail",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 10,
+                        "src": "2943:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ProduceDetail_$10_storage_ptr",
+                          "typeString": "struct DrugTracer.ProduceDetail"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 117,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 112,
+                        "name": "drug",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 100,
+                        "src": "2989:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 113,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2995:4:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 114,
+                        "name": "producer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 102,
+                        "src": "3001:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 115,
+                        "name": "produceDate",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 104,
+                        "src": "3011:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 111,
+                      "name": "ProduceDetail",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "2975:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_ProduceDetail_$10_storage_ptr_$",
+                        "typeString": "type(struct DrugTracer.ProduceDetail storage pointer)"
+                      }
+                    },
+                    "id": 116,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2975:48:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProduceDetail_$10_memory",
+                      "typeString": "struct DrugTracer.ProduceDetail memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2943:80:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 122,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 118,
+                        "name": "produceList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14,
+                        "src": "3033:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$10_storage_$",
+                          "typeString": "mapping(string memory => struct DrugTracer.ProduceDetail storage ref)"
+                        }
+                      },
+                      "id": 120,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 119,
+                        "name": "drugCode",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 98,
+                        "src": "3045:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "3033:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ProduceDetail_$10_storage",
+                        "typeString": "struct DrugTracer.ProduceDetail storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 121,
+                      "name": "drugInfo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 110,
+                      "src": "3057:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ProduceDetail_$10_memory_ptr",
+                        "typeString": "struct DrugTracer.ProduceDetail memory"
+                      }
+                    },
+                    "src": "3033:32:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProduceDetail_$10_storage",
+                      "typeString": "struct DrugTracer.ProduceDetail storage ref"
+                    }
+                  },
+                  "id": 123,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3033:32:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 124,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "3082:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 108,
+                  "id": 125,
+                  "nodeType": "Return",
+                  "src": "3075:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 127,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setProduce",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 98,
+                  "name": "drugCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2747:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 97,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2747:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 100,
+                  "name": "drug",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2788:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 99,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2788:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 102,
+                  "name": "producer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2825:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 101,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2825:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 104,
+                  "name": "produceDate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2867:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 103,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2867:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2721:165:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2927:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 106,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2927:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2926:6:0"
+            },
+            "scope": 178,
+            "src": "2701:392:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 161,
+              "nodeType": "Block",
+              "src": "3582:199:0",
+              "statements": [
+                {
+                  "assignments": [
+                    141
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 141,
+                      "name": "inflowInfo",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 162,
+                      "src": "3592:30:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_InflowDetail_$21_memory_ptr",
+                        "typeString": "struct DrugTracer.InflowDetail"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 140,
+                        "name": "InflowDetail",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 21,
+                        "src": "3592:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_InflowDetail_$21_storage_ptr",
+                          "typeString": "struct DrugTracer.InflowDetail"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 147,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 143,
+                        "name": "drugCode",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 131,
+                        "src": "3638:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 144,
+                        "name": "volume",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 133,
+                        "src": "3648:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 145,
+                        "name": "toMerchant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 135,
+                        "src": "3656:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 142,
+                      "name": "InflowDetail",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "3625:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_InflowDetail_$21_storage_ptr_$",
+                        "typeString": "type(struct DrugTracer.InflowDetail storage pointer)"
+                      }
+                    },
+                    "id": 146,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3625:42:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_InflowDetail_$21_memory",
+                      "typeString": "struct DrugTracer.InflowDetail memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "3592:75:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 152,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 148,
+                        "name": "inflowList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 25,
+                        "src": "3677:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$21_storage_$",
+                          "typeString": "mapping(string memory => struct DrugTracer.InflowDetail storage ref)"
+                        }
+                      },
+                      "id": 150,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 149,
+                        "name": "number",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 129,
+                        "src": "3688:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "3677:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_InflowDetail_$21_storage",
+                        "typeString": "struct DrugTracer.InflowDetail storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 151,
+                      "name": "inflowInfo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 141,
+                      "src": "3698:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_InflowDetail_$21_memory_ptr",
+                        "typeString": "struct DrugTracer.InflowDetail memory"
+                      }
+                    },
+                    "src": "3677:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_InflowDetail_$21_storage",
+                      "typeString": "struct DrugTracer.InflowDetail storage ref"
+                    }
+                  },
+                  "id": 153,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3677:31:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 155,
+                        "name": "toMerchant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 135,
+                        "src": "3734:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 156,
+                        "name": "number",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 129,
+                        "src": "3746:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 154,
+                      "name": "setSimpleInflow",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 177,
+                      "src": "3718:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (address,string memory)"
+                      }
+                    },
+                    "id": 157,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3718:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 158,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3718:35:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 159,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "3770:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 139,
+                  "id": 160,
+                  "nodeType": "Return",
+                  "src": "3763:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 162,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setInflow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 136,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 129,
+                  "name": "number",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3399:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 128,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3399:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 131,
+                  "name": "drugCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3438:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 130,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3438:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 133,
+                  "name": "volume",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3479:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 132,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3479:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 135,
+                  "name": "toMerchant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3516:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 134,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3516:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3373:162:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 139,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 138,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3576:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 137,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3576:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3575:6:0"
+            },
+            "scope": 178,
+            "src": "3354:427:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 176,
+              "nodeType": "Block",
+              "src": "3849:50:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 173,
+                        "name": "number",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 166,
+                        "src": "3885:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 169,
+                          "name": "simpleInflowList",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 30,
+                          "src": "3859:16:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                            "typeString": "mapping(address => string storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 171,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 170,
+                          "name": "to",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 164,
+                          "src": "3876:2:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "3859:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                          "typeString": "string storage ref[] storage ref"
+                        }
+                      },
+                      "id": 172,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "3859:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_string_storage_$returns$_t_uint256_$",
+                        "typeString": "function (string storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3859:33:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 175,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3859:33:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 177,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setSimpleInflow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 167,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 164,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 177,
+                  "src": "3813:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 163,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3813:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 166,
+                  "name": "number",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 177,
+                  "src": "3825:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 165,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3825:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3812:27:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 168,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3849:0:0"
+            },
+            "scope": 178,
+            "src": "3787:112:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 179,
+        "src": "25:3938:0"
+      }
+    ],
+    "src": "0:3963:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Drugtracer.sol",
+    "exportedSymbols": {
+      "DrugTracer": [
+        178
+      ]
+    },
+    "id": 179,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 178,
+        "linearizedBaseContracts": [
+          178
+        ],
+        "name": "DrugTracer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "DrugTracer.ProduceDetail",
+            "id": 10,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "drug",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "152:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "152:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "name": "state",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "199:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "199:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "name": "producerCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "246:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "246:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "produceDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "293:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "293:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ProduceDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "121:215:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14,
+            "name": "produceList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "367:45:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$10_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.ProduceDetail)"
+            },
+            "typeName": {
+              "id": 13,
+              "keyType": {
+                "id": 11,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "376:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "367:33:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$10_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.ProduceDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 12,
+                "name": "ProduceDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 10,
+                "src": "386:13:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ProduceDetail_$10_storage_ptr",
+                  "typeString": "struct DrugTracer.ProduceDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.InflowDetail",
+            "id": 21,
+            "members": [
+              {
+                "constant": false,
+                "id": 16,
+                "name": "drugCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "474:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "474:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "517:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 17,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "517:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 20,
+                "name": "toMerchant",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "557:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 19,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "557:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "InflowDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "444:164:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 25,
+            "name": "inflowList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "645:43:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$21_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.InflowDetail)"
+            },
+            "typeName": {
+              "id": 24,
+              "keyType": {
+                "id": 22,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "654:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "645:32:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$21_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.InflowDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 23,
+                "name": "InflowDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 21,
+                "src": "664:12:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_InflowDetail_$21_storage_ptr",
+                  "typeString": "struct DrugTracer.InflowDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 30,
+            "name": "simpleInflowList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "714:46:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
+            },
+            "typeName": {
+              "id": 29,
+              "keyType": {
+                "id": 26,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "723:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "714:29:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 27,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "734:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 28,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "734:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.RollDetail",
+            "id": 39,
+            "members": [
+              {
+                "constant": false,
+                "id": 32,
+                "name": "inflowNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 39,
+                "src": "865:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 31,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "865:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 34,
+                "name": "circulateDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 39,
+                "src": "918:21:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 33,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "918:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 39,
+                "src": "965:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 35,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "965:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38,
+                "name": "toDrugstore",
+                "nodeType": "VariableDeclaration",
+                "scope": 39,
+                "src": "1009:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 37,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1009:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "RollDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "837:216:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 43,
+            "name": "rollList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1084:37:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$39_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.RollDetail)"
+            },
+            "typeName": {
+              "id": 42,
+              "keyType": {
+                "id": 40,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1093:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1084:28:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$39_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.RollDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 41,
+                "name": "RollDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 39,
+                "src": "1101:10:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RollDetail_$39_storage_ptr",
+                  "typeString": "struct DrugTracer.RollDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 48,
+            "name": "simpleRollList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1153:42:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
+            },
+            "typeName": {
+              "id": 47,
+              "keyType": {
+                "id": 44,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1162:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1153:27:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 45,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1171:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 46,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1171:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.SaleDetail",
+            "id": 57,
+            "members": [
+              {
+                "constant": false,
+                "id": 50,
+                "name": "circulateNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 57,
+                "src": "1302:23:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 49,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1302:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 52,
+                "name": "customerNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 57,
+                "src": "1359:22:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 51,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1359:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 54,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 57,
+                "src": "1413:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 53,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1413:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 56,
+                "name": "saleDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 57,
+                "src": "1461:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 55,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1461:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "SaleDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "1274:235:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 61,
+            "name": "saleList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1540:37:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_SaleDetail_$57_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.SaleDetail)"
+            },
+            "typeName": {
+              "id": 60,
+              "keyType": {
+                "id": 58,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1549:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1540:28:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_SaleDetail_$57_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.SaleDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 59,
+                "name": "SaleDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 57,
+                "src": "1557:10:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_SaleDetail_$57_storage_ptr",
+                  "typeString": "struct DrugTracer.SaleDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 66,
+            "name": "simpleSaleList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1609:42:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
+            },
+            "typeName": {
+              "id": 65,
+              "keyType": {
+                "id": 62,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1618:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1609:27:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 63,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1627:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 64,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1627:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.ReportDetail",
+            "id": 75,
+            "members": [
+              {
+                "constant": false,
+                "id": 68,
+                "name": "saleNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 75,
+                "src": "1760:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 67,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1760:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 70,
+                "name": "reportDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 75,
+                "src": "1803:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 69,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1803:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 72,
+                "name": "report",
+                "nodeType": "VariableDeclaration",
+                "scope": 75,
+                "src": "1846:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 71,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1846:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 74,
+                "name": "state",
+                "nodeType": "VariableDeclaration",
+                "scope": 75,
+                "src": "1889:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 73,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1889:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ReportDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "1730:199:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 79,
+            "name": "reportList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "1960:41:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$75_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.ReportDetail)"
+            },
+            "typeName": {
+              "id": 78,
+              "keyType": {
+                "id": 76,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1969:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1960:30:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$75_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.ReportDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 77,
+                "name": "ReportDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 75,
+                "src": "1977:12:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ReportDetail_$75_storage_ptr",
+                  "typeString": "struct DrugTracer.ReportDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 84,
+            "name": "simplereportList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "2039:44:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
+            },
+            "typeName": {
+              "id": 83,
+              "keyType": {
+                "id": 80,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2048:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2039:27:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 81,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2057:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 82,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "2057:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "DrugTracer.DealDetail",
+            "id": 89,
+            "members": [
+              {
+                "constant": false,
+                "id": 86,
+                "name": "dealDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 89,
+                "src": "2190:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 85,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2190:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 88,
+                "name": "result",
+                "nodeType": "VariableDeclaration",
+                "scope": 89,
+                "src": "2233:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 87,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2233:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "DealDetail",
+            "nodeType": "StructDefinition",
+            "scope": 178,
+            "src": "2162:111:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 93,
+            "name": "dealList",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "2304:37:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$89_storage_$",
+              "typeString": "mapping(string => struct DrugTracer.DealDetail)"
+            },
+            "typeName": {
+              "id": 92,
+              "keyType": {
+                "id": 90,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "2313:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2304:28:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$89_storage_$",
+                "typeString": "mapping(string => struct DrugTracer.DealDetail)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 91,
+                "name": "DealDetail",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 89,
+                "src": "2321:10:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_DealDetail_$89_storage_ptr",
+                  "typeString": "struct DrugTracer.DealDetail"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 96,
+            "name": "reports",
+            "nodeType": "VariableDeclaration",
+            "scope": 178,
+            "src": "2367:16:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 94,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "2367:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 95,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "2367:8:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 126,
+              "nodeType": "Block",
+              "src": "2933:160:0",
+              "statements": [
+                {
+                  "assignments": [
+                    110
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 110,
+                      "name": "drugInfo",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 127,
+                      "src": "2943:29:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ProduceDetail_$10_memory_ptr",
+                        "typeString": "struct DrugTracer.ProduceDetail"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 109,
+                        "name": "ProduceDetail",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 10,
+                        "src": "2943:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ProduceDetail_$10_storage_ptr",
+                          "typeString": "struct DrugTracer.ProduceDetail"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 117,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 112,
+                        "name": "drug",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 100,
+                        "src": "2989:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 113,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2995:4:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 114,
+                        "name": "producer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 102,
+                        "src": "3001:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 115,
+                        "name": "produceDate",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 104,
+                        "src": "3011:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 111,
+                      "name": "ProduceDetail",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "2975:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_ProduceDetail_$10_storage_ptr_$",
+                        "typeString": "type(struct DrugTracer.ProduceDetail storage pointer)"
+                      }
+                    },
+                    "id": 116,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2975:48:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProduceDetail_$10_memory",
+                      "typeString": "struct DrugTracer.ProduceDetail memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2943:80:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 122,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 118,
+                        "name": "produceList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14,
+                        "src": "3033:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ProduceDetail_$10_storage_$",
+                          "typeString": "mapping(string memory => struct DrugTracer.ProduceDetail storage ref)"
+                        }
+                      },
+                      "id": 120,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 119,
+                        "name": "drugCode",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 98,
+                        "src": "3045:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "3033:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ProduceDetail_$10_storage",
+                        "typeString": "struct DrugTracer.ProduceDetail storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 121,
+                      "name": "drugInfo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 110,
+                      "src": "3057:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ProduceDetail_$10_memory_ptr",
+                        "typeString": "struct DrugTracer.ProduceDetail memory"
+                      }
+                    },
+                    "src": "3033:32:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProduceDetail_$10_storage",
+                      "typeString": "struct DrugTracer.ProduceDetail storage ref"
+                    }
+                  },
+                  "id": 123,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3033:32:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 124,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "3082:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 108,
+                  "id": 125,
+                  "nodeType": "Return",
+                  "src": "3075:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 127,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setProduce",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 98,
+                  "name": "drugCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2747:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 97,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2747:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 100,
+                  "name": "drug",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2788:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 99,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2788:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 102,
+                  "name": "producer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2825:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 101,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2825:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 104,
+                  "name": "produceDate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2867:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 103,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2867:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2721:165:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 127,
+                  "src": "2927:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 106,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2927:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2926:6:0"
+            },
+            "scope": 178,
+            "src": "2701:392:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 161,
+              "nodeType": "Block",
+              "src": "3582:199:0",
+              "statements": [
+                {
+                  "assignments": [
+                    141
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 141,
+                      "name": "inflowInfo",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 162,
+                      "src": "3592:30:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_InflowDetail_$21_memory_ptr",
+                        "typeString": "struct DrugTracer.InflowDetail"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 140,
+                        "name": "InflowDetail",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 21,
+                        "src": "3592:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_InflowDetail_$21_storage_ptr",
+                          "typeString": "struct DrugTracer.InflowDetail"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 147,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 143,
+                        "name": "drugCode",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 131,
+                        "src": "3638:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 144,
+                        "name": "volume",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 133,
+                        "src": "3648:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 145,
+                        "name": "toMerchant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 135,
+                        "src": "3656:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 142,
+                      "name": "InflowDetail",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "3625:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_InflowDetail_$21_storage_ptr_$",
+                        "typeString": "type(struct DrugTracer.InflowDetail storage pointer)"
+                      }
+                    },
+                    "id": 146,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3625:42:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_InflowDetail_$21_memory",
+                      "typeString": "struct DrugTracer.InflowDetail memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "3592:75:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 152,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 148,
+                        "name": "inflowList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 25,
+                        "src": "3677:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_InflowDetail_$21_storage_$",
+                          "typeString": "mapping(string memory => struct DrugTracer.InflowDetail storage ref)"
+                        }
+                      },
+                      "id": 150,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 149,
+                        "name": "number",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 129,
+                        "src": "3688:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "3677:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_InflowDetail_$21_storage",
+                        "typeString": "struct DrugTracer.InflowDetail storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 151,
+                      "name": "inflowInfo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 141,
+                      "src": "3698:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_InflowDetail_$21_memory_ptr",
+                        "typeString": "struct DrugTracer.InflowDetail memory"
+                      }
+                    },
+                    "src": "3677:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_InflowDetail_$21_storage",
+                      "typeString": "struct DrugTracer.InflowDetail storage ref"
+                    }
+                  },
+                  "id": 153,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3677:31:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 155,
+                        "name": "toMerchant",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 135,
+                        "src": "3734:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 156,
+                        "name": "number",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 129,
+                        "src": "3746:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 154,
+                      "name": "setSimpleInflow",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 177,
+                      "src": "3718:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (address,string memory)"
+                      }
+                    },
+                    "id": 157,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3718:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 158,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3718:35:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 159,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "3770:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 139,
+                  "id": 160,
+                  "nodeType": "Return",
+                  "src": "3763:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 162,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setInflow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 136,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 129,
+                  "name": "number",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3399:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 128,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3399:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 131,
+                  "name": "drugCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3438:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 130,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3438:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 133,
+                  "name": "volume",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3479:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 132,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3479:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 135,
+                  "name": "toMerchant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3516:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 134,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3516:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3373:162:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 139,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 138,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "3576:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 137,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3576:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3575:6:0"
+            },
+            "scope": 178,
+            "src": "3354:427:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 176,
+              "nodeType": "Block",
+              "src": "3849:50:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 173,
+                        "name": "number",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 166,
+                        "src": "3885:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 169,
+                          "name": "simpleInflowList",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 30,
+                          "src": "3859:16:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                            "typeString": "mapping(address => string storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 171,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 170,
+                          "name": "to",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 164,
+                          "src": "3876:2:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "3859:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                          "typeString": "string storage ref[] storage ref"
+                        }
+                      },
+                      "id": 172,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "3859:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_string_storage_$returns$_t_uint256_$",
+                        "typeString": "function (string storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3859:33:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 175,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3859:33:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 177,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setSimpleInflow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 167,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 164,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 177,
+                  "src": "3813:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 163,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3813:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 166,
+                  "name": "number",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 177,
+                  "src": "3825:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 165,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3825:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3812:27:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 168,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3849:0:0"
+            },
+            "scope": 178,
+            "src": "3787:112:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 179,
+        "src": "25:3938:0"
+      }
+    ],
+    "src": "0:3963:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-04T15:16:59.078Z"
+}
