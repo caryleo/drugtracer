@@ -1,24 +1,24 @@
 {
   "contractName": "Administrator",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820ff85501afb2d2c6fc4eab07603f72ba47098765e0f84c1354490aabd2fd407770029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820ff85501afb2d2c6fc4eab07603f72ba47098765e0f84c1354490aabd2fd407770029",
-  "sourceMap": "39:235:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;39:235:0;;;;;;;",
-  "deployedSourceMap": "39:235:0:-;;;;;",
-  "source": "pragma solidity ^0.4.0;\n//监管部门\ncontract Administrator {\n    \n    //受理信息\n    struct DealDetail {\n        string  dealDate;   //受理日期\n        bool    result;     //受理结果\n    }\n\n    //受理信息映射\n    mapping (string=>DealDetail) dealList;\n}",
-  "sourcePath": "D:\\Affair2018\\小学期\\应用\\drugtracer\\contracts\\Administrator.sol",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582047afec1d4b93931888a965dc6ac96af58d774a398d01e37dd8e39a3cadcd86d70029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582047afec1d4b93931888a965dc6ac96af58d774a398d01e37dd8e39a3cadcd86d70029",
+  "sourceMap": "41:245:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;41:245:2;;;;;;;",
+  "deployedSourceMap": "41:245:2:-;;;;;",
+  "source": "pragma solidity ^0.4.0;\r\n//监管部门\r\ncontract Administrator {\r\n    \r\n    //受理信息\r\n    struct DealDetail {\r\n        string  dealDate;   //受理日期\r\n        bool    result;     //受理结果\r\n    }\r\n\r\n    //受理信息映射\r\n    mapping (string=>DealDetail) dealList;\r\n}",
+  "sourcePath": "C:\\Users\\10848\\Desktop\\solidity\\drugtracer\\contracts\\administrator.sol",
   "ast": {
-    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Administrator.sol",
+    "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/contracts/administrator.sol",
     "exportedSymbols": {
       "Administrator": [
-        11
+        88
       ]
     },
-    "id": 12,
+    "id": 89,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 78,
         "literals": [
           "solidity",
           "^",
@@ -26,7 +26,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:23:2"
       },
       {
         "baseContracts": [],
@@ -34,24 +34,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 11,
+        "id": 88,
         "linearizedBaseContracts": [
-          11
+          88
         ],
         "name": "Administrator",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Administrator.DealDetail",
-            "id": 6,
+            "id": 83,
             "members": [
               {
                 "constant": false,
-                "id": 3,
+                "id": 80,
                 "name": "dealDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "120:16:0",
+                "scope": 83,
+                "src": "126:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -59,10 +59,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2,
+                  "id": 79,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "120:6:0",
+                  "src": "126:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -73,11 +73,11 @@
               },
               {
                 "constant": false,
-                "id": 5,
+                "id": 82,
                 "name": "result",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "163:14:0",
+                "scope": 83,
+                "src": "170:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -85,10 +85,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 4,
+                  "id": 81,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "163:4:0",
+                  "src": "170:4:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -100,50 +100,50 @@
             ],
             "name": "DealDetail",
             "nodeType": "StructDefinition",
-            "scope": 11,
-            "src": "92:111:0",
+            "scope": 88,
+            "src": "97:114:2",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 10,
+            "id": 87,
             "name": "dealList",
             "nodeType": "VariableDeclaration",
-            "scope": 11,
-            "src": "234:37:0",
+            "scope": 88,
+            "src": "245:37:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$6_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$83_storage_$",
               "typeString": "mapping(string => struct Administrator.DealDetail)"
             },
             "typeName": {
-              "id": 9,
+              "id": 86,
               "keyType": {
-                "id": 7,
+                "id": 84,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "243:6:0",
+                "src": "254:6:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "234:28:0",
+              "src": "245:28:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$6_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$83_storage_$",
                 "typeString": "mapping(string => struct Administrator.DealDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 8,
+                "id": 85,
                 "name": "DealDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 6,
-                "src": "251:10:0",
+                "referencedDeclaration": 83,
+                "src": "262:10:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_DealDetail_$6_storage_ptr",
+                  "typeIdentifier": "t_struct$_DealDetail_$83_storage_ptr",
                   "typeString": "struct Administrator.DealDetail"
                 }
               }
@@ -152,24 +152,24 @@
             "visibility": "internal"
           }
         ],
-        "scope": 12,
-        "src": "39:235:0"
+        "scope": 89,
+        "src": "41:245:2"
       }
     ],
-    "src": "0:274:0"
+    "src": "0:286:2"
   },
   "legacyAST": {
-    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Administrator.sol",
+    "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/contracts/administrator.sol",
     "exportedSymbols": {
       "Administrator": [
-        11
+        88
       ]
     },
-    "id": 12,
+    "id": 89,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 78,
         "literals": [
           "solidity",
           "^",
@@ -177,7 +177,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:23:2"
       },
       {
         "baseContracts": [],
@@ -185,24 +185,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 11,
+        "id": 88,
         "linearizedBaseContracts": [
-          11
+          88
         ],
         "name": "Administrator",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Administrator.DealDetail",
-            "id": 6,
+            "id": 83,
             "members": [
               {
                 "constant": false,
-                "id": 3,
+                "id": 80,
                 "name": "dealDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "120:16:0",
+                "scope": 83,
+                "src": "126:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -210,10 +210,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2,
+                  "id": 79,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "120:6:0",
+                  "src": "126:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -224,11 +224,11 @@
               },
               {
                 "constant": false,
-                "id": 5,
+                "id": 82,
                 "name": "result",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "163:14:0",
+                "scope": 83,
+                "src": "170:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -236,10 +236,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 4,
+                  "id": 81,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "163:4:0",
+                  "src": "170:4:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -251,50 +251,50 @@
             ],
             "name": "DealDetail",
             "nodeType": "StructDefinition",
-            "scope": 11,
-            "src": "92:111:0",
+            "scope": 88,
+            "src": "97:114:2",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 10,
+            "id": 87,
             "name": "dealList",
             "nodeType": "VariableDeclaration",
-            "scope": 11,
-            "src": "234:37:0",
+            "scope": 88,
+            "src": "245:37:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$6_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$83_storage_$",
               "typeString": "mapping(string => struct Administrator.DealDetail)"
             },
             "typeName": {
-              "id": 9,
+              "id": 86,
               "keyType": {
-                "id": 7,
+                "id": 84,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "243:6:0",
+                "src": "254:6:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "234:28:0",
+              "src": "245:28:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$6_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_DealDetail_$83_storage_$",
                 "typeString": "mapping(string => struct Administrator.DealDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 8,
+                "id": 85,
                 "name": "DealDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 6,
-                "src": "251:10:0",
+                "referencedDeclaration": 83,
+                "src": "262:10:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_DealDetail_$6_storage_ptr",
+                  "typeIdentifier": "t_struct$_DealDetail_$83_storage_ptr",
                   "typeString": "struct Administrator.DealDetail"
                 }
               }
@@ -303,11 +303,11 @@
             "visibility": "internal"
           }
         ],
-        "scope": 12,
-        "src": "39:235:0"
+        "scope": 89,
+        "src": "41:245:2"
       }
     ],
-    "src": "0:274:0"
+    "src": "0:286:2"
   },
   "compiler": {
     "name": "solc",
@@ -315,5 +315,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-03T13:46:56.097Z"
+  "updatedAt": "2018-09-04T01:23:29.226Z"
 }

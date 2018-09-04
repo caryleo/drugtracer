@@ -1,24 +1,24 @@
 {
   "contractName": "Customer",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058205c67564b751b436f506e9baf817d71021d562f2e6b6fcfebef3fa6965dc9d11f0029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058205c67564b751b436f506e9baf817d71021d562f2e6b6fcfebef3fa6965dc9d11f0029",
-  "sourceMap": "41:334:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;41:334:1;;;;;;;",
-  "deployedSourceMap": "41:334:1:-;;;;;",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820d02c61818985fc62abb2c328325e7c71562048ffd5f6f2dfc0eeb43e94d684f70029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820d02c61818985fc62abb2c328325e7c71562048ffd5f6f2dfc0eeb43e94d684f70029",
+  "sourceMap": "41:334:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;41:334:0;;;;;;;",
+  "deployedSourceMap": "41:334:0:-;;;;;",
   "source": "pragma solidity ^0.4.0;\r\n//消费者类\r\ncontract Customer {\r\n    \r\n    //举报信息\r\n    struct ReportDetail {\r\n        string  saleNumber; //交易单号\r\n        string  reportDate; //举报日期\r\n        string  report;     //举报内容\r\n        bool    state;      //受理状态\r\n    }\r\n\r\n    //举报信息映射\r\n    mapping (string=>ReportDetail) reportList;\r\n}",
-  "sourcePath": "D:\\Affair2018\\小学期\\应用\\drugtracer\\contracts\\Customer.sol",
+  "sourcePath": "C:\\Users\\10848\\Desktop\\solidity\\drugtracer\\contracts\\customer.sol",
   "ast": {
-    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Customer.sol",
+    "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/contracts/customer.sol",
     "exportedSymbols": {
       "Customer": [
-        27
+        15
       ]
     },
-    "id": 28,
+    "id": 16,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 13,
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -26,7 +26,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "src": "0:23:0"
       },
       {
         "baseContracts": [],
@@ -34,24 +34,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 27,
+        "id": 15,
         "linearizedBaseContracts": [
-          27
+          15
         ],
         "name": "Customer",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Customer.ReportDetail",
-            "id": 22,
+            "id": 10,
             "members": [
               {
                 "constant": false,
-                "id": 15,
+                "id": 3,
                 "name": "saleNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 22,
-                "src": "123:18:1",
+                "scope": 10,
+                "src": "123:18:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -59,10 +59,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 14,
+                  "id": 2,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "123:6:1",
+                  "src": "123:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -73,11 +73,11 @@
               },
               {
                 "constant": false,
-                "id": 17,
+                "id": 5,
                 "name": "reportDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 22,
-                "src": "167:18:1",
+                "scope": 10,
+                "src": "167:18:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -85,10 +85,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 16,
+                  "id": 4,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "167:6:1",
+                  "src": "167:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -99,11 +99,11 @@
               },
               {
                 "constant": false,
-                "id": 19,
+                "id": 7,
                 "name": "report",
                 "nodeType": "VariableDeclaration",
-                "scope": 22,
-                "src": "211:14:1",
+                "scope": 10,
+                "src": "211:14:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -111,10 +111,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 18,
+                  "id": 6,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "211:6:1",
+                  "src": "211:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -125,11 +125,11 @@
               },
               {
                 "constant": false,
-                "id": 21,
+                "id": 9,
                 "name": "state",
                 "nodeType": "VariableDeclaration",
-                "scope": 22,
-                "src": "255:13:1",
+                "scope": 10,
+                "src": "255:13:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -137,10 +137,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 20,
+                  "id": 8,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "255:4:1",
+                  "src": "255:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -152,50 +152,50 @@
             ],
             "name": "ReportDetail",
             "nodeType": "StructDefinition",
-            "scope": 27,
-            "src": "92:204:1",
+            "scope": 15,
+            "src": "92:204:0",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 26,
+            "id": 14,
             "name": "reportList",
             "nodeType": "VariableDeclaration",
-            "scope": 27,
-            "src": "330:41:1",
+            "scope": 15,
+            "src": "330:41:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$22_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$10_storage_$",
               "typeString": "mapping(string => struct Customer.ReportDetail)"
             },
             "typeName": {
-              "id": 25,
+              "id": 13,
               "keyType": {
-                "id": 23,
+                "id": 11,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "339:6:1",
+                "src": "339:6:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "330:30:1",
+              "src": "330:30:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$22_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$10_storage_$",
                 "typeString": "mapping(string => struct Customer.ReportDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 24,
+                "id": 12,
                 "name": "ReportDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 22,
-                "src": "347:12:1",
+                "referencedDeclaration": 10,
+                "src": "347:12:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_ReportDetail_$22_storage_ptr",
+                  "typeIdentifier": "t_struct$_ReportDetail_$10_storage_ptr",
                   "typeString": "struct Customer.ReportDetail"
                 }
               }
@@ -204,24 +204,24 @@
             "visibility": "internal"
           }
         ],
-        "scope": 28,
-        "src": "41:334:1"
+        "scope": 16,
+        "src": "41:334:0"
       }
     ],
-    "src": "0:375:1"
+    "src": "0:375:0"
   },
   "legacyAST": {
-    "absolutePath": "/D/Affair2018/小学期/应用/drugtracer/contracts/Customer.sol",
+    "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/contracts/customer.sol",
     "exportedSymbols": {
       "Customer": [
-        27
+        15
       ]
     },
-    "id": 28,
+    "id": 16,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 13,
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -229,7 +229,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "src": "0:23:0"
       },
       {
         "baseContracts": [],
@@ -237,24 +237,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 27,
+        "id": 15,
         "linearizedBaseContracts": [
-          27
+          15
         ],
         "name": "Customer",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Customer.ReportDetail",
-            "id": 22,
+            "id": 10,
             "members": [
               {
                 "constant": false,
-                "id": 15,
+                "id": 3,
                 "name": "saleNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 22,
-                "src": "123:18:1",
+                "scope": 10,
+                "src": "123:18:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -262,10 +262,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 14,
+                  "id": 2,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "123:6:1",
+                  "src": "123:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -276,11 +276,11 @@
               },
               {
                 "constant": false,
-                "id": 17,
+                "id": 5,
                 "name": "reportDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 22,
-                "src": "167:18:1",
+                "scope": 10,
+                "src": "167:18:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -288,10 +288,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 16,
+                  "id": 4,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "167:6:1",
+                  "src": "167:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -302,11 +302,11 @@
               },
               {
                 "constant": false,
-                "id": 19,
+                "id": 7,
                 "name": "report",
                 "nodeType": "VariableDeclaration",
-                "scope": 22,
-                "src": "211:14:1",
+                "scope": 10,
+                "src": "211:14:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -314,10 +314,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 18,
+                  "id": 6,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "211:6:1",
+                  "src": "211:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -328,11 +328,11 @@
               },
               {
                 "constant": false,
-                "id": 21,
+                "id": 9,
                 "name": "state",
                 "nodeType": "VariableDeclaration",
-                "scope": 22,
-                "src": "255:13:1",
+                "scope": 10,
+                "src": "255:13:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -340,10 +340,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 20,
+                  "id": 8,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "255:4:1",
+                  "src": "255:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -355,50 +355,50 @@
             ],
             "name": "ReportDetail",
             "nodeType": "StructDefinition",
-            "scope": 27,
-            "src": "92:204:1",
+            "scope": 15,
+            "src": "92:204:0",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 26,
+            "id": 14,
             "name": "reportList",
             "nodeType": "VariableDeclaration",
-            "scope": 27,
-            "src": "330:41:1",
+            "scope": 15,
+            "src": "330:41:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$22_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$10_storage_$",
               "typeString": "mapping(string => struct Customer.ReportDetail)"
             },
             "typeName": {
-              "id": 25,
+              "id": 13,
               "keyType": {
-                "id": 23,
+                "id": 11,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "339:6:1",
+                "src": "339:6:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "330:30:1",
+              "src": "330:30:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$22_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_ReportDetail_$10_storage_$",
                 "typeString": "mapping(string => struct Customer.ReportDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 24,
+                "id": 12,
                 "name": "ReportDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 22,
-                "src": "347:12:1",
+                "referencedDeclaration": 10,
+                "src": "347:12:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_ReportDetail_$22_storage_ptr",
+                  "typeIdentifier": "t_struct$_ReportDetail_$10_storage_ptr",
                   "typeString": "struct Customer.ReportDetail"
                 }
               }
@@ -407,11 +407,11 @@
             "visibility": "internal"
           }
         ],
-        "scope": 28,
-        "src": "41:334:1"
+        "scope": 16,
+        "src": "41:334:0"
       }
     ],
-    "src": "0:375:1"
+    "src": "0:375:0"
   },
   "compiler": {
     "name": "solc",
@@ -419,5 +419,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-03T13:46:56.097Z"
+  "updatedAt": "2018-09-04T01:36:49.376Z"
 }

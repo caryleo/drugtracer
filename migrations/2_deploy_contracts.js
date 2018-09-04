@@ -1,6 +1,9 @@
 var hello = artifacts.require("hello");
-
+var CallTest = artifacts.require("CallTest");
+var add = artifacts.require("add")
 module.exports = function(deployer) {
-  // deployment steps
+  // deployment step
   deployer.deploy(hello);
+  deployer.deploy(CallTest);
+  deployer.deploy(add);
 };

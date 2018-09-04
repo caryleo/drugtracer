@@ -10,6 +10,8 @@ contract Producer {
         string  produceDate;   //出厂日期
     }
 
+
+
     //出厂信息映射
     mapping (string => ProduceDetail) produceList;
 
