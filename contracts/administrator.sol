@@ -10,4 +10,7 @@ contract Administrator {
 
     //受理信息映射
     mapping (string=>DealDetail) dealList;
+
+    //举报记录
+    string[] reports;
 }
