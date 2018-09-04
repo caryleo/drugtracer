@@ -1,10 +1,12 @@
 pragma solidity ^0.4.0;
 pragma experimental ABIEncoderV2;
 contract CallTest{
-    string[] b ;
-    function array123() public view  returns(string[]){
-        b.push("123123");
-        b.push("456");
+    bytes4 [] b ;
+    function array()  constant public returns(bytes4 []){
+        b.push(0x12345678);
+        b.push(0x12345678);
+        b.push(0x12345678);
+        b.push(0x123456);
         return b;
     }
 }

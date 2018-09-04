@@ -26,4 +26,9 @@ contract Producer {
     //流入记录
     mapping (address => string[]) simpleInflowList;
 
+    function setProduce(string drugCode,string drug,address producer,string producerDate)
+    public constant returns(bool){
+
+    }
+
 }
