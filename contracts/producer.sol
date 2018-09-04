@@ -12,6 +12,7 @@ contract Producer {
 
 
 
+
     //出厂信息映射
     mapping (string => ProduceDetail) produceList;
 
@@ -27,5 +28,10 @@ contract Producer {
 
     //流入记录
     mapping (address => string[]) simpleInflowList;
+
+    function setProduce(string drugCode,string drug,address producer,string producerDate)
+    public constant returns(bool){
+
+    }
 
 }

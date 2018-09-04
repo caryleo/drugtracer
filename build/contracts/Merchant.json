@@ -1,24 +1,24 @@
 {
   "contractName": "Merchant",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058206646dd7e5f5471886fcc5e3b184b0832e4a389542da514add461776c010f38140029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058206646dd7e5f5471886fcc5e3b184b0832e4a389542da514add461776c010f38140029",
-  "sourceMap": "38:423:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;38:423:0;;;;;;;",
-  "deployedSourceMap": "38:423:0:-;;;;;",
-  "source": "pragma solidity ^0.4.0;\r\n//销售商\r\ncontract Merchant {\r\n\r\n    //流通信息\r\n    struct RollDetail {\r\n        string  inflowNumber;   //流入交易单号\r\n        string  circulateDate;  //流通日期\r\n        uint    volume;        //流通量\r\n        address to;             //药店编号\r\n    }\r\n\r\n    //流通信息映射\r\n    mapping (string=>RollDetail) rollList;\r\n\r\n    //简化流出记录\r\n    mapping (address=>string) simpleRollList;\r\n    \r\n}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820bb08e686a0305c76d0eb2ecbb05cf4711b02fd17194d74684d8083eba47955cd0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820bb08e686a0305c76d0eb2ecbb05cf4711b02fd17194d74684d8083eba47955cd0029",
+  "sourceMap": "38:426:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;38:426:1;;;;;;;",
+  "deployedSourceMap": "38:426:1:-;;;;;",
+  "source": "pragma solidity ^0.4.0;\r\n//销售商\r\ncontract Merchant {\r\n\r\n    //流通信息\r\n    struct RollDetail {\r\n        string  inflowNumber;   //流入交易单号\r\n        string  circulateDate;  //流通日期\r\n        uint    volume;         //流通量\r\n        address toDrugstore;    //药店编号\r\n    }\r\n\r\n    //流通信息映射\r\n    mapping (string=>RollDetail) rollList;\r\n\r\n    //简化流出记录\r\n    mapping (address=>string[]) simpleRollList;\r\n    \r\n}",
   "sourcePath": "C:\\Users\\10848\\Desktop\\solidity\\drugtracer\\contracts\\Merchant.sol",
   "ast": {
     "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/contracts/Merchant.sol",
     "exportedSymbols": {
       "Merchant": [
-        19
+        66
       ]
     },
-    "id": 20,
+    "id": 67,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 47,
         "literals": [
           "solidity",
           "^",
@@ -26,7 +26,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:23:1"
       },
       {
         "baseContracts": [],
@@ -34,24 +34,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 19,
+        "id": 66,
         "linearizedBaseContracts": [
-          19
+          66
         ],
         "name": "Merchant",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Merchant.RollDetail",
-            "id": 10,
+            "id": 56,
             "members": [
               {
                 "constant": false,
-                "id": 3,
+                "id": 49,
                 "name": "inflowNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 10,
-                "src": "114:20:0",
+                "scope": 56,
+                "src": "114:20:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -59,10 +59,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2,
+                  "id": 48,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "114:6:0",
+                  "src": "114:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -73,11 +73,11 @@
               },
               {
                 "constant": false,
-                "id": 5,
+                "id": 51,
                 "name": "circulateDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 10,
-                "src": "168:21:0",
+                "scope": 56,
+                "src": "168:21:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -85,10 +85,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 4,
+                  "id": 50,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "168:6:0",
+                  "src": "168:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -99,11 +99,11 @@
               },
               {
                 "constant": false,
-                "id": 7,
+                "id": 53,
                 "name": "volume",
                 "nodeType": "VariableDeclaration",
-                "scope": 10,
-                "src": "216:14:0",
+                "scope": 56,
+                "src": "216:14:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -111,10 +111,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 6,
+                  "id": 52,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "216:4:0",
+                  "src": "216:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -125,11 +125,11 @@
               },
               {
                 "constant": false,
-                "id": 9,
-                "name": "to",
+                "id": 55,
+                "name": "toDrugstore",
                 "nodeType": "VariableDeclaration",
-                "scope": 10,
-                "src": "260:10:0",
+                "scope": 56,
+                "src": "261:19:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -137,10 +137,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 8,
+                  "id": 54,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "260:7:0",
+                  "src": "261:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
@@ -152,50 +152,50 @@
             ],
             "name": "RollDetail",
             "nodeType": "StructDefinition",
-            "scope": 19,
-            "src": "85:220:0",
+            "scope": 66,
+            "src": "85:221:1",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 14,
+            "id": 60,
             "name": "rollList",
             "nodeType": "VariableDeclaration",
-            "scope": 19,
-            "src": "339:37:0",
+            "scope": 66,
+            "src": "340:37:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$10_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$56_storage_$",
               "typeString": "mapping(string => struct Merchant.RollDetail)"
             },
             "typeName": {
-              "id": 13,
+              "id": 59,
               "keyType": {
-                "id": 11,
+                "id": 57,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "348:6:0",
+                "src": "349:6:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "339:28:0",
+              "src": "340:28:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$10_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$56_storage_$",
                 "typeString": "mapping(string => struct Merchant.RollDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 12,
+                "id": 58,
                 "name": "RollDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 10,
-                "src": "356:10:0",
+                "referencedDeclaration": 56,
+                "src": "357:10:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_RollDetail_$10_storage_ptr",
+                  "typeIdentifier": "t_struct$_RollDetail_$56_storage_ptr",
                   "typeString": "struct Merchant.RollDetail"
                 }
               }
@@ -205,43 +205,53 @@
           },
           {
             "constant": false,
-            "id": 18,
+            "id": 65,
             "name": "simpleRollList",
             "nodeType": "VariableDeclaration",
-            "scope": 19,
-            "src": "411:40:0",
+            "scope": 66,
+            "src": "412:42:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
-              "typeString": "mapping(address => string)"
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
             },
             "typeName": {
-              "id": 17,
+              "id": 64,
               "keyType": {
-                "id": 15,
+                "id": 61,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "420:7:0",
+                "src": "421:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "411:25:0",
+              "src": "412:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
-                "typeString": "mapping(address => string)"
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
               },
               "valueType": {
-                "id": 16,
-                "name": "string",
-                "nodeType": "ElementaryTypeName",
-                "src": "429:6:0",
+                "baseType": {
+                  "id": 62,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "430:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 63,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "430:8:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
                 }
               }
             },
@@ -249,24 +259,24 @@
             "visibility": "internal"
           }
         ],
-        "scope": 20,
-        "src": "38:423:0"
+        "scope": 67,
+        "src": "38:426:1"
       }
     ],
-    "src": "0:461:0"
+    "src": "0:464:1"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/contracts/Merchant.sol",
     "exportedSymbols": {
       "Merchant": [
-        19
+        66
       ]
     },
-    "id": 20,
+    "id": 67,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 47,
         "literals": [
           "solidity",
           "^",
@@ -274,7 +284,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:23:1"
       },
       {
         "baseContracts": [],
@@ -282,24 +292,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 19,
+        "id": 66,
         "linearizedBaseContracts": [
-          19
+          66
         ],
         "name": "Merchant",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Merchant.RollDetail",
-            "id": 10,
+            "id": 56,
             "members": [
               {
                 "constant": false,
-                "id": 3,
+                "id": 49,
                 "name": "inflowNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 10,
-                "src": "114:20:0",
+                "scope": 56,
+                "src": "114:20:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -307,10 +317,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2,
+                  "id": 48,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "114:6:0",
+                  "src": "114:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -321,11 +331,11 @@
               },
               {
                 "constant": false,
-                "id": 5,
+                "id": 51,
                 "name": "circulateDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 10,
-                "src": "168:21:0",
+                "scope": 56,
+                "src": "168:21:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -333,10 +343,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 4,
+                  "id": 50,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "168:6:0",
+                  "src": "168:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -347,11 +357,11 @@
               },
               {
                 "constant": false,
-                "id": 7,
+                "id": 53,
                 "name": "volume",
                 "nodeType": "VariableDeclaration",
-                "scope": 10,
-                "src": "216:14:0",
+                "scope": 56,
+                "src": "216:14:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -359,10 +369,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 6,
+                  "id": 52,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "216:4:0",
+                  "src": "216:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -373,11 +383,11 @@
               },
               {
                 "constant": false,
-                "id": 9,
-                "name": "to",
+                "id": 55,
+                "name": "toDrugstore",
                 "nodeType": "VariableDeclaration",
-                "scope": 10,
-                "src": "260:10:0",
+                "scope": 56,
+                "src": "261:19:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -385,10 +395,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 8,
+                  "id": 54,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "260:7:0",
+                  "src": "261:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
@@ -400,50 +410,50 @@
             ],
             "name": "RollDetail",
             "nodeType": "StructDefinition",
-            "scope": 19,
-            "src": "85:220:0",
+            "scope": 66,
+            "src": "85:221:1",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 14,
+            "id": 60,
             "name": "rollList",
             "nodeType": "VariableDeclaration",
-            "scope": 19,
-            "src": "339:37:0",
+            "scope": 66,
+            "src": "340:37:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$10_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$56_storage_$",
               "typeString": "mapping(string => struct Merchant.RollDetail)"
             },
             "typeName": {
-              "id": 13,
+              "id": 59,
               "keyType": {
-                "id": 11,
+                "id": 57,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "348:6:0",
+                "src": "349:6:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "339:28:0",
+              "src": "340:28:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$10_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_RollDetail_$56_storage_$",
                 "typeString": "mapping(string => struct Merchant.RollDetail)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 12,
+                "id": 58,
                 "name": "RollDetail",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 10,
-                "src": "356:10:0",
+                "referencedDeclaration": 56,
+                "src": "357:10:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_RollDetail_$10_storage_ptr",
+                  "typeIdentifier": "t_struct$_RollDetail_$56_storage_ptr",
                   "typeString": "struct Merchant.RollDetail"
                 }
               }
@@ -453,43 +463,53 @@
           },
           {
             "constant": false,
-            "id": 18,
+            "id": 65,
             "name": "simpleRollList",
             "nodeType": "VariableDeclaration",
-            "scope": 19,
-            "src": "411:40:0",
+            "scope": 66,
+            "src": "412:42:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
-              "typeString": "mapping(address => string)"
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+              "typeString": "mapping(address => string[])"
             },
             "typeName": {
-              "id": 17,
+              "id": 64,
               "keyType": {
-                "id": 15,
+                "id": 61,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "420:7:0",
+                "src": "421:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "411:25:0",
+              "src": "412:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
-                "typeString": "mapping(address => string)"
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_string_storage_$dyn_storage_$",
+                "typeString": "mapping(address => string[])"
               },
               "valueType": {
-                "id": 16,
-                "name": "string",
-                "nodeType": "ElementaryTypeName",
-                "src": "429:6:0",
+                "baseType": {
+                  "id": 62,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "430:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "id": 63,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "430:8:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
                 }
               }
             },
@@ -497,11 +517,11 @@
             "visibility": "internal"
           }
         ],
-        "scope": 20,
-        "src": "38:423:0"
+        "scope": 67,
+        "src": "38:426:1"
       }
     ],
-    "src": "0:461:0"
+    "src": "0:464:1"
   },
   "compiler": {
     "name": "solc",
@@ -509,5 +529,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-04T01:23:29.113Z"
+  "updatedAt": "2018-09-04T07:58:44.568Z"
 }
