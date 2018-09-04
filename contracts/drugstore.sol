@@ -14,5 +14,5 @@ contract Drugstore {
     mapping (string=>SaleDetail) saleList;
 
     //简化销售记录
-    mapping (address=>string) simpleSaleList;
+    mapping (address=>string[]) simpleSaleList;
 }

@@ -12,4 +12,7 @@ contract Customer {
 
     //举报信息映射
     mapping (string=>ReportDetail) reportList;
+
+    //简单举报信息映射
+    mapping (address=>string[]) simplereportList;
 }
