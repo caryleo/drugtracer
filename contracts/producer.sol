@@ -11,8 +11,6 @@ contract Producer {
     }
 
 
-
-
     //出厂信息映射
     mapping (string => ProduceDetail) produceList;
 
@@ -29,9 +27,21 @@ contract Producer {
     //流入记录
     mapping (address => string[]) simpleInflowList;
 
-    function setProduce(string drugCode,string drug,address producer,string producerDate)
-    public constant returns(bool){
+    //插入出厂记录，state默认true，药品批号由前端生成，返回处理结果（布尔值）
+    //drugCode:药品批号
+    //drug:药品名称
+    //producer:厂商编号
+    //produceDate:出厂日期
+    //return 返回函数执行成功的bool值
+    function setProduce(string drugCode,string drug,address producer,string produceDate) public  returns(bool){
+
+        ProduceDetail druginfo;
+        druginfo.drug = drug;
+        druginfo.state = true;
+        druginfo.producerCode = producer;
+        druginfo.produceDate = produceDate;
 
     }
-
+    fun
+    function setInflow(string number , string drugCode , uint volume , address toMerchan) public returns{}
 }
