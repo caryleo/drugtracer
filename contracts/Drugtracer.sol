@@ -1,8 +1,8 @@
 pragma solidity ^0.4.0;
-
+pragma experimental ABIEncoderV2;
 contract DrugTracer {
 
-    //------药厂方数据结构-------------------
+    //------药厂方数据结构------------------
 
     //出厂信息
     struct ProduceDetail {
@@ -32,7 +32,7 @@ contract DrugTracer {
     //流入记录
     mapping (address => string[]) simpleInflowList;
 
-    //------销售商方数据结构----------------------
+    //------销售商方数据结构---------------------
 
     //流通信息
     struct RollDetail {
@@ -50,7 +50,7 @@ contract DrugTracer {
     //简化流出记录
     mapping (address=>string[]) simpleRollList;
 
-    //------药店方数据结构--------------------
+    //------药店方数据结构-------------------
 
     //销售信息
     struct SaleDetail {
@@ -84,7 +84,7 @@ contract DrugTracer {
     //简单举报信息映射
     mapping (address=>string[]) simpleReportList;
 
-    //------监管部门方数据结构--------------------
+    //------监管部门方数据结构-------------------
 
     //受理信息
     struct DealDetail {
@@ -123,7 +123,7 @@ contract DrugTracer {
             return false;
         }
     }
-
+    
     //插入流入市场记录，交易单号为交易的hash值，返回处理结果（布尔值）
     //number:流入交易单号
     //drugCode:药品批号
@@ -156,9 +156,10 @@ contract DrugTracer {
                                 internal {
         simpleInflowList[to].push(number);
     }
+    //------------------------------------------------    
 
     //------销售商方set方法---------------------
-
+    
     function setRoll (
                         string number,
                         string inflowNumber,
