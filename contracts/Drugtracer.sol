@@ -291,6 +291,7 @@ contract DrugTracer {
         DealDetail memory dealInfo = DealDetail(dealDate, result, true);
         if (dealList[number].isValid == false) {
             reportList[number].state = true;
+            dealList[number] = dealInfo;
             if (result == true) {
                 //情况属实，监管部门采取措施
                 produceList[drugCode].state = false;
@@ -304,21 +305,55 @@ contract DrugTracer {
 
     //------药厂方get方法
 
+    function getProduce (string number) public returns (string) {
+        //TODO:GETPRODUCE
+    }
 
+    function getInflow (string drugCode) public returns (string) {
+        //TODO:GETINFLOW
+    }
+
+    function getSimpleInflow (address to) public returns (string[]) {
+        //TODO:GETSIMPLEINFLOW
+    }
 
     //------销售商方get方法
 
+    function getRoll (string number) public returns (string) {
+        //TODO:GETROLL
+    }
 
+    function getSimpleRoll (address to) public returns (string[]) {
+        //TODO:GETSIMPLEROLL
+    }
 
     //------药店方get方法
 
+    function getSale (string number) public returns (string) {
 
+    }
+
+    function getSimpleSale (address to) public returns (string[]) {
+
+    }
 
     //------消费者方get方法
 
+    function getReport (string number) public returns (string) {
 
+    }
+    
+    function getSimpleReport (address to) public returns (string[]) {
+
+    }
+
+    function getSource (string number) public returns (string) {
+
+    }
 
     //------监管部门方get方法
 
-
+    function getAdminReport () public returns (string) {
+        
+    }
 }
