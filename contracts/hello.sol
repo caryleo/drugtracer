@@ -7,5 +7,4 @@ contract hello{
             {
                 return re;
             }
-
-         }
+}
