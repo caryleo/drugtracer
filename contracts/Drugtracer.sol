@@ -1,5 +1,5 @@
 pragma solidity ^0.4.0;
-
+pragma experimental ABIEncoderV2;
 contract DrugTracer {
 
     //------------------------------------------
@@ -108,7 +108,8 @@ contract DrugTracer {
         produceList[drugCode] = drugInfo;
         return true;
     }
-
+    //------------------------------------------------
+    
     //插入流入市场记录，交易单号为交易的hash值，返回处理结果（布尔值）
     //number:流入交易单号
     //drugCode:药品批号
@@ -126,12 +127,42 @@ contract DrugTracer {
         setSimpleInflow(toMerchant, number);
         return true;
     }
-
+    //------------------------------------------------
+    
+    //插入简单记录，内部方法
+    //to:
     function setSimpleInflow (address to, string number) internal {
         simpleInflowList[to].push(number);
     }
+    //------------------------------------------------    
 
+    function getInflow(string number) public returns(InflowDetail){
+        return inflowList[number];
+    }
     //------------------------------------------------
-
     
+    function getProduce(string drugCode) public returns(ProduceDetail){
+        return produceList[drugCode];
+    }
+    //------------------------------------------------
+    
+    function getSimpleInflow(address to) internal returns(string[]){
+        return simpleInflowList[to];
+    }
+    //------------------------------------------------
+    
+    function setRoll(
+                    string number,
+                    string inflowNumber,
+                    string circulateDate,
+                    uint volume,
+                    address toDrugstore)
+                    public returns(bool){
+        RollDetail memory RollInfo = RollDetail(inflowNumber,circulateDate,volume,toDrugstore);
+        rollList[number] = RollInfo;
+    }
+    //------------------------------------------------
+    
+    //function getSimple
+
 }
