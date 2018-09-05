@@ -82,7 +82,7 @@ contract DrugTracer {
     mapping (string=>ReportDetail) reportList;
 
     //简单举报信息映射
-    mapping (address=>string[]) simplereportList;
+    mapping (address=>string[]) simpleReportList;
 
     //------监管部门方数据结构--------------------
 
@@ -147,7 +147,13 @@ contract DrugTracer {
         }
     }
 
-    function setSimpleInflow (address to, string number) internal {
+    //插入简单记录，内部方法
+    //to:销售方地址
+    //number:流出单号
+    function setSimpleInflow (
+                                address to,
+                                string number)
+                                internal {
         simpleInflowList[to].push(number);
     }
 
@@ -170,10 +176,13 @@ contract DrugTracer {
 
     //------消费者方set方法------------------------
 
-
-
-    //------监管部门方set方法----------------------------
-
+    //插入举报记录，单号为本次交易hash值，销售单号由前端记录给出，受理状态默认为false，返回操作状态（布尔值）。同时向动态数组中存入举报单号
+    //number:举报单号
+    //saleNumber:交易单号
+    //reportDate:举报日期
+    //report:举报理由
+    //state:受理状态，false为未受理（默认），true为已受理
+    //return:true为操作成功，false为操作失败
     function setReport (
                         string number,
                         string saleNumber,
@@ -181,10 +190,28 @@ contract DrugTracer {
                         string report,
                         bool state)
                         public returns (bool) {
-        ReportDetail memory reportInfo = ReportDetail(saleNumber, reportDate, report, false, true);
-        reportList[number] = reportInfo;
-        return true;
+        ReportDetail memory reportInfo = ReportDetail(saleNumber, reportDate, report, state, true);
+        if (reportList[number].isValid == false) {
+            reportList[number] = reportInfo;
+            return true;
+        }
+        else {
+            return false;
+        }
     }
+
+    //插入简单记录，内部方法
+    //to:
+    function setSimpleReport (
+                                address to,
+                                string number)
+                                internal {
+        simpleReportList[to].push(number);
+    }
+    
+    //------监管部门方set方法----------------------------
+
+    
 
     //------药厂方get方法
 
