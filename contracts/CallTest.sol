@@ -1,12 +1,12 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.20;
 pragma experimental ABIEncoderV2;
-contract CallTest{
-    string[] b ;
-    function array123()  constant public returns(string[]){
+import "../strings.sol";
 
+contract CallTest {
+    using strings for *;
+    string public s;
 
-        b.push("123123");
-        b.push("456");
-        return b;
+    function foo(string s1, string s2) {
+        s = s1.toSlice().concat(s2.toSlice());
     }
 }

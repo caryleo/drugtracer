@@ -17,6 +17,7 @@
     }
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
   "bytecode": "0x60806040526040805190810160405280600b81526020017f68656c6c6f20776f726c640000000000000000000000000000000000000000008152506000908051906020019061004f929190610062565b5034801561005c57600080fd5b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b6101a4806101166000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806391be5d2c14610046575b600080fd5b34801561005257600080fd5b5061005b6100d6565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009b578082015181840152602081019050610080565b50505050905090810190601f1680156100c85780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561016e5780601f106101435761010080835404028352916020019161016e565b820191906000526020600020905b81548152906001019060200180831161015157829003601f168201915b50505050509050905600a165627a7a72305820e94c5a9195f5e0ac259ede0d2629586187b23382bdf4a476d289a292007802e40029",
   "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806391be5d2c14610046575b600080fd5b34801561005257600080fd5b5061005b6100d6565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009b578082015181840152602081019050610080565b50505050905090810190601f1680156100c85780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561016e5780601f106101435761010080835404028352916020019161016e565b820191906000526020600020905b81548152906001019060200180831161015157829003601f168201915b50505050509050905600a165627a7a72305820e94c5a9195f5e0ac259ede0d2629586187b23382bdf4a476d289a292007802e40029",
   "sourceMap": "25:180:1:-;;;54:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;25:180;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:180:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
@@ -29,20 +30,27 @@
   "sourceMap": "27:186:2:-;;;58:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;27:186;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:186:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
   "deployedSourceMap": "27:186:2:-;;;;;;;;;;;;;;;;;;;;;;;;98:103;;8:9:-1;5:2;;;30:1;27;20:12;5:2;98:103:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;98:103:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;136:6;183:2;176:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;98:103;:::o",
   "source": "pragma solidity ^0.4.2;\r\n\r\ncontract hello{\r\n\r\n            string re = \"hello world\";\r\n            function fa() public constant returns(string)\r\n            {\r\n                return re;\r\n            }\r\n         }\r\n",
+=======
+  "bytecode": "0x60806040526040805190810160405280600b81526020017f68656c6c6f20776f726c640000000000000000000000000000000000000000008152506000908051906020019061004f929190610062565b5034801561005c57600080fd5b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b6101a4806101166000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806391be5d2c14610046575b600080fd5b34801561005257600080fd5b5061005b6100d6565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009b578082015181840152602081019050610080565b50505050905090810190601f1680156100c85780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561016e5780601f106101435761010080835404028352916020019161016e565b820191906000526020600020905b81548152906001019060200180831161015157829003601f168201915b50505050509050905600a165627a7a7230582091a7eb689c326cca889ea83e9f0fd97d437487c6bcf2425ec05a1a070f416c040029",
+  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806391be5d2c14610046575b600080fd5b34801561005257600080fd5b5061005b6100d6565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009b578082015181840152602081019050610080565b50505050905090810190601f1680156100c85780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561016e5780601f106101435761010080835404028352916020019161016e565b820191906000526020600020905b81548152906001019060200180831161015157829003601f168201915b50505050509050905600a165627a7a7230582091a7eb689c326cca889ea83e9f0fd97d437487c6bcf2425ec05a1a070f416c040029",
+  "sourceMap": "27:137:7:-;;;50:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;27:137;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:137:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "27:137:7:-;;;;;;;;;;;;;;;;;;;;;;;;82:79;;8:9:-1;5:2;;;30:1;27;20:12;5:2;82:79:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;82:79:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;120:6;151:2;144:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;82:79;:::o",
+  "source": "pragma solidity ^0.4.2;\r\n\r\ncontract hello{\r\n\r\n    string re = \"hello world\";\r\n    function fa() public constant returns(string)\r\n    {\r\n        return re;\r\n    }\r\n}\r\n",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
   "sourcePath": "C:\\Users\\10848\\Desktop\\solidity\\drugtracer\\contracts\\hello.sol",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
   "ast": {
     "absolutePath": "/Users/mac/Documents/代码们（vs code）/drugtracer/contracts/hello.sol",
     "exportedSymbols": {
       "hello": [
-        49
+        367
       ]
     },
-    "id": 50,
+    "id": 368,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 37,
+        "id": 355,
         "literals": [
           "solidity",
           "^",
@@ -50,7 +58,7 @@
           ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:2"
+        "src": "0:23:7"
       },
       {
         "baseContracts": [],
@@ -58,18 +66,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 49,
+        "id": 367,
         "linearizedBaseContracts": [
-          49
+          367
         ],
         "name": "hello",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 40,
+            "id": 358,
             "name": "re",
             "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
             "scope": 70,
             "src": "54:25:1",
@@ -77,6 +86,10 @@
             "scope": 49,
             "src": "58:25:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+            "scope": 367,
+            "src": "50:25:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -84,14 +97,18 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 38,
+              "id": 356,
               "name": "string",
               "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "54:6:1",
 =======
               "src": "58:6:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "50:6:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -100,7 +117,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "68656c6c6f20776f726c64",
-              "id": 39,
+              "id": 357,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -108,10 +125,14 @@
               "lValueRequested": false,
               "nodeType": "Literal",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "src": "66:13:1",
 =======
               "src": "70:13:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "62:13:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad",
@@ -123,21 +144,26 @@
           },
           {
             "body": {
-              "id": 47,
+              "id": 365,
               "nodeType": "Block",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "151:42:1",
 =======
               "src": "157:44:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "133:28:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 45,
+                    "id": 363,
                     "name": "re",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "referencedDeclaration": 61,
                     "src": "176:2:1",
@@ -145,24 +171,32 @@
                     "referencedDeclaration": 40,
                     "src": "183:2:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+                    "referencedDeclaration": 358,
+                    "src": "151:2:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 44,
-                  "id": 46,
+                  "functionReturnParameters": 362,
+                  "id": 364,
                   "nodeType": "Return",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "169:9:1"
 =======
                   "src": "176:9:2"
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+                  "src": "144:9:7"
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
                 }
               ]
             },
             "documentation": null,
-            "id": 48,
+            "id": 366,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -170,25 +204,30 @@
             "name": "fa",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 41,
+              "id": 359,
               "nodeType": "ParameterList",
               "parameters": [],
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "104:2:1"
 =======
               "src": "109:2:2"
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "93:2:7"
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
             },
             "payable": false,
             "returnParameters": {
-              "id": 44,
+              "id": 362,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 43,
+                  "id": 361,
                   "name": "",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "scope": 69,
                   "src": "131:6:1",
@@ -196,6 +235,10 @@
                   "scope": 48,
                   "src": "136:6:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+                  "scope": 366,
+                  "src": "120:6:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -203,14 +246,18 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 42,
+                    "id": 360,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "131:6:1",
 =======
                     "src": "136:6:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+                    "src": "120:6:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -220,6 +267,7 @@
                   "visibility": "internal"
                 }
               ],
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "130:8:1"
             },
@@ -231,11 +279,18 @@
             "scope": 49,
             "src": "98:103:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "119:8:7"
+            },
+            "scope": 367,
+            "src": "82:79:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
+<<<<<<< HEAD
 <<<<<<< HEAD
         "scope": 71,
         "src": "25:180:1"
@@ -249,19 +304,26 @@
     ],
     "src": "0:215:2"
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+        "scope": 368,
+        "src": "27:137:7"
+      }
+    ],
+    "src": "0:166:7"
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
   },
   "legacyAST": {
     "absolutePath": "/Users/mac/Documents/代码们（vs code）/drugtracer/contracts/hello.sol",
     "exportedSymbols": {
       "hello": [
-        49
+        367
       ]
     },
-    "id": 50,
+    "id": 368,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 37,
+        "id": 355,
         "literals": [
           "solidity",
           "^",
@@ -269,7 +331,7 @@
           ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:2"
+        "src": "0:23:7"
       },
       {
         "baseContracts": [],
@@ -277,18 +339,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 49,
+        "id": 367,
         "linearizedBaseContracts": [
-          49
+          367
         ],
         "name": "hello",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 40,
+            "id": 358,
             "name": "re",
             "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
             "scope": 70,
             "src": "54:25:1",
@@ -296,6 +359,10 @@
             "scope": 49,
             "src": "58:25:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+            "scope": 367,
+            "src": "50:25:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -303,14 +370,18 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 38,
+              "id": 356,
               "name": "string",
               "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "54:6:1",
 =======
               "src": "58:6:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "50:6:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -319,7 +390,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "68656c6c6f20776f726c64",
-              "id": 39,
+              "id": 357,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -327,10 +398,14 @@
               "lValueRequested": false,
               "nodeType": "Literal",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "src": "66:13:1",
 =======
               "src": "70:13:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "62:13:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad",
@@ -342,21 +417,26 @@
           },
           {
             "body": {
-              "id": 47,
+              "id": 365,
               "nodeType": "Block",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "151:42:1",
 =======
               "src": "157:44:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "133:28:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 45,
+                    "id": 363,
                     "name": "re",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "referencedDeclaration": 61,
                     "src": "176:2:1",
@@ -364,24 +444,32 @@
                     "referencedDeclaration": 40,
                     "src": "183:2:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+                    "referencedDeclaration": 358,
+                    "src": "151:2:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 44,
-                  "id": 46,
+                  "functionReturnParameters": 362,
+                  "id": 364,
                   "nodeType": "Return",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "169:9:1"
 =======
                   "src": "176:9:2"
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+                  "src": "144:9:7"
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
                 }
               ]
             },
             "documentation": null,
-            "id": 48,
+            "id": 366,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -389,25 +477,30 @@
             "name": "fa",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 41,
+              "id": 359,
               "nodeType": "ParameterList",
               "parameters": [],
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "104:2:1"
 =======
               "src": "109:2:2"
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "93:2:7"
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
             },
             "payable": false,
             "returnParameters": {
-              "id": 44,
+              "id": 362,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 43,
+                  "id": 361,
                   "name": "",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "scope": 69,
                   "src": "131:6:1",
@@ -415,6 +508,10 @@
                   "scope": 48,
                   "src": "136:6:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+                  "scope": 366,
+                  "src": "120:6:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -422,14 +519,18 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 42,
+                    "id": 360,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "131:6:1",
 =======
                     "src": "136:6:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+                    "src": "120:6:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -439,6 +540,7 @@
                   "visibility": "internal"
                 }
               ],
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "130:8:1"
             },
@@ -450,11 +552,18 @@
             "scope": 49,
             "src": "98:103:2",
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+              "src": "119:8:7"
+            },
+            "scope": 367,
+            "src": "82:79:7",
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
+<<<<<<< HEAD
 <<<<<<< HEAD
         "scope": 71,
         "src": "25:180:1"
@@ -468,6 +577,13 @@
     ],
     "src": "0:215:2"
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+        "scope": 368,
+        "src": "27:137:7"
+      }
+    ],
+    "src": "0:166:7"
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
   },
   "compiler": {
     "name": "solc",
@@ -477,6 +593,7 @@
     "666": {
       "events": {},
       "links": {},
+<<<<<<< HEAD
 <<<<<<< HEAD
       "address": "0xdf4f80c10f7708b467114d5a0d50de0e644944f0",
       "transactionHash": "0x5853c1a0e3dbc04d9fbbdb0116b14c5a6c75e2f4e5ad36801584cd849cad3db2"
@@ -492,4 +609,12 @@
   "schemaVersion": "2.0.1",
   "updatedAt": "2018-09-04T03:19:50.083Z"
 >>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
+=======
+      "address": "0x62fb3fd2106f175b15d0ed9263333bf659c8f858",
+      "transactionHash": "0x9d5ee573442021f1f3621b9fb0df456d3644e8a9e57ca091b5a5d9016376430d"
+    }
+  },
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-04T17:42:03.873Z"
+>>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
 }

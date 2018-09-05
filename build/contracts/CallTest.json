@@ -4,23 +4,41 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "array123",
+      "name": "s",
       "outputs": [
         {
           "name": "",
-          "type": "string[]"
+          "type": "string"
         }
       ],
       "payable": false,
       "stateMutability": "view",
       "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "s1",
+          "type": "string"
+        },
+        {
+          "name": "s2",
+          "type": "string"
+        }
+      ],
+      "name": "foo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b50610453806100206000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638eca578514610046575b600080fd5b34801561005257600080fd5b5061005b610071565b6040516100689190610383565b60405180910390f35b606060008060018154018082558091505090600182039060005260206000200160006040805190810160405280600681526020017f3132333132330000000000000000000000000000000000000000000000000000815250909190915090805190602001906100e192919061023a565b505060008060018154018082558091505090600182039060005260206000200160006040805190810160405280600381526020017f34353600000000000000000000000000000000000000000000000000000000008152509091909150908051906020019061015192919061023a565b50506000805480602002602001604051908101604052809291908181526020016000905b82821015610231578382906000526020600020018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561021d5780601f106101f25761010080835404028352916020019161021d565b820191906000526020600020905b81548152906001019060200180831161020057829003601f168201915b505050505081526020019060010190610175565b50505050905090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061027b57805160ff19168380011785556102a9565b828001600101855582156102a9579182015b828111156102a857825182559160200191906001019061028d565b5b5090506102b691906102ba565b5090565b6102dc91905b808211156102d85760008160009055506001016102c0565b5090565b90565b60006102ea826103b2565b80845260208401935083602082028501610303856103a5565b60005b8481101561033c57838303885261031e83835161034d565b9250610329826103c8565b9150602088019750600181019050610306565b508196508694505050505092915050565b6000610358826103bd565b80845261036c8160208601602086016103d5565b61037581610408565b602085010191505092915050565b6000602082019050818103600083015261039d81846102df565b905092915050565b6000602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b60005b838110156103f35780820151818401526020810190506103d8565b83811115610402576000848401525b50505050565b6000601f19601f83011690509190505600a265627a7a723058207bb4f6edf1f2848851c9a059fc125c6dc1ace68ce0e03cf02484152abea4fb786c6578706572696d656e74616cf50037",
-  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638eca578514610046575b600080fd5b34801561005257600080fd5b5061005b610071565b6040516100689190610383565b60405180910390f35b606060008060018154018082558091505090600182039060005260206000200160006040805190810160405280600681526020017f3132333132330000000000000000000000000000000000000000000000000000815250909190915090805190602001906100e192919061023a565b505060008060018154018082558091505090600182039060005260206000200160006040805190810160405280600381526020017f34353600000000000000000000000000000000000000000000000000000000008152509091909150908051906020019061015192919061023a565b50506000805480602002602001604051908101604052809291908181526020016000905b82821015610231578382906000526020600020018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561021d5780601f106101f25761010080835404028352916020019161021d565b820191906000526020600020905b81548152906001019060200180831161020057829003601f168201915b505050505081526020019060010190610175565b50505050905090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061027b57805160ff19168380011785556102a9565b828001600101855582156102a9579182015b828111156102a857825182559160200191906001019061028d565b5b5090506102b691906102ba565b5090565b6102dc91905b808211156102d85760008160009055506001016102c0565b5090565b90565b60006102ea826103b2565b80845260208401935083602082028501610303856103a5565b60005b8481101561033c57838303885261031e83835161034d565b9250610329826103c8565b9150602088019750600181019050610306565b508196508694505050505092915050565b6000610358826103bd565b80845261036c8160208601602086016103d5565b61037581610408565b602085010191505092915050565b6000602082019050818103600083015261039d81846102df565b905092915050565b6000602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b60005b838110156103f35780820151818401526020810190506103d8565b83811115610402576000848401525b50505050565b6000601f19601f83011690509190505600a265627a7a723058207bb4f6edf1f2848851c9a059fc125c6dc1ace68ce0e03cf02484152abea4fb786c6578706572696d656e74616cf50037",
-  "sourceMap": "60:181:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:181:0;;;;;;;",
-  "deployedSourceMap": "60:181:0:-;;;;;;;;;;;;;;;;;;;;;;;;102:136;;8:9:-1;5:2;;;30:1;27;20:12;5:2;102:136:0;;;;;;;;;;;;;;;;;;;;;147:8;171:1;:16;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;171:16:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;198:1;:13;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;198:13:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;229:1;222:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;102:136;:::o;60:181::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;34:773:-1:-;;181:60;235:5;181:60;;;259:6;254:3;247:19;283:4;278:3;274:14;267:21;;331:3;373:4;365:6;361:17;356:3;352:27;399:62;455:5;399:62;;;482:1;467:301;492:6;489:1;486:13;467:301;;;554:9;548:4;544:20;539:3;532:33;580:70;645:4;636:6;630:13;580:70;;;572:78;;667:66;726:6;667:66;;;657:76;;756:4;751:3;747:14;740:21;;514:1;511;507:9;502:14;;467:301;;;471:14;781:4;774:11;;798:3;791:10;;160:647;;;;;;;;;815:292;;913:35;942:5;913:35;;;965:6;960:3;953:19;977:63;1033:6;1026:4;1021:3;1017:14;1010:4;1003:5;999:16;977:63;;;1072:29;1094:6;1072:29;;;1065:4;1060:3;1056:14;1052:50;1045:57;;893:214;;;;;;1114:365;;1284:2;1273:9;1269:18;1261:26;;1334:9;1328:4;1324:20;1320:1;1309:9;1305:17;1298:47;1359:110;1464:4;1455:6;1359:110;;;1351:118;;1255:224;;;;;1488:127;;1603:4;1595:6;1591:17;1580:28;;1572:43;;;;1624:113;;1726:5;1720:12;1710:22;;1704:33;;;;1744:88;;1821:5;1815:12;1805:22;;1799:33;;;;1840:128;;1957:4;1949:6;1945:17;1934:28;;1927:41;;;;1977:268;2042:1;2049:101;2063:6;2060:1;2057:13;2049:101;;;2139:1;2134:3;2130:11;2124:18;2120:1;2115:3;2111:11;2104:39;2085:2;2082:1;2078:10;2073:15;;2049:101;;;2165:6;2162:1;2159:13;2156:2;;;2230:1;2221:6;2216:3;2212:16;2205:27;2156:2;2026:219;;;;;2253:97;;2341:2;2337:7;2332:2;2325:5;2321:14;2317:28;2307:38;;2301:49;;;",
-  "source": "pragma solidity ^0.4.0;\r\npragma experimental ABIEncoderV2;\r\ncontract CallTest{\r\n    string[] b ;\r\n    function array123()  constant public returns(string[]){\r\n\r\n\r\n        b.push(\"123123\");\r\n        b.push(\"456\");\r\n        return b;\r\n    }\r\n}\r\n",
+  "bytecode": "0x608060405234801561001057600080fd5b50610545806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063124a83fa1461005157806386b714e21461007a575b600080fd5b34801561005d57600080fd5b5061007860048036036100739190810190610390565b6100a5565b005b34801561008657600080fd5b5061008f6100e2565b60405161009c9190610432565b60405180910390f35b6100c86100b182610180565b6100ba84610180565b6101ae90919063ffffffff16565b600090805190602001906100dd92919061027b565b505050565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101785780601f1061014d57610100808354040283529160200191610178565b820191906000526020600020905b81548152906001019060200180831161015b57829003601f168201915b505050505081565b6101886102fb565b600060208301905060408051908101604052808451815260200182815250915050919050565b606080600083600001518560000151016040519080825280601f01601f1916602001820160405280156101f05781602001602082028038833980820191505090505b50915060208201905061020c8186602001518760000151610230565b6102258560000151820185602001518660000151610230565b819250505092915050565b60005b6020821015156102585782518452602084019350602083019250602082039150610233565b6001826020036101000a0390508019835116818551168181178652505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102bc57805160ff19168380011785556102ea565b828001600101855582156102ea579182015b828111156102e95782518255916020019190600101906102ce565b5b5090506102f79190610315565b5090565b604080519081016040528060008152602001600081525090565b61033791905b8082111561033357600081600090555060010161031b565b5090565b90565b600082601f830112151561034d57600080fd5b813561036061035b82610481565b610454565b9150808252602083016020830185838301111561037c57600080fd5b6103878382846104b8565b50505092915050565b600080604083850312156103a357600080fd5b600083013567ffffffffffffffff8111156103bd57600080fd5b6103c98582860161033a565b925050602083013567ffffffffffffffff8111156103e657600080fd5b6103f28582860161033a565b9150509250929050565b6000610407826104ad565b80845261041b8160208601602086016104c7565b610424816104fa565b602085010191505092915050565b6000602082019050818103600083015261044c81846103fc565b905092915050565b6000604051905081810181811067ffffffffffffffff8211171561047757600080fd5b8060405250919050565b600067ffffffffffffffff82111561049857600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b82818337600083830152505050565b60005b838110156104e55780820151818401526020810190506104ca565b838111156104f4576000848401525b50505050565b6000601f19601f83011690509190505600a265627a7a723058202244b8729f899cbce3fd48ef489e7b3fc7d34a5ea201c0c834dc799a9090c6f16c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063124a83fa1461005157806386b714e21461007a575b600080fd5b34801561005d57600080fd5b5061007860048036036100739190810190610390565b6100a5565b005b34801561008657600080fd5b5061008f6100e2565b60405161009c9190610432565b60405180910390f35b6100c86100b182610180565b6100ba84610180565b6101ae90919063ffffffff16565b600090805190602001906100dd92919061027b565b505050565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101785780601f1061014d57610100808354040283529160200191610178565b820191906000526020600020905b81548152906001019060200180831161015b57829003601f168201915b505050505081565b6101886102fb565b600060208301905060408051908101604052808451815260200182815250915050919050565b606080600083600001518560000151016040519080825280601f01601f1916602001820160405280156101f05781602001602082028038833980820191505090505b50915060208201905061020c8186602001518760000151610230565b6102258560000151820185602001518660000151610230565b819250505092915050565b60005b6020821015156102585782518452602084019350602083019250602082039150610233565b6001826020036101000a0390508019835116818551168181178652505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102bc57805160ff19168380011785556102ea565b828001600101855582156102ea579182015b828111156102e95782518255916020019190600101906102ce565b5b5090506102f79190610315565b5090565b604080519081016040528060008152602001600081525090565b61033791905b8082111561033357600081600090555060010161031b565b5090565b90565b600082601f830112151561034d57600080fd5b813561036061035b82610481565b610454565b9150808252602083016020830185838301111561037c57600080fd5b6103878382846104b8565b50505092915050565b600080604083850312156103a357600080fd5b600083013567ffffffffffffffff8111156103bd57600080fd5b6103c98582860161033a565b925050602083013567ffffffffffffffff8111156103e657600080fd5b6103f28582860161033a565b9150509250929050565b6000610407826104ad565b80845261041b8160208601602086016104c7565b610424816104fa565b602085010191505092915050565b6000602082019050818103600083015261044c81846103fc565b905092915050565b6000604051905081810181811067ffffffffffffffff8211171561047757600080fd5b8060405250919050565b600067ffffffffffffffff82111561049857600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b82818337600083830152505050565b60005b838110156104e55780820151818401526020810190506104ca565b838111156104f4576000848401525b50505050565b6000601f19601f83011690509190505600a265627a7a723058202244b8729f899cbce3fd48ef489e7b3fc7d34a5ea201c0c834dc799a9090c6f16c6578706572696d656e74616cf50037",
+  "sourceMap": "89:169:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;89:169:0;;;;;;;",
+  "deployedSourceMap": "89:169:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;164:91;;8:9:-1;5:2;;;30:1;27;20:12;5:2;164:91:0;;;;;;;;;;;;;;;;;;;140:15;;8:9:-1;5:2;;;30:1;27;20:12;5:2;140:15:0;;;;;;;;;;;;;;;;;;;;164:91;214:33;234:12;:2;:10;:12::i;:::-;214;:2;:10;:12::i;:::-;:19;;:33;;;;:::i;:::-;210:1;:37;;;;;;;;;;;;:::i;:::-;;164:91;;:::o;140:15::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;2905:216:4:-;2965:5;;:::i;:::-;2990:8;3050:4;3044;3040:15;3033:22;;3083:30;;;;;;;;;3095:4;3089:18;3083:30;;;;3109:3;3083:30;;;3076:37;;2905:216;;;;:::o;24617:362::-;24695:6;24721:17;24786:11;24764:5;:10;;;24752:4;:9;;;:22;24741:34;;;;;;;;;;;;;;;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;148:4;140:6;136:17;126:27;;0:157;24741:34:4;;;;24721:54;;24838:2;24833:3;24829:12;24819:22;;24853:36;24860:6;24868:4;:9;;;24879:4;:9;;;24853:6;:36::i;:::-;24900:50;24916:4;:9;;;24907:6;:18;24927:5;:10;;;24939:5;:10;;;24900:6;:50::i;:::-;24968:3;24961:10;;24617:362;;;;;;:::o;2133:565::-;2470:9;2255:170;2268:2;2261:3;:9;;2255:170;;;2345:3;2339:10;2333:4;2326:24;2387:2;2379:10;;;;2411:2;2404:9;;;;2279:2;2272:9;;;;2255:170;;;2502:1;2495:3;2490:2;:8;2482:3;:17;:21;2470:33;;2573:4;2569:9;2563:3;2557:10;2553:26;2626:4;2619;2613:11;2609:22;2671:7;2661:8;2658:21;2652:4;2645:35;2523:168;;;;;;:::o;89:169:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;6:442:-1:-;;108:3;101:4;93:6;89:17;85:27;78:35;75:2;;;126:1;123;116:12;75:2;163:6;150:20;185:65;200:49;242:6;200:49;;;185:65;;;176:74;;270:6;263:5;256:21;306:4;298:6;294:17;339:4;332:5;328:16;374:3;365:6;360:3;356:16;353:25;350:2;;;391:1;388;381:12;350:2;401:41;435:6;430:3;425;401:41;;;68:380;;;;;;;;456:578;;;597:2;585:9;576:7;572:23;568:32;565:2;;;613:1;610;603:12;565:2;676:1;665:9;661:17;648:31;699:18;691:6;688:30;685:2;;;731:1;728;721:12;685:2;751:63;806:7;797:6;786:9;782:22;751:63;;;741:73;;627:193;879:2;868:9;864:18;851:32;903:18;895:6;892:30;889:2;;;935:1;932;925:12;889:2;955:63;1010:7;1001:6;990:9;986:22;955:63;;;945:73;;830:194;559:475;;;;;;1041:292;;1139:35;1168:5;1139:35;;;1191:6;1186:3;1179:19;1203:63;1259:6;1252:4;1247:3;1243:14;1236:4;1229:5;1225:16;1203:63;;;1298:29;1320:6;1298:29;;;1291:4;1286:3;1282:14;1278:50;1271:57;;1119:214;;;;;;1340:273;;1464:2;1453:9;1449:18;1441:26;;1514:9;1508:4;1504:20;1500:1;1489:9;1485:17;1478:47;1539:64;1598:4;1589:6;1539:64;;;1531:72;;1435:178;;;;;1620:256;;1682:2;1676:9;1666:19;;1720:4;1712:6;1708:17;1819:6;1807:10;1804:22;1783:18;1771:10;1768:34;1765:62;1762:2;;;1840:1;1837;1830:12;1762:2;1860:10;1856:2;1849:22;1660:216;;;;;1883:259;;2027:18;2019:6;2016:30;2013:2;;;2059:1;2056;2049:12;2013:2;2103:4;2099:9;2092:4;2084:6;2080:17;2076:33;2068:41;;2132:4;2126;2122:15;2114:23;;1950:192;;;;2149:88;;2226:5;2220:12;2210:22;;2204:33;;;;2245:145;2326:6;2321:3;2316;2303:30;2382:1;2373:6;2368:3;2364:16;2357:27;2296:94;;;;2399:268;2464:1;2471:101;2485:6;2482:1;2479:13;2471:101;;;2561:1;2556:3;2552:11;2546:18;2542:1;2537:3;2533:11;2526:39;2507:2;2504:1;2500:10;2495:15;;2471:101;;;2587:6;2584:1;2581:13;2578:2;;;2652:1;2643:6;2638:3;2634:16;2627:27;2578:2;2448:219;;;;;2675:97;;2763:2;2759:7;2754:2;2747:5;2743:14;2739:28;2729:38;;2723:49;;;",
+  "source": "pragma solidity ^0.4.20;\r\npragma experimental ABIEncoderV2;\r\nimport \"../strings.sol\";\r\n\r\ncontract CallTest {\r\n    using strings for *;\r\n    string public s;\r\n\r\n    function foo(string s1, string s2) {\r\n        s = s1.toSlice().concat(s2.toSlice());\r\n    }\r\n}\r\n",
   "sourcePath": "C:\\Users\\10848\\Desktop\\solidity\\drugtracer\\contracts\\CallTest.sol",
   "ast": {
     "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/contracts/CallTest.sol",
@@ -38,10 +56,10 @@
           "solidity",
           "^",
           "0.4",
-          ".0"
+          ".20"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:24:0"
       },
       {
         "id": 2,
@@ -50,7 +68,18 @@
           "ABIEncoderV2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "25:33:0"
+        "src": "26:33:0"
+      },
+      {
+        "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/strings.sol",
+        "file": "../strings.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 28,
+        "sourceUnit": 2007,
+        "src": "61:24:0",
+        "symbolAliases": [],
+        "unitAlias": ""
       },
       {
         "baseContracts": [],
@@ -66,215 +95,218 @@
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "constant": false,
             "id": 5,
-            "name": "b",
+            "libraryName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "strings",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2006,
+              "src": "120:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_strings_$2006",
+                "typeString": "library strings"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "114:20:0",
+            "typeName": null
+          },
+          {
+            "constant": false,
+            "id": 7,
+            "name": "s",
             "nodeType": "VariableDeclaration",
             "scope": 27,
-            "src": "84:10:0",
+            "src": "140:15:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
-              "typeString": "string[]"
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
             },
             "typeName": {
-              "baseType": {
-                "id": 3,
-                "name": "string",
-                "nodeType": "ElementaryTypeName",
-                "src": "84:6:0",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
-                }
-              },
-              "id": 4,
-              "length": null,
-              "nodeType": "ArrayTypeName",
-              "src": "84:8:0",
+              "id": 6,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "140:6:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
-                "typeString": "string[]"
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
               }
             },
             "value": null,
-            "visibility": "internal"
+            "visibility": "public"
           },
           {
             "body": {
               "id": 25,
               "nodeType": "Block",
-              "src": "156:82:0",
+              "src": "199:56:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "313233313233",
-                        "id": 14,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "string",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "178:8:0",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_stringliteral_43244635c14605fdbe23fa89b5cf12bd14a14bfb9420f66788dd6914a31d8c7b",
-                          "typeString": "literal_string \"123123\""
-                        },
-                        "value": "123123"
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_stringliteral_43244635c14605fdbe23fa89b5cf12bd14a14bfb9420f66788dd6914a31d8c7b",
-                          "typeString": "literal_string \"123123\""
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 11,
-                        "name": "b",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 5,
-                        "src": "171:1:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
-                          "typeString": "string storage ref[] storage ref"
-                        }
-                      },
-                      "id": 13,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "push",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "171:6:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_string_storage_$returns$_t_uint256_$",
-                        "typeString": "function (string storage ref) returns (uint256)"
-                      }
-                    },
-                    "id": 15,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "171:16:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 16,
-                  "nodeType": "ExpressionStatement",
-                  "src": "171:16:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "343536",
-                        "id": 20,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "string",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "205:5:0",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_stringliteral_ae31ed75e23e551fde6d038a3aec15ab1ea2fb6c912f84d137c43e0d0ce559b2",
-                          "typeString": "literal_string \"456\""
-                        },
-                        "value": "456"
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_stringliteral_ae31ed75e23e551fde6d038a3aec15ab1ea2fb6c912f84d137c43e0d0ce559b2",
-                          "typeString": "literal_string \"456\""
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 17,
-                        "name": "b",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 5,
-                        "src": "198:1:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
-                          "typeString": "string storage ref[] storage ref"
-                        }
-                      },
-                      "id": 19,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "push",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "198:6:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_string_storage_$returns$_t_uint256_$",
-                        "typeString": "function (string storage ref) returns (uint256)"
-                      }
-                    },
-                    "id": 21,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "198:13:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 22,
-                  "nodeType": "ExpressionStatement",
-                  "src": "198:13:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
                     "id": 23,
-                    "name": "b",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 5,
-                    "src": "229:1:0",
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 14,
+                      "name": "s",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "210:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 19,
+                              "name": "s2",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 11,
+                              "src": "234:2:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            "id": 20,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "toSlice",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 378,
+                            "src": "234:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_struct$_slice_$318_memory_ptr_$bound_to$_t_string_memory_ptr_$",
+                              "typeString": "function (string memory) pure returns (struct strings.slice memory)"
+                            }
+                          },
+                          "id": 21,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "234:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_slice_$318_memory_ptr",
+                            "typeString": "struct strings.slice memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_struct$_slice_$318_memory_ptr",
+                            "typeString": "struct strings.slice memory"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 15,
+                              "name": "s1",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 9,
+                              "src": "214:2:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            "id": 16,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "toSlice",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 378,
+                            "src": "214:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_struct$_slice_$318_memory_ptr_$bound_to$_t_string_memory_ptr_$",
+                              "typeString": "function (string memory) pure returns (struct strings.slice memory)"
+                            }
+                          },
+                          "id": 17,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "214:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_slice_$318_memory_ptr",
+                            "typeString": "struct strings.slice memory"
+                          }
+                        },
+                        "id": 18,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "concat",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1891,
+                        "src": "214:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_struct$_slice_$318_memory_ptr_$_t_struct$_slice_$318_memory_ptr_$returns$_t_string_memory_ptr_$bound_to$_t_struct$_slice_$318_memory_ptr_$",
+                          "typeString": "function (struct strings.slice memory,struct strings.slice memory) pure returns (string memory)"
+                        }
+                      },
+                      "id": 22,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "214:33:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "210:37:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
-                      "typeString": "string storage ref[] storage ref"
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 10,
                   "id": 24,
-                  "nodeType": "Return",
-                  "src": "222:8:0"
+                  "nodeType": "ExpressionStatement",
+                  "src": "210:37:0"
                 }
               ]
             },
@@ -282,72 +314,88 @@
             "id": 26,
             "implemented": true,
             "isConstructor": false,
-            "isDeclaredConst": true,
+            "isDeclaredConst": false,
             "modifiers": [],
-            "name": "array123",
+            "name": "foo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "119:2:0"
-            },
-            "payable": false,
-            "returnParameters": {
-              "id": 10,
+              "id": 12,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
                   "id": 9,
-                  "name": "",
+                  "name": "s1",
                   "nodeType": "VariableDeclaration",
                   "scope": 26,
-                  "src": "147:8:0",
+                  "src": "177:9:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
-                    "typeString": "string[]"
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
                   },
                   "typeName": {
-                    "baseType": {
-                      "id": 7,
-                      "name": "string",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "147:6:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_string_storage_ptr",
-                        "typeString": "string"
-                      }
-                    },
                     "id": 8,
-                    "length": null,
-                    "nodeType": "ArrayTypeName",
-                    "src": "147:8:0",
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "177:6:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
-                      "typeString": "string[]"
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11,
+                  "name": "s2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26,
+                  "src": "188:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 10,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "188:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "146:10:0"
+              "src": "176:22:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "199:0:0"
             },
             "scope": 27,
-            "src": "102:136:0",
-            "stateMutability": "view",
+            "src": "164:91:0",
+            "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 28,
-        "src": "60:181:0"
+        "src": "89:169:0"
       }
     ],
-    "src": "0:243:0"
+    "src": "0:260:0"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/contracts/CallTest.sol",
@@ -365,10 +413,10 @@
           "solidity",
           "^",
           "0.4",
-          ".0"
+          ".20"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:24:0"
       },
       {
         "id": 2,
@@ -377,7 +425,18 @@
           "ABIEncoderV2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "25:33:0"
+        "src": "26:33:0"
+      },
+      {
+        "absolutePath": "/C/Users/10848/Desktop/solidity/drugtracer/strings.sol",
+        "file": "../strings.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 28,
+        "sourceUnit": 2007,
+        "src": "61:24:0",
+        "symbolAliases": [],
+        "unitAlias": ""
       },
       {
         "baseContracts": [],
@@ -393,215 +452,218 @@
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "constant": false,
             "id": 5,
-            "name": "b",
+            "libraryName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "strings",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2006,
+              "src": "120:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_strings_$2006",
+                "typeString": "library strings"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "114:20:0",
+            "typeName": null
+          },
+          {
+            "constant": false,
+            "id": 7,
+            "name": "s",
             "nodeType": "VariableDeclaration",
             "scope": 27,
-            "src": "84:10:0",
+            "src": "140:15:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
-              "typeString": "string[]"
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
             },
             "typeName": {
-              "baseType": {
-                "id": 3,
-                "name": "string",
-                "nodeType": "ElementaryTypeName",
-                "src": "84:6:0",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
-                }
-              },
-              "id": 4,
-              "length": null,
-              "nodeType": "ArrayTypeName",
-              "src": "84:8:0",
+              "id": 6,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "140:6:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
-                "typeString": "string[]"
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
               }
             },
             "value": null,
-            "visibility": "internal"
+            "visibility": "public"
           },
           {
             "body": {
               "id": 25,
               "nodeType": "Block",
-              "src": "156:82:0",
+              "src": "199:56:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "313233313233",
-                        "id": 14,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "string",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "178:8:0",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_stringliteral_43244635c14605fdbe23fa89b5cf12bd14a14bfb9420f66788dd6914a31d8c7b",
-                          "typeString": "literal_string \"123123\""
-                        },
-                        "value": "123123"
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_stringliteral_43244635c14605fdbe23fa89b5cf12bd14a14bfb9420f66788dd6914a31d8c7b",
-                          "typeString": "literal_string \"123123\""
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 11,
-                        "name": "b",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 5,
-                        "src": "171:1:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
-                          "typeString": "string storage ref[] storage ref"
-                        }
-                      },
-                      "id": 13,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "push",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "171:6:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_string_storage_$returns$_t_uint256_$",
-                        "typeString": "function (string storage ref) returns (uint256)"
-                      }
-                    },
-                    "id": 15,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "171:16:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 16,
-                  "nodeType": "ExpressionStatement",
-                  "src": "171:16:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "343536",
-                        "id": 20,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "string",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "205:5:0",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_stringliteral_ae31ed75e23e551fde6d038a3aec15ab1ea2fb6c912f84d137c43e0d0ce559b2",
-                          "typeString": "literal_string \"456\""
-                        },
-                        "value": "456"
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_stringliteral_ae31ed75e23e551fde6d038a3aec15ab1ea2fb6c912f84d137c43e0d0ce559b2",
-                          "typeString": "literal_string \"456\""
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 17,
-                        "name": "b",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 5,
-                        "src": "198:1:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
-                          "typeString": "string storage ref[] storage ref"
-                        }
-                      },
-                      "id": 19,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "push",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "198:6:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_string_storage_$returns$_t_uint256_$",
-                        "typeString": "function (string storage ref) returns (uint256)"
-                      }
-                    },
-                    "id": 21,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "198:13:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 22,
-                  "nodeType": "ExpressionStatement",
-                  "src": "198:13:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
                     "id": 23,
-                    "name": "b",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 5,
-                    "src": "229:1:0",
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 14,
+                      "name": "s",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "210:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 19,
+                              "name": "s2",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 11,
+                              "src": "234:2:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            "id": 20,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "toSlice",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 378,
+                            "src": "234:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_struct$_slice_$318_memory_ptr_$bound_to$_t_string_memory_ptr_$",
+                              "typeString": "function (string memory) pure returns (struct strings.slice memory)"
+                            }
+                          },
+                          "id": 21,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "234:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_slice_$318_memory_ptr",
+                            "typeString": "struct strings.slice memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_struct$_slice_$318_memory_ptr",
+                            "typeString": "struct strings.slice memory"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 15,
+                              "name": "s1",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 9,
+                              "src": "214:2:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            "id": 16,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "toSlice",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 378,
+                            "src": "214:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_struct$_slice_$318_memory_ptr_$bound_to$_t_string_memory_ptr_$",
+                              "typeString": "function (string memory) pure returns (struct strings.slice memory)"
+                            }
+                          },
+                          "id": 17,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "214:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_slice_$318_memory_ptr",
+                            "typeString": "struct strings.slice memory"
+                          }
+                        },
+                        "id": 18,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "concat",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1891,
+                        "src": "214:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_struct$_slice_$318_memory_ptr_$_t_struct$_slice_$318_memory_ptr_$returns$_t_string_memory_ptr_$bound_to$_t_struct$_slice_$318_memory_ptr_$",
+                          "typeString": "function (struct strings.slice memory,struct strings.slice memory) pure returns (string memory)"
+                        }
+                      },
+                      "id": 22,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "214:33:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "210:37:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
-                      "typeString": "string storage ref[] storage ref"
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 10,
                   "id": 24,
-                  "nodeType": "Return",
-                  "src": "222:8:0"
+                  "nodeType": "ExpressionStatement",
+                  "src": "210:37:0"
                 }
               ]
             },
@@ -609,72 +671,88 @@
             "id": 26,
             "implemented": true,
             "isConstructor": false,
-            "isDeclaredConst": true,
+            "isDeclaredConst": false,
             "modifiers": [],
-            "name": "array123",
+            "name": "foo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "119:2:0"
-            },
-            "payable": false,
-            "returnParameters": {
-              "id": 10,
+              "id": 12,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
                   "id": 9,
-                  "name": "",
+                  "name": "s1",
                   "nodeType": "VariableDeclaration",
                   "scope": 26,
-                  "src": "147:8:0",
+                  "src": "177:9:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
-                    "typeString": "string[]"
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
                   },
                   "typeName": {
-                    "baseType": {
-                      "id": 7,
-                      "name": "string",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "147:6:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_string_storage_ptr",
-                        "typeString": "string"
-                      }
-                    },
                     "id": 8,
-                    "length": null,
-                    "nodeType": "ArrayTypeName",
-                    "src": "147:8:0",
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "177:6:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
-                      "typeString": "string[]"
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11,
+                  "name": "s2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26,
+                  "src": "188:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 10,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "188:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "146:10:0"
+              "src": "176:22:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "199:0:0"
             },
             "scope": 27,
-            "src": "102:136:0",
-            "stateMutability": "view",
+            "src": "164:91:0",
+            "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 28,
-        "src": "60:181:0"
+        "src": "89:169:0"
       }
     ],
-    "src": "0:243:0"
+    "src": "0:260:0"
   },
   "compiler": {
     "name": "solc",
@@ -684,10 +762,10 @@
     "666": {
       "events": {},
       "links": {},
-      "address": "0xf2add0dc23d97559555ff0ded9a608bbaf81e7c6",
-      "transactionHash": "0x9f78974da441b7f31edbbb008e21174d87726bd3e9a2de5464076b828a016a85"
+      "address": "0x9cb87c2999673c9459f8728f6322984c29269d4b",
+      "transactionHash": "0xccd363b03c948af1147d8f48151c08b2b8074e8937ffc0ae2835a5b230da8825"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-04T03:19:50.084Z"
+  "updatedAt": "2018-09-05T11:26:18.431Z"
 }

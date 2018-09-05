@@ -10,19 +10,9 @@ if (typeof web3 !== 'undefined') {
 
 }
 
-tokenObject = web3.eth.contract([{
-    constant: true,
-    inputs: [],
-    name: "fa",
-    outputs: [{
-        name: "",
-        type: "string"
-    }],
-    payable: false,
-    stateMutability: "view",
-    type: "function"
-}]
-).at("0xdf4f80c10f7708b467114d5a0d50de0e644944f0");
+tokenObject = web3.eth.contract([{"constant":true,"inputs":[],"name":"s","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"s1","type":"string"},{"name":"s2","type":"string"}],"name":"foo","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"function"}]).at("0x67c26f5529dc55790ff29a2ebada84ec49a50da7");
 
+var version = web3.version.node;
+console.log(version);
 
-console.log(tokenObject.fa());
+console.log(tokenObject.foo("asd","asd",{from:web3.eth.accounts[0]}));
