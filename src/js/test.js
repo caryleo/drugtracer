@@ -1,4 +1,5 @@
 var Web3 = require('web3')
+var fs = require('fs')
 
 if (typeof web3 !== 'undefined') {
 
@@ -9,10 +10,20 @@ if (typeof web3 !== 'undefined') {
     web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:4444"));
 
 }
+//document.write("<script language=javascript src='jquery.min.js’></script>”)
 
-tokenObject = web3.eth.contract([{"constant":true,"inputs":[],"name":"s","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"s1","type":"string"},{"name":"s2","type":"string"}],"name":"foo","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"function"}]).at("0x67c26f5529dc55790ff29a2ebada84ec49a50da7");
+var eth = web3.eth
+//var abi = JSON.parse(fs.readFileSync("../../build/contracts/hello.json").toString())
 
-var version = web3.version.node;
-console.log(version);
+$.getJSON("hello.json", function(data) {
+    var abi = json_encode($data,true);
+});
 
-console.log(tokenObject.foo("asd","asd",{from:web3.eth.accounts[0]}));
+
+var contract = eth.contract(abi)
+var instance = contract.at("0xdf4f80c10f7708b467114d5a0d50de0e644944f0")
+
+console.log(eth.accounts())
+
+
+
