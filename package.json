@@ -21,8 +21,12 @@
     "lite-server": "^2.4.0"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "web3": "^0.19.1"
+=======
     "minimatch": "^3.0.4",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1"
+>>>>>>> bc3f579458f0c2d117a2b68bdba8e2092980485b
   }
 }
