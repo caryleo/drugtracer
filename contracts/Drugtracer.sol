@@ -2,27 +2,16 @@ pragma solidity ^0.4.0;
 pragma experimental ABIEncoderV2;
 contract DrugTracer {
 
-<<<<<<< HEAD:Drugtracer.sol
-    //------药厂方数据结�------------------
-=======
     //------药厂方数据结构------------------
->>>>>>> bbda50fe2996fd8cfef04b94f85632ab31217127:contracts/Drugtracer.sol
 
     //出厂信息
     struct ProduceDetail {
         string  drug;           //药品名称
-<<<<<<< HEAD:Drugtracer.sol
-        bool    state;          //合格状�
-        address producerCode;   //厂商地址
-        string  produceDate;    //出厂日期
-        uint    left;           //剩余�
-=======
         bool    state;          //合格状态
         address producerCode;   //厂商地址
         string  produceDate;    //出厂日期
         uint    volume;         //生产量
         uint    left;           //剩余量
->>>>>>> bbda50fe2996fd8cfef04b94f85632ab31217127:contracts/Drugtracer.sol
         bool    isValid;
     }
 
@@ -32,15 +21,9 @@ contract DrugTracer {
     //流入市场信息
     struct InflowDetail {
         string  drugCode;   //药品批号
-<<<<<<< HEAD:Drugtracer.sol
-        uint    volume;     //交易�
-        address toMerchant; //销售商地址
-        uint    left;       //剩余�
-=======
         uint    volume;     //交易量
         address toMerchant; //销售商地址
         uint    left;       //剩余量
->>>>>>> bbda50fe2996fd8cfef04b94f85632ab31217127:contracts/Drugtracer.sol
         bool    isValid;
     }
 
@@ -50,41 +33,6 @@ contract DrugTracer {
     //流入记录
     mapping (address => string[]) simpleInflowList;
 
-<<<<<<< HEAD:Drugtracer.sol
-    //------销售商方数据结�---------------------
-
-    //流通信�
-    struct RollDetail {
-        string  inflowNumber;   //流入交易单号
-        string  circulateDate;  //流通日�
-        uint    volume;         //流通量
-        address toDrugstore;    //药店编号
-        uint    left;           //剩余�
-        bool    isValid;
-    }
-
-    //流通信息映�
-    mapping (string=>RollDetail) rollList;
-
-    //简化流出记�
-    mapping (address=>string[]) simpleRollList;
-
-    //------药店方数据结�-------------------
-
-    //销售信�
-    struct SaleDetail {
-        string  circulateNumber;    //流出交易单号
-        address customerNumber;     //消费者编�
-        uint    volume;             //交易�
-        string  saleDate;           //销售日�
-        bool    isValid;
-    }
-
-    //销售信息映�
-    mapping (string=>SaleDetail) saleList;
-
-    //简化销售记�
-=======
     //------销售商方数据结构---------------------
 
     //流通信息
@@ -118,7 +66,6 @@ contract DrugTracer {
     mapping (string=>SaleDetail) saleList;
 
     //简化销售记录
->>>>>>> bbda50fe2996fd8cfef04b94f85632ab31217127:contracts/Drugtracer.sol
     mapping (address=>string[]) simpleSaleList;
 
     //------消费者方数据结果---------------------
@@ -129,28 +76,17 @@ contract DrugTracer {
         string  reportDate; //举报日期
         address reporter;   //举报人地址
         string  report;     //举报内容
-<<<<<<< HEAD:Drugtracer.sol
-        bool    state;      //受理状�
-=======
         bool    state;      //受理状态
->>>>>>> bbda50fe2996fd8cfef04b94f85632ab31217127:contracts/Drugtracer.sol
         bool    isValid;
     }
 
     //举报信息映射
     mapping (string=>ReportDetail) reportList;
 
-<<<<<<< HEAD:Drugtracer.sol
-    //简单举报信息映�
-    mapping (address=>string[]) simplereportList;
-
-    //------监管部门方数据结�-------------------
-=======
     //简单举报信息映射
     mapping (address=>string[]) simpleReportList;
 
     //------监管部门方数据结构-------------------
->>>>>>> bbda50fe2996fd8cfef04b94f85632ab31217127:contracts/Drugtracer.sol
 
     //受理信息
     struct DealDetail {
@@ -194,11 +130,7 @@ contract DrugTracer {
     //插入流入市场记录，交易单号为交易的hash值，返回处理结果（布尔值）
     //number:流入交易单号
     //drugCode:药品批号
-<<<<<<< HEAD:Drugtracer.sol
-    //volume:交易�
-=======
     //volume:交易量
->>>>>>> bbda50fe2996fd8cfef04b94f85632ab31217127:contracts/Drugtracer.sol
     //toMerchant:销售商地址
     //return:true成功，false失败
     function setInflow (
@@ -220,17 +152,12 @@ contract DrugTracer {
     }
 
     //插入简单记录，内部方法
-<<<<<<< HEAD:Drugtracer.sol
-    //to:
-    function setSimpleInflow (address to, string number) internal returns(InflowDetail){
-=======
     //to:销售方地址
     //number:流出单号
     function setSimpleInflow (
                                 address to,
                                 string number)
                                 internal {
->>>>>>> bbda50fe2996fd8cfef04b94f85632ab31217127:contracts/Drugtracer.sol
         simpleInflowList[to].push(number);
     }
 
