@@ -1,5 +1,6 @@
 pragma solidity ^0.4.0;
 pragma experimental ABIEncoderV2;
+import "../strings.sol";
 contract DrugTracer {
 
     //------药厂方数据结构------------------
@@ -17,6 +18,7 @@ contract DrugTracer {
 
     //出厂信息映射
     mapping (string => ProduceDetail) produceList;
+    bool stateProduce = true;
 
     //流入市场信息
     struct InflowDetail {
@@ -29,6 +31,7 @@ contract DrugTracer {
 
     //流入市场信息映射
     mapping (string => InflowDetail) inflowList;
+    bool stateInflow = true;
 
     //流入记录
     mapping (address => string[]) simpleInflowList;
@@ -47,6 +50,7 @@ contract DrugTracer {
 
     //流通信息映射
     mapping (string=>RollDetail) rollList;
+    bool stateRoll = true;
 
     //简化流出记录
     mapping (address=>string[]) simpleRollList;
@@ -64,11 +68,12 @@ contract DrugTracer {
 
     //销售信息映射
     mapping (string=>SaleDetail) saleList;
+    bool stateSale = true;
 
     //简化销售记录
     mapping (address=>string[]) simpleSaleList;
 
-    //------消费者方数据结果---------------------
+    //------消费者方数据结构---------------------
 
     //举报信息
     struct ReportDetail {
@@ -82,6 +87,7 @@ contract DrugTracer {
 
     //举报信息映射
     mapping (string=>ReportDetail) reportList;
+    bool stateReport = true;
 
     //简单举报信息映射
     mapping (address=>string[]) simpleReportList;
@@ -97,6 +103,7 @@ contract DrugTracer {
 
     //受理信息映射
     mapping (string=>DealDetail) dealList;
+    bool stateDeal = true;
 
     //举报记录
     string[] reports;
@@ -120,9 +127,11 @@ contract DrugTracer {
         ProduceDetail memory drugInfo = ProduceDetail(drug, true, producer, produceDate, volume, volume, true);
         if (produceList[drugCode].isValid == false) {
             produceList[drugCode] = drugInfo;
+            stateProduce = true;
             return true;
         }
         else {
+            stateProduce = false;
             return false;
         }
     }
@@ -143,10 +152,12 @@ contract DrugTracer {
         if (inflowList[number].isValid == false && produceList[drugCode].left >= volume) {
             inflowList[number] = inflowInfo;
             produceList[drugCode].left -= volume;
+            stateInflow = true;
             setSimpleInflow(toMerchant, number);
             return true;
         }
         else {
+            stateInflow = false;
             return false;
         }
     }
@@ -181,10 +192,12 @@ contract DrugTracer {
         if (rollList[number].isValid == false && inflowList[inflowNumber].left >= volume) {
             rollList[number] = rollInfo;
             inflowList[inflowNumber].left -= volume;
+            stateRoll = true;
             setSimpleRoll(toDrugStore, number);
             return true;
         }
         else {
+            stateRoll = false;
             return false;
         }
     }
@@ -219,10 +232,12 @@ contract DrugTracer {
         if (saleList[number].isValid == false && rollList[circulateNumber].left >= volume) {
             saleList[number] = saleInfo;
             rollList[circulateNumber].left -= volume;
+            stateSale = true;
             setSimpleSale(customerNumber, number);
             return true;
         }
         else {
+            stateSale = false;
             return false;
         }
     }
@@ -257,10 +272,12 @@ contract DrugTracer {
         ReportDetail memory reportInfo = ReportDetail(saleNumber, reportDate, reporter, report, false, true);
         if (reportList[number].isValid == false) {
             reportList[number] = reportInfo;
+            stateReport = true;
             setSimpleReport(reporter, number);
             return true;
         }
         else {
+            stateReport = false;
             return false;
         }
     }
@@ -296,66 +313,148 @@ contract DrugTracer {
                 //情况属实，监管部门采取措施
                 produceList[drugCode].state = false;
             }
+            stateDeal = true;
            return true;
         }
         else {
+            stateDeal = false;
             return false;
         }
     }
 
     //------药厂方get方法
 
-    function getProduce (string number) public returns (string) {
-        //TODO:GETPRODUCE
-        
-        
+    //通过查询，返回对应该批号的一个ProduceDetail结构体实例
+    //drugCode:药品批号
+    //return:由整个结构体数据转成的string
+    function getProduce (string drugCode) public view returns (string) {
+        string memory tmp = " ";
+        ProduceDetail memory tmpProduce = produceList[drugCode];
+        string memory s = "{";
+        tmp = "\"drugCode\":";
+        s = s.toSlice().concat(tmp.toSlice());
+        tmp = drugCode;
+        s = s.toSlice().concat(tmp.toSlice());
+        tmp = ",\"drug\":";
+        s = s.toSlice().concat(tmp.toSlice());
+        tmp = tmpProduce.drug;
+        s = s.toSlice().concat(tmp.toSlice());
+        bool tmpb = tmpProduce.state;
+        tmp = (tmpb == true) ? "true" : "false";
+        s = s.toSlice().concat(tmp.toSlice());
+        return s;
     }
 
-    function getInflow (string drugCode) public returns (string) {
+    //通过查询，返回对应该单号的一个InflowDetail结构体实例
+    //number:流入市场单号
+    //return:由整个结构体数据转成的string
+    function getInflow (string number) public returns (string) {
         //TODO:GETINFLOW
     }
 
+    //经过查询，返回对应该地址名下的交易单号组成的动态数组，内部方法
+    //to:销售商地址
+    //string[]:地址对应的流入单号记录
     function getSimpleInflow (address to) public returns (string[]) {
         //TODO:GETSIMPLEINFLOW
     }
 
+    //返回setProduce的结果状态
+    //return:true成功，false失败
+    function getStateProduce () public view returns (bool) {
+        return stateProduce;
+    }
+
+    //返回setInflow的结果状态
+    //return:true成功，false失败
+    function getStateInflow () public view returns (bool) {
+        return stateInflow;
+    }
+
     //------销售商方get方法
 
+    //经过查询，返回一个RollDetail结构体实例。
+    //number:流出单号
+    //string:由结构体数据转成的string
     function getRoll (string number) public returns (string) {
         //TODO:GETROLL
     }
 
+    //经过查询，返回对应该地址名下的交易单号组成的动态数组，内部方法
+    //to:药店地址
+    //string[]:地址对应的流出单号记录
     function getSimpleRoll (address to) public returns (string[]) {
         //TODO:GETSIMPLEROLL
     }
 
+    //返回setRoll的结果状态
+    //return:true成功，false失败
+    function getStateRoll () public view returns (bool) {
+        return stateRoll;
+    }
+
     //------药店方get方法
 
+    //经过查询，返回和单号对应的SaleDetail结构体实例
+    //number:销售单号
+    //string:由结构体数据转成的string
     function getSale (string number) public returns (string) {
 
     }
 
+    //经过查询，返回对应该地址名下的交易单号组成的动态数组
+    //to:消费者地址
+    //string[]:地址对应的销售单号记录
     function getSimpleSale (address to) public returns (string[]) {
 
     }
 
+    //返回setSale的结果状态
+    //return:true成功，false失败
+    function getStateSale () public view returns (bool) {
+        return stateSale;
+    }
+
     //------消费者方get方法
 
+    //经过查询，返回对应该地址名下的交易单号组成的动态数组
+    //number:举报单号
+    //string:由结构体数据转成的string
     function getReport (string number) public returns (string) {
 
     }
     
+    //经过查询，返回当前地址名下的全部举报编号
+    //to:消费者地址
+    //string[]:地址对应的举报记录
     function getSimpleReport (address to) public returns (string[]) {
 
     }
 
+    //递归调用各个类的get方法，不断获得更深层次的信息，最终返回一个完整的json数据结构体
+    //number:销售单号
+    //string:由全部溯源信息组成的字符串
     function getSource (string number) public returns (string) {
 
     }
 
+    //返回setReport的结果状态
+    //return:true成功，false失败
+    function getStateReport () public view returns (bool) {
+        return stateReport;
+    }
+
     //------监管部门方get方法
 
+    //获取举报信息，返回json字符串
+    //return:举报记录组成的string
     function getAdminReport () public returns (string) {
         
+    }
+
+    //返回setDeal的结果状态
+    //return:true成功，false失败
+    function getStateDeal () public view returns (bool) {
+        return stateDeal;
     }
 }
