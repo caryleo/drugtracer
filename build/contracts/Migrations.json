@@ -2325,6 +2325,7 @@
       "links": {},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "address": "0x174ba8b516ed71916d07213bc3cc2d61846d6de8",
       "transactionHash": "0xb1b74c9ac753fb5c3caf3ac1968423cf2e0ff53e59d63111bad24b6e7df431ca"
     }
@@ -2347,4 +2348,12 @@
   "schemaVersion": "2.0.1",
   "updatedAt": "2018-09-05T11:35:32.771Z"
 >>>>>>> 7a7cc40b1aa9d94f74f460bb216bd7470bfacf5b
+=======
+      "address": "0x2cf4976ea82bdc0ff14efe9bb11d0082be557f5f",
+      "transactionHash": "0x5455f430a291b1f7c078c96649c8df01953f51bc0b9a2bd08a118a33f5a39853"
+    }
+  },
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-05T14:04:43.862Z"
+>>>>>>> 77f9419fcac2da8c0f290a49e37b72741cd66f86
 }
