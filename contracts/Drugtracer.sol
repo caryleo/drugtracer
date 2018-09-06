@@ -307,6 +307,8 @@ contract DrugTracer {
 
     function getProduce (string number) public returns (string) {
         //TODO:GETPRODUCE
+        
+        
     }
 
     function getInflow (string drugCode) public returns (string) {
