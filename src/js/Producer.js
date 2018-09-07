@@ -10,10 +10,20 @@ if (typeof web3 !== 'undefined') {
 
 }
 
-var eth = web3.eth
-var abi = JSON.parse(fs.readFileSync("../../build/contracts/Producer.json"))
-var contract = eth.contract(abi)
-var instance = contract.at("")
+tokenObject = web3.eth.contract([{
+    constant: true,
+    inputs: [],
+    name: "fa",
+    outputs: [{
+        name: "",
+        type: "string"
+    }],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+}]
+).at("0xdf4f80c10f7708b467114d5a0d50de0e644944f0");
 
-instance.setProduce("12331","04","0xjkkri2rbqu931rkywnj ???  ","2018-09-06", 500)
 
+tokenObject.setProduce("");
+tokenObject.getProduce("");

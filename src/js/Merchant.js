@@ -10,10 +10,19 @@ if (typeof web3 !== 'undefined') {
 
 }
 
-var eth = web3.eth
-var abi = JSON.parse(fs.readFileSync("../../build/contracts/Merchant.json"))
-var contract = eth.contract(abi)
-var instance = contract.at("")
-console.log(instance.   )
+tokenObject = web3.eth.contract([{
+    constant: true,
+    inputs: [],
+    name: "fa",
+    outputs: [{
+        name: "",
+        type: "string"
+    }],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+}]
+).at("0xdf4f80c10f7708b467114d5a0d50de0e644944f0");
 
 
+console.log(tokenObject.fa());

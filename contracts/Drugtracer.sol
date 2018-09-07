@@ -117,7 +117,7 @@ contract DrugTracer {
                         string produceDate,
                         uint volume)
                         public returns (bool) {
-        ProduceDetail memory drugInfo = ProduceDetail(drug, true, producer, produceDate, volume, volume, true);
+        ProduceDetail memory drugInfo = ProduceDetail(drug, true, producer, produceDate, volume, true);
         if (produceList[drugCode].isValid == false) {
             produceList[drugCode] = drugInfo;
             return true;
