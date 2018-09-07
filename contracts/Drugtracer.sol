@@ -3,6 +3,8 @@ pragma experimental ABIEncoderV2;
 import "../strings.sol";
 contract DrugTracer {
 
+    using strings for *;
+
     //------药厂方数据结构------------------
 
     //出厂信息
@@ -327,29 +329,37 @@ contract DrugTracer {
     //通过查询，返回对应该批号的一个ProduceDetail结构体实例
     //drugCode:药品批号
     //return:由整个结构体数据转成的string
-    function getProduce (string drugCode) public view returns (string) {
-        string memory tmp = " ";
+    function getProduce (string drugCode) public view returns ( string,
+                                                                string,
+                                                                bool,
+                                                                address,
+                                                                string,
+                                                                uint,
+                                                                uint) {
         ProduceDetail memory tmpProduce = produceList[drugCode];
-        string memory s = "{";
-        tmp = "\"drugCode\":";
-        s = s.toSlice().concat(tmp.toSlice());
-        tmp = drugCode;
-        s = s.toSlice().concat(tmp.toSlice());
-        tmp = ",\"drug\":";
-        s = s.toSlice().concat(tmp.toSlice());
-        tmp = tmpProduce.drug;
-        s = s.toSlice().concat(tmp.toSlice());
-        bool tmpb = tmpProduce.state;
-        tmp = (tmpb == true) ? "true" : "false";
-        s = s.toSlice().concat(tmp.toSlice());
-        return s;
+        string memory tmpDrug = tmpProduce.drug;
+        bool tmpState = tmpProduce.state;
+        address tmpProducerCode = tmpProduce.producerCode;
+        string memory tmpProduceDate = tmpProduce.produceDate;
+        uint tmpVolume = tmpProduce.volume;
+        uint tmpLeft = tmpProduce.left;
+        return (drugCode, tmpDrug, tmpState, tmpProducerCode, tmpProduceDate, tmpVolume, tmpLeft);
     }
 
     //通过查询，返回对应该单号的一个InflowDetail结构体实例
     //number:流入市场单号
     //return:由整个结构体数据转成的string
-    function getInflow (string number) public returns (string) {
-        //TODO:GETINFLOW
+    function getInflow (string number) public view returns ( string,
+                                                        string,
+                                                        uint,
+                                                        address,
+                                                        uint) {
+        InflowDetail memory tmpInflow = inflowList[number];
+        string memory tmpDrugCode = tmpInflow.drugCode;
+        uint tmpVolume = tmpInflow.volume;
+        address tmpToMerchant = tmpInflow.toMerchant;
+        uint tmpLeft = tmpInflow.left;
+        return (number, tmpDrugCode, tmpVolume, tmpToMerchant, tmpLeft);
     }
 
     //经过查询，返回对应该地址名下的交易单号组成的动态数组，内部方法
@@ -376,8 +386,19 @@ contract DrugTracer {
     //经过查询，返回一个RollDetail结构体实例。
     //number:流出单号
     //string:由结构体数据转成的string
-    function getRoll (string number) public returns (string) {
-        //TODO:GETROLL
+    function getRoll (string number) public view returns (   string,
+                                                        string,
+                                                        string,
+                                                        uint,
+                                                        address,
+                                                        uint) {
+        RollDetail memory rollInfo = rollList[number];
+        string memory tmpInflowNumber = rollInfo.inflowNumber;
+        string memory tmpCirculateDate = rollInfo.circulateDate;
+        uint tmpVolume = rollInfo.volume;
+        address tmpToDrugstore = rollInfo.toDrugstore;
+        uint tmpLeft = rollInfo.left;
+        return (number, tmpInflowNumber, tmpCirculateDate, tmpVolume, tmpToDrugstore, tmpLeft);
     }
 
     //经过查询，返回对应该地址名下的交易单号组成的动态数组，内部方法
@@ -398,8 +419,17 @@ contract DrugTracer {
     //经过查询，返回和单号对应的SaleDetail结构体实例
     //number:销售单号
     //string:由结构体数据转成的string
-    function getSale (string number) public returns (string) {
-
+    function getSale (string number) public view returns (   string,
+                                                        string,
+                                                        address,
+                                                        uint,
+                                                        string) {
+        SaleDetail memory saleInfo = saleList[number];
+        string memory tmpCirculateNumber = saleInfo.circulateNumber;
+        address tmpCustomerNumber = saleInfo.customerNumber;
+        uint tmpVolume = saleInfo.volume;
+        string memory tmpSaleDate = saleInfo.saleDate;
+        return (number, tmpCirculateNumber, tmpCustomerNumber, tmpVolume, tmpSaleDate);
     }
 
     //经过查询，返回对应该地址名下的交易单号组成的动态数组
@@ -420,8 +450,19 @@ contract DrugTracer {
     //经过查询，返回对应该地址名下的交易单号组成的动态数组
     //number:举报单号
     //string:由结构体数据转成的string
-    function getReport (string number) public returns (string) {
-
+    function getReport (string number) public view returns ( string,
+                                                        string,
+                                                        string,
+                                                        address,
+                                                        string,
+                                                        bool) {
+        ReportDetail memory reportInfo = reportList[number];
+        string memory tmpSaleNumber = reportInfo.saleNumber;
+        string memory tmpReportDate = reportInfo.reportDate;
+        address tmpReporter = reportInfo.reporter;
+        string memory tmpReport = reportInfo.report;
+        bool tmpState = reportInfo.state;
+        return (number, tmpSaleNumber, tmpReportDate, tmpReporter, tmpReport, tmpState);
     }
     
     //经过查询，返回当前地址名下的全部举报编号
