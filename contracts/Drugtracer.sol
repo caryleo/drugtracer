@@ -1,9 +1,5 @@
 pragma solidity ^0.4.0;
-pragma experimental ABIEncoderV2;
-import "../strings.sol";
 contract DrugTracer {
-
-    using strings for *;
 
     //------药厂方数据结构------------------
 
@@ -26,6 +22,7 @@ contract DrugTracer {
     struct InflowDetail {
         string  drugCode;   //药品批号
         uint    volume;     //交易量
+        string  inflowDate; //流入日期
         address toMerchant; //销售商地址
         uint    left;       //剩余量
         bool    isValid;
@@ -37,6 +34,7 @@ contract DrugTracer {
 
     //流入记录
     mapping (address => string[]) simpleInflowList;
+    uint offsetInflow = 0;
 
     //------销售商方数据结构---------------------
 
@@ -56,6 +54,7 @@ contract DrugTracer {
 
     //简化流出记录
     mapping (address=>string[]) simpleRollList;
+    uint offsetRoll = 0;
 
     //------药店方数据结构-------------------
 
@@ -74,6 +73,7 @@ contract DrugTracer {
 
     //简化销售记录
     mapping (address=>string[]) simpleSaleList;
+    uint offsetSale = 0;
 
     //------消费者方数据结构---------------------
 
@@ -93,6 +93,7 @@ contract DrugTracer {
 
     //简单举报信息映射
     mapping (address=>string[]) simpleReportList;
+    uint offsetReport = 0;
 
     //------监管部门方数据结构-------------------
 
@@ -109,6 +110,7 @@ contract DrugTracer {
 
     //举报记录
     string[] reports;
+    uint offsetReports = 0;
 
     //------药厂方set方法--------------------
 
@@ -147,10 +149,11 @@ contract DrugTracer {
     function setInflow (
                         string number,
                         string drugCode,
+                        string inflowDate,
                         uint volume,
                         address toMerchant)
                         public returns (bool) {
-        InflowDetail memory inflowInfo = InflowDetail(drugCode, volume, toMerchant, volume, true);//初始情况下，剩余量就是交易量
+        InflowDetail memory inflowInfo = InflowDetail(drugCode, volume, inflowDate, toMerchant, volume, true);//初始情况下，剩余量就是交易量
         if (inflowList[number].isValid == false && produceList[drugCode].left >= volume) {
             inflowList[number] = inflowInfo;
             produceList[drugCode].left -= volume;
@@ -188,14 +191,14 @@ contract DrugTracer {
                         string inflowNumber,
                         string circulateDate,
                         uint volume,
-                        address toDrugStore)
+                        address toDrugstore)
                         public returns (bool) {
-        RollDetail memory rollInfo = RollDetail(inflowNumber, circulateDate, volume, toDrugStore, volume, true);
+        RollDetail memory rollInfo = RollDetail(inflowNumber, circulateDate, volume, toDrugstore, volume, true);
         if (rollList[number].isValid == false && inflowList[inflowNumber].left >= volume) {
             rollList[number] = rollInfo;
             inflowList[inflowNumber].left -= volume;
             stateRoll = true;
-            setSimpleRoll(toDrugStore, number);
+            setSimpleRoll(toDrugstore, number);
             return true;
         }
         else {
@@ -276,6 +279,7 @@ contract DrugTracer {
             reportList[number] = reportInfo;
             stateReport = true;
             setSimpleReport(reporter, number);
+            reports.push(number);
             return true;
         }
         else {
@@ -362,11 +366,20 @@ contract DrugTracer {
         return (number, tmpDrugCode, tmpVolume, tmpToMerchant, tmpLeft);
     }
 
-    //经过查询，返回对应该地址名下的交易单号组成的动态数组，内部方法
-    //to:销售商地址
-    //string[]:地址对应的流入单号记录
-    function getSimpleInflow (address to) public returns (string[]) {
-        //TODO:GETSIMPLEINFLOW
+    function initInflow () public {
+        offsetInflow = 0;
+    }
+
+    function getLengthInflow (address to) public view returns (uint) {
+        return simpleInflowList[to].length;
+    }
+
+    function getNextInflow (address to) public view returns (string) {
+        return simpleInflowList[to][offsetInflow];
+    }
+
+    function setOffsetInflow () public {
+        offsetInflow += 1;
     }
 
     //返回setProduce的结果状态
@@ -401,11 +414,20 @@ contract DrugTracer {
         return (number, tmpInflowNumber, tmpCirculateDate, tmpVolume, tmpToDrugstore, tmpLeft);
     }
 
-    //经过查询，返回对应该地址名下的交易单号组成的动态数组，内部方法
-    //to:药店地址
-    //string[]:地址对应的流出单号记录
-    function getSimpleRoll (address to) public returns (string[]) {
-        //TODO:GETSIMPLEROLL
+    function initRoll () public {
+        offsetRoll = 0;
+    }
+
+    function getLengthRoll (address to) public view returns (uint) {
+        return simpleRollList[to].length;
+    }
+
+    function getNextRoll (address to) public view returns (string) {
+        return simpleRollList[to][offsetRoll];
+    }
+
+    function setOffsetRoll () public {
+        offsetRoll += 1;
     }
 
     //返回setRoll的结果状态
@@ -432,11 +454,20 @@ contract DrugTracer {
         return (number, tmpCirculateNumber, tmpCustomerNumber, tmpVolume, tmpSaleDate);
     }
 
-    //经过查询，返回对应该地址名下的交易单号组成的动态数组
-    //to:消费者地址
-    //string[]:地址对应的销售单号记录
-    function getSimpleSale (address to) public returns (string[]) {
+    function initSale () public {
+        offsetSale = 0;
+    }
 
+    function getLengthSale (address to) public view returns (uint) {
+        return simpleSaleList[to].length;
+    }
+
+    function getNextSale (address to) public view returns (string) {
+        return simpleSaleList[to][offsetSale];
+    }
+
+    function setOffsetSale () public {
+        offsetSale += 1;
     }
 
     //返回setSale的结果状态
@@ -465,18 +496,74 @@ contract DrugTracer {
         return (number, tmpSaleNumber, tmpReportDate, tmpReporter, tmpReport, tmpState);
     }
     
-    //经过查询，返回当前地址名下的全部举报编号
-    //to:消费者地址
-    //string[]:地址对应的举报记录
-    function getSimpleReport (address to) public returns (string[]) {
+    function initReport () public {
+        offsetReport = 0;
+    }
 
+    function getLengthReport (address to) public view returns (uint) {
+        return simpleReportList[to].length;
+    }
+
+    function getNextReport (address to) public view returns (string) {
+        return simpleReportList[to][offsetReport];
+    }
+
+    function setOffsetReport () public {
+        offsetReport += 1;
     }
 
     //递归调用各个类的get方法，不断获得更深层次的信息，最终返回一个完整的json数据结构体
     //number:销售单号
     //string:由全部溯源信息组成的字符串
-    function getSource (string number) public returns (string) {
-
+    function getSource (string number) public returns ( string,
+                                                        string,
+                                                        bool,
+                                                        address,
+                                                        string,
+                                                        uint,
+                                                        uint,
+                                                        string,
+                                                        address,
+                                                        string,
+                                                        uint,
+                                                        uint,
+                                                        string,
+                                                        address,
+                                                        string,
+                                                        uint,
+                                                        uint,
+                                                        string,
+                                                        address,
+                                                        string,
+                                                        uint) {
+        SaleDetail memory saleInfo = saleList[number];
+        string memory tmpRollNumber = saleInfo.circulateNumber;
+        RollDetail memory rollInfo = rollList[tmpRollNumber];
+        string memory tmpInflowNumber = rollInfo.inflowNumber;
+        InflowDetail memory inflowInfo = inflowList[tmpInflowNumber];
+        string memory tmpDrugCode = inflowInfo.drugCode;
+        ProduceDetail memory produceInfo = produceList[tmpDrugCode];
+        return (    tmpDrugCode,
+                    produceInfo.drug,
+                    produceInfo.state,
+                    produceInfo.producerCode,
+                    produceInfo.produceDate,
+                    produceInfo.volume,
+                    produceInfo.left,
+                    tmpInflowNumber,
+                    inflowInfo.toMerchant,
+                    inflowInfo.inflowDate,
+                    inflowInfo.volume,
+                    inflowInfo.left,
+                    tmpRollNumber,
+                    rollInfo.toDrugstore,
+                    rollInfo.circulateDate,
+                    rollInfo.volume,
+                    rollInfo.left,
+                    number,
+                    saleInfo.customerNumber,
+                    saleInfo.saleDate,
+                    saleInfo.volume);
     }
 
     //返回setReport的结果状态
@@ -487,10 +574,20 @@ contract DrugTracer {
 
     //------监管部门方get方法
 
-    //获取举报信息，返回json字符串
-    //return:举报记录组成的string
-    function getAdminReport () public returns (string) {
-        
+    function initReports () public {
+        offsetReports = 0;
+    }
+
+    function getLengthReports () public view returns (uint) {
+        return reports.length;
+    }
+
+    function getNextReports () public view returns (string) {
+        return reports[offsetReports];
+    }
+
+    function setOffsetReports () public {
+        offsetReports += 1;
     }
 
     //返回setDeal的结果状态
