@@ -34,7 +34,6 @@ contract DrugTracer {
 
     //流入记录
     mapping (address => string[]) simpleInflowList;
-    uint offsetInflow = 0;
 
     //------销售商方数据结构---------------------
 
@@ -54,7 +53,6 @@ contract DrugTracer {
 
     //简化流出记录
     mapping (address=>string[]) simpleRollList;
-    uint offsetRoll = 0;
 
     //------药店方数据结构-------------------
 
@@ -73,7 +71,6 @@ contract DrugTracer {
 
     //简化销售记录
     mapping (address=>string[]) simpleSaleList;
-    uint offsetSale = 0;
 
     //------消费者方数据结构---------------------
 
@@ -93,8 +90,6 @@ contract DrugTracer {
 
     //简单举报信息映射
     mapping (address=>string[]) simpleReportList;
-    uint offsetReport = 0;
-
     //------监管部门方数据结构-------------------
 
     //受理信息
@@ -110,8 +105,7 @@ contract DrugTracer {
 
     //举报记录
     string[] reports;
-    uint offsetReports = 0;
-
+    
     //------药厂方set方法--------------------
 
     //插入出厂记录，state默认true，药品批号由前端生成，返回处理结果（布尔值）
@@ -366,21 +360,14 @@ contract DrugTracer {
         return (number, tmpDrugCode, tmpVolume, tmpToMerchant, tmpLeft);
     }
 
-    function initInflow () public {
-        offsetInflow = 0;
-    }
-
     function getLengthInflow (address to) public view returns (uint) {
         return simpleInflowList[to].length;
     }
 
-    function getNextInflow (address to) public view returns (string) {
-        return simpleInflowList[to][offsetInflow];
+    function getNextInflow (address to, uint offset) public view returns (string) {
+        return simpleInflowList[to][offset];
     }
 
-    function setOffsetInflow () public {
-        offsetInflow += 1;
-    }
 
     //返回setProduce的结果状态
     //return:true成功，false失败
@@ -414,20 +401,13 @@ contract DrugTracer {
         return (number, tmpInflowNumber, tmpCirculateDate, tmpVolume, tmpToDrugstore, tmpLeft);
     }
 
-    function initRoll () public {
-        offsetRoll = 0;
-    }
 
     function getLengthRoll (address to) public view returns (uint) {
         return simpleRollList[to].length;
     }
 
-    function getNextRoll (address to) public view returns (string) {
-        return simpleRollList[to][offsetRoll];
-    }
-
-    function setOffsetRoll () public {
-        offsetRoll += 1;
+    function getNextRoll (address to, uint offset) public view returns (string) {
+        return simpleRollList[to][offset];
     }
 
     //返回setRoll的结果状态
@@ -454,20 +434,12 @@ contract DrugTracer {
         return (number, tmpCirculateNumber, tmpCustomerNumber, tmpVolume, tmpSaleDate);
     }
 
-    function initSale () public {
-        offsetSale = 0;
-    }
-
     function getLengthSale (address to) public view returns (uint) {
         return simpleSaleList[to].length;
     }
 
-    function getNextSale (address to) public view returns (string) {
-        return simpleSaleList[to][offsetSale];
-    }
-
-    function setOffsetSale () public {
-        offsetSale += 1;
+    function getNextSale (address to, uint offset) public view returns (string) {
+        return simpleSaleList[to][offset];
     }
 
     //返回setSale的结果状态
@@ -495,24 +467,16 @@ contract DrugTracer {
         bool tmpState = reportInfo.state;
         return (number, tmpSaleNumber, tmpReportDate, tmpReporter, tmpReport, tmpState);
     }
-    
-    function initReport () public {
-        offsetReport = 0;
-    }
 
     function getLengthReport (address to) public view returns (uint) {
         return simpleReportList[to].length;
     }
 
-    function getNextReport (address to) public view returns (string) {
-        return simpleReportList[to][offsetReport];
+    function getNextReport (address to, uint offset) public view returns (string) {
+        return simpleReportList[to][offset];
     }
 
-    function setOffsetReport () public {
-        offsetReport += 1;
-    }
-
-    //递归调用各个类的get方法，不断获得更深层次的信息，最终返回一个完整的json数据结构体
+    /*//递归调用各个类的get方法，不断获得更深层次的信息，最终返回一个完整的json数据结构体
     //number:销售单号
     //string:由全部溯源信息组成的字符串
     function getSource (string number) public returns ( string,
@@ -564,6 +528,16 @@ contract DrugTracer {
                     saleInfo.customerNumber,
                     saleInfo.saleDate,
                     saleInfo.volume);
+    }*/
+
+    function getSource(string number) public view returns (string, string, string, string) {
+        SaleDetail memory saleInfo = saleList[number];
+        string memory tmpRollNumber = saleInfo.circulateNumber;
+        RollDetail memory rollInfo = rollList[tmpRollNumber];
+        string memory tmpInflowNumber = rollInfo.inflowNumber;
+        InflowDetail memory inflowInfo = inflowList[tmpInflowNumber];
+        string memory tmpDrugCode = inflowInfo.drugCode;
+        return (number, tmpRollNumber, tmpInflowNumber, tmpDrugCode);
     }
 
     //返回setReport的结果状态
@@ -574,21 +548,14 @@ contract DrugTracer {
 
     //------监管部门方get方法
 
-    function initReports () public {
-        offsetReports = 0;
-    }
-
     function getLengthReports () public view returns (uint) {
         return reports.length;
     }
 
-    function getNextReports () public view returns (string) {
-        return reports[offsetReports];
+    function getNextReports (uint offset) public view returns (string) {
+        return reports[offset];
     }
 
-    function setOffsetReports () public {
-        offsetReports += 1;
-    }
 
     //返回setDeal的结果状态
     //return:true成功，false失败
