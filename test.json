@@ -1,0 +1,109 @@
+//getSource  的返回值
+{
+    "data"  :[
+        {
+            "address"   :"生产厂家地址",
+            "drugCode"  :"药品编号",
+            "drug"      :"药品名称",
+            "produceDate":"商品交易日期",
+            "number"    :"生产厂家交易单号",
+            "state"     :true,"注释：药品状态"
+            "left"      :123456"注释：int型 生产厂家剩余量",
+            "volume"    :10000"注释：int型 生产厂家交易量"
+        },
+        {
+            "address"   :"批发商地址",
+            "number"    :"批发商交易单号",
+            "left"      :123456"注释：int型 批发商剩余量",
+            "volume"    :123465"注释：int型 批发商交易量"
+        },
+        {
+            "address"   :"药店地址",
+            "number"    :"药店交易单号",
+            "left"      :123456"注释：int型 药店剩余量",
+            "volume"    :123456"注释：int型 药店交易量"
+        },
+        {
+            "address"   :"用户编号"
+        }
+
+    ]
+}
+//getInflow
+{
+
+        "drugCode"  :"药店编号",
+        "volume"    :123456"注释：int型 交易量",
+        "toMerchant":"销售商地址",
+        "left"      :123456"注释：int型 剩余量",
+
+
+}
+//getProduce
+{
+
+        "drug"      :"药品名称",
+        "state"     :"合格状态",
+        "producerCode"  :"厂商地址",
+        "produceDate"   :"出厂日期",
+        "volume"        :123456"注释：int型 生产量",
+        "left"          :123456"注释：int型 剩余量",
+
+}
+//getRoll
+{
+
+        "inflowNumber"      :"流入交易单号",
+        "circulateDate"     :"流通日期",
+        "volume"            :123456"注释：int型 流通量",
+        "toDrugstore"       :"药店编号",
+        "left"              :123465"注释：int型 剩余量",
+
+
+}
+//getSale
+{
+
+    "circulateNumber"   :"流出交易单号",
+    "customerNumber"    :"消费者编号",
+    "volume"            :123456"注释：int型 流通量",
+    "toDrugstore"       :"交易量",
+    "saleDate"          :"销售日期",
+}
+//getSimpleSale
+{
+
+    "data"      :
+    [
+        "这是一个不定长的数组，data[0],data[1]中分别是返回的都是该地址下的交易单号"
+    ]
+}
+//getReport
+{
+    "saleNumber":"交易单号",
+    "reportDate":"举报日期",
+    "reporter"  :"举报人地址",
+    "report"    :"举报内容",
+    "state"     :1"注释：bool型 受理状态",
+}
+//getSimpleReport
+{
+    "data"      :
+    [
+        "这是一个不定长的数组，data[0],data[1]中分别是返回的都是该地址下的举报编号"
+    ]
+}
+//getAdminReport
+{
+    "data"      :
+    [
+        "这是一个不定长的数组，data[0],data[1]中分别是返回的都是该地址下的举报编号"
+    ]
+}
+//getAdminReport
+{
+    "data"      :
+    [
+        "这是一个不定长的数组，data[0],data[1]中分别是举报编号"
+    ]
+}

@@ -25,22 +25,11 @@ web3.eth.defatltAccount = '0x341744a7191e2fd52e24968b93e87db41a1ba250';
 //asfhahfs().then(data=>(sdhfbsdk fdksjksd console.log(data)));
 
 //交易1  from:Producer  to:Merchant 
-web3.eth.sendTransaction({from:eth.defatltAccount , 
-    to:"药店地址" , gas:30000 }).then(address=>{instance.setRoll.sendTransaction(address, 
-        "流入交易单号", "流出日期", "流通量", "药店地址", {from:eth.defatltAccount})}).then(web3.eth.sendTransaction({from:"上帝账户", to:eth.defatltAccount, gas:30000}));
-
-info = instance.getProduce.call("流出单号");
-var drugCode = info[1],
-    tmpDrug = info[2],
-    tmpState = info[3],
-    tmpProducerCode = info[4],
-    tmpProduceDate = info[5],
-    tmpVolume = info[6],
-    tmpLeft = info[7];
-
-console.log(drugCode, tmpDrug, tmpState, tmpProducerCode, tmpProduceDate, tmpVolume, tmpLeft);
+web3.eth.sendTransaction({from:eth.defatltAccount , to:"  从页面获取 " , gas:30000 }).then(address=>{});
 
 
+//交易2  from:Merchant  to:DrugStore
 
+//交易3  from:DrugStore  to:Customer
 
-       
+//交易4  from:Customer  to:Administrator

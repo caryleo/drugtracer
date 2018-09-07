@@ -1,5 +1,4 @@
 pragma solidity ^0.4.0;
-pragma experimental ABIEncoderV2;
 contract DrugTracer {
 
     //------药厂方数据结构------------------
@@ -17,11 +16,13 @@ contract DrugTracer {
 
     //出厂信息映射
     mapping (string => ProduceDetail) produceList;
+    bool stateProduce = true;
 
     //流入市场信息
     struct InflowDetail {
         string  drugCode;   //药品批号
         uint    volume;     //交易量
+        string  inflowDate; //流入日期
         address toMerchant; //销售商地址
         uint    left;       //剩余量
         bool    isValid;
@@ -29,9 +30,11 @@ contract DrugTracer {
 
     //流入市场信息映射
     mapping (string => InflowDetail) inflowList;
+    bool stateInflow = true;
 
     //流入记录
     mapping (address => string[]) simpleInflowList;
+    uint offsetInflow = 0;
 
     //------销售商方数据结构---------------------
 
@@ -47,9 +50,11 @@ contract DrugTracer {
 
     //流通信息映射
     mapping (string=>RollDetail) rollList;
+    bool stateRoll = true;
 
     //简化流出记录
     mapping (address=>string[]) simpleRollList;
+    uint offsetRoll = 0;
 
     //------药店方数据结构-------------------
 
@@ -64,11 +69,13 @@ contract DrugTracer {
 
     //销售信息映射
     mapping (string=>SaleDetail) saleList;
+    bool stateSale = true;
 
     //简化销售记录
     mapping (address=>string[]) simpleSaleList;
+    uint offsetSale = 0;
 
-    //------消费者方数据结果---------------------
+    //------消费者方数据结构---------------------
 
     //举报信息
     struct ReportDetail {
@@ -82,9 +89,11 @@ contract DrugTracer {
 
     //举报信息映射
     mapping (string=>ReportDetail) reportList;
+    bool stateReport = true;
 
     //简单举报信息映射
     mapping (address=>string[]) simpleReportList;
+    uint offsetReport = 0;
 
     //------监管部门方数据结构-------------------
 
@@ -97,9 +106,11 @@ contract DrugTracer {
 
     //受理信息映射
     mapping (string=>DealDetail) dealList;
+    bool stateDeal = true;
 
     //举报记录
     string[] reports;
+    uint offsetReports = 0;
 
     //------药厂方set方法--------------------
 
@@ -120,9 +131,11 @@ contract DrugTracer {
         ProduceDetail memory drugInfo = ProduceDetail(drug, true, producer, produceDate, volume, true);
         if (produceList[drugCode].isValid == false) {
             produceList[drugCode] = drugInfo;
+            stateProduce = true;
             return true;
         }
         else {
+            stateProduce = false;
             return false;
         }
     }
@@ -136,17 +149,20 @@ contract DrugTracer {
     function setInflow (
                         string number,
                         string drugCode,
+                        string inflowDate,
                         uint volume,
                         address toMerchant)
                         public returns (bool) {
-        InflowDetail memory inflowInfo = InflowDetail(drugCode, volume, toMerchant, volume, true);//初始情况下，剩余量就是交易量
+        InflowDetail memory inflowInfo = InflowDetail(drugCode, volume, inflowDate, toMerchant, volume, true);//初始情况下，剩余量就是交易量
         if (inflowList[number].isValid == false && produceList[drugCode].left >= volume) {
             inflowList[number] = inflowInfo;
             produceList[drugCode].left -= volume;
+            stateInflow = true;
             setSimpleInflow(toMerchant, number);
             return true;
         }
         else {
+            stateInflow = false;
             return false;
         }
     }
@@ -175,16 +191,18 @@ contract DrugTracer {
                         string inflowNumber,
                         string circulateDate,
                         uint volume,
-                        address toDrugStore)
+                        address toDrugstore)
                         public returns (bool) {
-        RollDetail memory rollInfo = RollDetail(inflowNumber, circulateDate, volume, toDrugStore, volume, true);
+        RollDetail memory rollInfo = RollDetail(inflowNumber, circulateDate, volume, toDrugstore, volume, true);
         if (rollList[number].isValid == false && inflowList[inflowNumber].left >= volume) {
             rollList[number] = rollInfo;
             inflowList[inflowNumber].left -= volume;
-            setSimpleRoll(toDrugStore, number);
+            stateRoll = true;
+            setSimpleRoll(toDrugstore, number);
             return true;
         }
         else {
+            stateRoll = false;
             return false;
         }
     }
@@ -219,10 +237,12 @@ contract DrugTracer {
         if (saleList[number].isValid == false && rollList[circulateNumber].left >= volume) {
             saleList[number] = saleInfo;
             rollList[circulateNumber].left -= volume;
+            stateSale = true;
             setSimpleSale(customerNumber, number);
             return true;
         }
         else {
+            stateSale = false;
             return false;
         }
     }
@@ -257,10 +277,13 @@ contract DrugTracer {
         ReportDetail memory reportInfo = ReportDetail(saleNumber, reportDate, reporter, report, false, true);
         if (reportList[number].isValid == false) {
             reportList[number] = reportInfo;
+            stateReport = true;
             setSimpleReport(reporter, number);
+            reports.push(number);
             return true;
         }
         else {
+            stateReport = false;
             return false;
         }
     }
@@ -296,64 +319,280 @@ contract DrugTracer {
                 //情况属实，监管部门采取措施
                 produceList[drugCode].state = false;
             }
+            stateDeal = true;
            return true;
         }
         else {
+            stateDeal = false;
             return false;
         }
     }
 
     //------药厂方get方法
 
-    function getProduce (string number) public returns (string) {
-        //TODO:GETPRODUCE
+    //通过查询，返回对应该批号的一个ProduceDetail结构体实例
+    //drugCode:药品批号
+    //return:由整个结构体数据转成的string
+    function getProduce (string drugCode) public view returns ( string,
+                                                                string,
+                                                                bool,
+                                                                address,
+                                                                string,
+                                                                uint,
+                                                                uint) {
+        ProduceDetail memory tmpProduce = produceList[drugCode];
+        string memory tmpDrug = tmpProduce.drug;
+        bool tmpState = tmpProduce.state;
+        address tmpProducerCode = tmpProduce.producerCode;
+        string memory tmpProduceDate = tmpProduce.produceDate;
+        uint tmpVolume = tmpProduce.volume;
+        uint tmpLeft = tmpProduce.left;
+        return (drugCode, tmpDrug, tmpState, tmpProducerCode, tmpProduceDate, tmpVolume, tmpLeft);
     }
 
-    function getInflow (string drugCode) public returns (string) {
-        //TODO:GETINFLOW
+    //通过查询，返回对应该单号的一个InflowDetail结构体实例
+    //number:流入市场单号
+    //return:由整个结构体数据转成的string
+    function getInflow (string number) public view returns ( string,
+                                                        string,
+                                                        uint,
+                                                        address,
+                                                        uint) {
+        InflowDetail memory tmpInflow = inflowList[number];
+        string memory tmpDrugCode = tmpInflow.drugCode;
+        uint tmpVolume = tmpInflow.volume;
+        address tmpToMerchant = tmpInflow.toMerchant;
+        uint tmpLeft = tmpInflow.left;
+        return (number, tmpDrugCode, tmpVolume, tmpToMerchant, tmpLeft);
     }
 
-    function getSimpleInflow (address to) public returns (string[]) {
-        //TODO:GETSIMPLEINFLOW
+    function initInflow () public {
+        offsetInflow = 0;
+    }
+
+    function getLengthInflow (address to) public view returns (uint) {
+        return simpleInflowList[to].length;
+    }
+
+    function getNextInflow (address to) public view returns (string) {
+        return simpleInflowList[to][offsetInflow];
+    }
+
+    function setOffsetInflow () public {
+        offsetInflow += 1;
+    }
+
+    //返回setProduce的结果状态
+    //return:true成功，false失败
+    function getStateProduce () public view returns (bool) {
+        return stateProduce;
+    }
+
+    //返回setInflow的结果状态
+    //return:true成功，false失败
+    function getStateInflow () public view returns (bool) {
+        return stateInflow;
     }
 
     //------销售商方get方法
 
-    function getRoll (string number) public returns (string) {
-        //TODO:GETROLL
+    //经过查询，返回一个RollDetail结构体实例。
+    //number:流出单号
+    //string:由结构体数据转成的string
+    function getRoll (string number) public view returns (   string,
+                                                        string,
+                                                        string,
+                                                        uint,
+                                                        address,
+                                                        uint) {
+        RollDetail memory rollInfo = rollList[number];
+        string memory tmpInflowNumber = rollInfo.inflowNumber;
+        string memory tmpCirculateDate = rollInfo.circulateDate;
+        uint tmpVolume = rollInfo.volume;
+        address tmpToDrugstore = rollInfo.toDrugstore;
+        uint tmpLeft = rollInfo.left;
+        return (number, tmpInflowNumber, tmpCirculateDate, tmpVolume, tmpToDrugstore, tmpLeft);
     }
 
-    function getSimpleRoll (address to) public returns (string[]) {
-        //TODO:GETSIMPLEROLL
+    function initRoll () public {
+        offsetRoll = 0;
+    }
+
+    function getLengthRoll (address to) public view returns (uint) {
+        return simpleRollList[to].length;
+    }
+
+    function getNextRoll (address to) public view returns (string) {
+        return simpleRollList[to][offsetRoll];
+    }
+
+    function setOffsetRoll () public {
+        offsetRoll += 1;
+    }
+
+    //返回setRoll的结果状态
+    //return:true成功，false失败
+    function getStateRoll () public view returns (bool) {
+        return stateRoll;
     }
 
     //------药店方get方法
 
-    function getSale (string number) public returns (string) {
-
+    //经过查询，返回和单号对应的SaleDetail结构体实例
+    //number:销售单号
+    //string:由结构体数据转成的string
+    function getSale (string number) public view returns (   string,
+                                                        string,
+                                                        address,
+                                                        uint,
+                                                        string) {
+        SaleDetail memory saleInfo = saleList[number];
+        string memory tmpCirculateNumber = saleInfo.circulateNumber;
+        address tmpCustomerNumber = saleInfo.customerNumber;
+        uint tmpVolume = saleInfo.volume;
+        string memory tmpSaleDate = saleInfo.saleDate;
+        return (number, tmpCirculateNumber, tmpCustomerNumber, tmpVolume, tmpSaleDate);
     }
 
-    function getSimpleSale (address to) public returns (string[]) {
+    function initSale () public {
+        offsetSale = 0;
+    }
 
+    function getLengthSale (address to) public view returns (uint) {
+        return simpleSaleList[to].length;
+    }
+
+    function getNextSale (address to) public view returns (string) {
+        return simpleSaleList[to][offsetSale];
+    }
+
+    function setOffsetSale () public {
+        offsetSale += 1;
+    }
+
+    //返回setSale的结果状态
+    //return:true成功，false失败
+    function getStateSale () public view returns (bool) {
+        return stateSale;
     }
 
     //------消费者方get方法
 
-    function getReport (string number) public returns (string) {
-
+    //经过查询，返回对应该地址名下的交易单号组成的动态数组
+    //number:举报单号
+    //string:由结构体数据转成的string
+    function getReport (string number) public view returns ( string,
+                                                        string,
+                                                        string,
+                                                        address,
+                                                        string,
+                                                        bool) {
+        ReportDetail memory reportInfo = reportList[number];
+        string memory tmpSaleNumber = reportInfo.saleNumber;
+        string memory tmpReportDate = reportInfo.reportDate;
+        address tmpReporter = reportInfo.reporter;
+        string memory tmpReport = reportInfo.report;
+        bool tmpState = reportInfo.state;
+        return (number, tmpSaleNumber, tmpReportDate, tmpReporter, tmpReport, tmpState);
     }
     
-    function getSimpleReport (address to) public returns (string[]) {
-
+    function initReport () public {
+        offsetReport = 0;
     }
 
-    function getSource (string number) public returns (string) {
+    function getLengthReport (address to) public view returns (uint) {
+        return simpleReportList[to].length;
+    }
 
+    function getNextReport (address to) public view returns (string) {
+        return simpleReportList[to][offsetReport];
+    }
+
+    function setOffsetReport () public {
+        offsetReport += 1;
+    }
+
+    //递归调用各个类的get方法，不断获得更深层次的信息，最终返回一个完整的json数据结构体
+    //number:销售单号
+    //string:由全部溯源信息组成的字符串
+    function getSource (string number) public returns ( string,
+                                                        string,
+                                                        bool,
+                                                        address,
+                                                        string,
+                                                        uint,
+                                                        uint,
+                                                        string,
+                                                        address,
+                                                        string,
+                                                        uint,
+                                                        uint,
+                                                        string,
+                                                        address,
+                                                        string,
+                                                        uint,
+                                                        uint,
+                                                        string,
+                                                        address,
+                                                        string,
+                                                        uint) {
+        SaleDetail memory saleInfo = saleList[number];
+        string memory tmpRollNumber = saleInfo.circulateNumber;
+        RollDetail memory rollInfo = rollList[tmpRollNumber];
+        string memory tmpInflowNumber = rollInfo.inflowNumber;
+        InflowDetail memory inflowInfo = inflowList[tmpInflowNumber];
+        string memory tmpDrugCode = inflowInfo.drugCode;
+        ProduceDetail memory produceInfo = produceList[tmpDrugCode];
+        return (    tmpDrugCode,
+                    produceInfo.drug,
+                    produceInfo.state,
+                    produceInfo.producerCode,
+                    produceInfo.produceDate,
+                    produceInfo.volume,
+                    produceInfo.left,
+                    tmpInflowNumber,
+                    inflowInfo.toMerchant,
+                    inflowInfo.inflowDate,
+                    inflowInfo.volume,
+                    inflowInfo.left,
+                    tmpRollNumber,
+                    rollInfo.toDrugstore,
+                    rollInfo.circulateDate,
+                    rollInfo.volume,
+                    rollInfo.left,
+                    number,
+                    saleInfo.customerNumber,
+                    saleInfo.saleDate,
+                    saleInfo.volume);
+    }
+
+    //返回setReport的结果状态
+    //return:true成功，false失败
+    function getStateReport () public view returns (bool) {
+        return stateReport;
     }
 
     //------监管部门方get方法
 
-    function getAdminReport () public returns (string) {
-        
+    function initReports () public {
+        offsetReports = 0;
+    }
+
+    function getLengthReports () public view returns (uint) {
+        return reports.length;
+    }
+
+    function getNextReports () public view returns (string) {
+        return reports[offsetReports];
+    }
+
+    function setOffsetReports () public {
+        offsetReports += 1;
+    }
+
+    //返回setDeal的结果状态
+    //return:true成功，false失败
+    function getStateDeal () public view returns (bool) {
+        return stateDeal;
     }
 }

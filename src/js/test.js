@@ -18,11 +18,7 @@ var address = "0xb95c190ce7fbacdf3dd7f1f8125faf870b673c49"
 tokenObject = web3.eth.contract(abi).at(address);
 //console.log(web3.isConnected())
 //console.log(web3.eth.accounts[0])
-//tokenObject.setProduce().sendTransaction("zhanglingxu","hhhhhhh").then(console.log);
-//tokenObject.setProduce("zhanglingxu","hhhhhhh",{from: web3.eth.accounts[0]})
-//.then(console.log(tokenObject.get("zhanglingxu")));
 web3.eth.defatltAccount = '0x341744a7191e2fd52e24968b93e87db41a1ba250';
-//web3.eth.getAccounts().then(console.log);
 //console.log(web3.eth.getAccounts());
 //console.log(tokenObject.get("123", 6));
 tokenObject.setSimpleSale.sendTransaction("zhang","17",{from: web3.eth.defatltAccount}).then(console.log(tokenObject.get.call("zhang",9)));
