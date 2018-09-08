@@ -1,1 +1,43 @@
-hello world
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DrugTracer</title>
+</head>
+
+<body background="image/background.jpg">
+<div align="center">
+  <h1>Drug Tracer</h1>
+  <p>Index Page</p>
+</div>
+<hr>
+<div class="Buttons">
+  <div align="center">
+    <p>&nbsp;    </p>
+    <p>
+      <input type="button" name="Customer" id="Customer" value="Customer" onclick="jumpPages('Customers.html')">
+    </p>
+    <p>
+      <input type="button" name="PharmaceuticalFactory" id="PharmaceuticalFactory" value="Pharmaceutical Factory" onclick="jumpPages('PharmaceuticalFactory.html')">
+    </p>
+    <p>
+      <input type="button" name="Merchant" id="Merchant" value="Merchant" onclick="jumpPages('Merchant.html')">
+    </p>
+    <p>
+      <input type="button" name="DrugStore" id="DrugStore" value="Drug Store" onclick="jumpPages('DrugStore.html')">
+    </p>
+    <p>
+      <input type="button" name="Regulator" id="Regulator" value="Regulator" onclick="jumpPages('Regulator.html')">
+    </p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+<hr>
+<p align="center"><span data-boldtype="0">©Calories Team</span></p>
+</body>
+</html>
+<script>
+function jumpPages(target){
+  window.location.href=target;
+}
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MerchantDrugTracer</title>
+<style type="text/css">
+body {
+	background-image: url(image/background.jpg);
+}
+</style>
+</head>
+<body>
+<div align="center">
+  <h1>Drug Tracer
+  </h1>
+  <h2>Merchant</h2>
+</div>
+<hr>
+<form>
+  Address:
+    <input type = "text" name = "address" id = "address">
+Password:
+<input type = "password" name = "password" id = "password">
+</form>
+<hr>
+<h2 align="center">setRoll</h2>
+<form>
+  <div align="center">
+    <table width="360" border="1">
+      <tr>
+        <td width="120">inflowNumber</td>
+        <td width="224"><input type = "text" name = "inflowNumber" id = "inflowNumber"></td>
+      </tr>
+      <tr>
+        <td>circulateDate</td>
+        <td><input type ="text" name = "circulateDate" id = "circulateDate"></td>
+      </tr>
+      <tr>
+        <td>volume</td>
+        <td><input type ="text" name ="volume" id = "volume"></td>
+      </tr>
+      <tr>
+        <td>toDrugstore</td>
+        <td><input type = "text" name = "toDrugstore" id = "toDrugstore"></td>
+      </tr>
+    </table>
+    <p><br>
+      <input type = "button" name = "submitsetRoll" value = "setRoll" id = "submitsetRoll" onclick="sendMess()">
+    </p>
+    <p>&nbsp;</p>
+  </div>
+</form>
+<hr>
+<p align="center">©<span data-boldtype="0">Calories Team</span></p>
+<p>&nbsp;</p>
+</body>
+</html>
+<script src="Merchant.js" type="text/javascript" charset="utf-8"></script>

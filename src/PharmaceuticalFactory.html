@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>PharmaceuticalFactoryDrugTracer</title>
+<body background="image/background.jpg">
+<div align="center">
+  <h1>Drug Tracer
+  </h1>
+  <h2>Pharmaceutical Factory</h2>
+</div>
+<hr>
+<form>
+  Address:
+    <input type="text" name="address" id = "address">
+Password:
+<input type="password" name="password" id = "password">
+</form> 
+<hr align="center">
+<h2 align="center">setProduce</h2>
+<form>
+  <div align="center">
+    <table width="360" border="1">
+      <tr>
+        <td width="120">drugCode</td>
+        <td width="224"><input type="text" name ="drugCode_produce" id = "drugCode_produce"></td>
+      </tr>
+      <tr>
+        <td>drug</td>
+        <td><input type="text" name = "drug" id = "drug"></td>
+      </tr>
+      <tr>
+        <td>produceDate</td>
+        <td><input type="text" name = "produceDate" id = "produceDate"></td>
+      </tr>
+      <tr>
+        <td>volume</td>
+        <td><input type="text" name = "volume_produce" id = "volume_produce"></td>
+      </tr>
+    </table>
+  </div>
+  <p align="center"><br>
+    <input type = "button" name = "submitsetProduce" value = "setProduce" id = "submitsetProduce" onclick="sendMess1()">
+  </p>
+  <p align="center">&nbsp;</p>
+</form>
+<hr>
+<h2 align="center">setInflow</h2>
+<form>
+  <div align="center">
+    <table width="360" border="1">
+      <tr>
+        <td width="120">drugCode</td>
+        <td width="224"><input type = "text" name = "drugCode_inflow" id ="drugCode_inflow"></td>
+      </tr>
+      <tr>
+        <td>inflowDate</td>
+        <td><input type="text" name="inflowDate" id = "inflowDate"></td>
+      </tr>
+      <tr>
+        <td>volume</td>
+        <td><input type ="text" name = "volume_inflow" id = "volume_inflow"></td>
+      </tr>
+      <tr>
+        <td>toMerchant</td>
+        <td><input type ="text" name ="toMerchant" id = "toMerchant"></td>
+      </tr>
+    </table>
+  </div>
+  <p align="center"><br>
+    <input type = "button" name = "submitsetInflow" value = "setInflow" id = "submitsetInflow" onclick="sendMess2()">
+  </p>
+  <p align = "center">&nbsp;</p>
+  <p align = "center">&nbsp;</p>
+</form>
+<hr>
+<p align="center">©<span data-boldtype="0">Calories Team</span></p>
+</body>
+</html>
+<script src="js/PharmaceuticalFactory.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/web3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/truffle-contract.js" type="text/javascript" charset="utf-8"></script>

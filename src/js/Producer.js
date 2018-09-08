@@ -19,8 +19,8 @@ web3.eth.defaultAccount = "0xc4ea40e0330b6043e8249a49bde5afdad77e412e";
 
 //console.log(web3.eth.getBalance(web3.eth.defaultAccount));
 
-// web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, value:web3.toWei(10,'ether')});
-
+web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, value:web3.toWei(10,'ether')});
+        
 // console.log(web3.eth.getBalance("0x0342bd23544ded0a902f8275206b333204cf8bfd"));
 
 //交易1  from:Producer  to:Merchant 
@@ -46,16 +46,16 @@ web3.eth.defaultAccount = "0xc4ea40e0330b6043e8249a49bde5afdad77e412e";
 //         if(!err){
             
 //             instance.setProduce.sendTransaction(address,
-//                 "感冒灵颗粒",  web3.eth.defaultAccount, "2018-09-08", 5000, 
+//                 "感冒灵",  web3.eth.defaultAccount, "2018-09-08", 5000, 
 //                 {from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", gas:300000});
             
 //             console.log(address)
 //         }
 //     });
 
-// var info = instance.getProduce("0xabefe256504fff189e97d6c8e7e7c20c4f75fa7e22bcaba2b18393c74ccf5b26");
+// var info = instance.getProduce("0x51e4b1a349fcb463cb18558616630e5fa69ef6e361e34a0e1006a487af838049");
 // console.log(info); 
 
-var info = instance.getInflow("0xbdc0c9122099228bd8666b6746862a87716c317944f362ad635f2e2fb0c05c2f");
+var info = instance.getInflow("0xf77d694ec33c7c3f0c40df8cb115c82100f927a817a003d8f7a144dc0a9a53ee");
 console.log(info);
 

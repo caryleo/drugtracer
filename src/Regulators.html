@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Regulator Drug Tracer</title>
+</head>
+
+<body background="image/background.jpg">
+<div align="center">
+  <h1>Drug Tracer
+  </h1>
+  <h2><span data-boldtype="0">Regulator</span></h2>
+</div>
+<hr>
+<div class="RegulatorSignIn" id="RegulatorSignIn">
+  <p align="justify">Address:
+<input type="text" name="address" id="address">
+    Password:
+    <input type="password" name="password" id="password">
+  </p>
+</div>
+<hr>
+<div class="Admit" id="Admit">
+  <h2 align="center">Admit</h2>
+  <div align="center">
+    <table width="360" border="1">
+      <tr>
+        <td width="120">dealDate</td>
+        <td width="724"><input type="text" name="dealDate" id="dealDate"></td>
+      </tr>
+      <tr>
+        <td>drugCode</td>
+        <td><input type="text" name="drugCode" id="drugCode"></td>
+      </tr>
+      <tr>
+        <td>result</td>
+        <td><select name="result" id="result">
+          <option>Standard</option>
+          <option>Unstandard</option>
+        </select></td>
+      </tr>
+    </table>
+  </div>
+  <p align="center">
+      <input type="button" name="Accept" id="Accept" value="Admit" onclick="sendMess()">
+  </p>
+  <p align="center">&nbsp;</p>
+</div>
+<hr>
+<div class="Report" id="Report">
+  <div align="center">
+    <h2>Report</h2>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+<hr>
+<p align="center"><span data-boldtype="0">©Calories Team</span></p>
+<p>&nbsp;</p> 
+</body>
+</html>
+<script src="Regulators.js" type="text/javascript" charset="utf-8"></script>

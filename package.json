@@ -1,7 +1,6 @@
 {
   "name": "drugtracer",
   "version": "1.0.0",
-  "description": "",
   "main": "truffle.js",
   "scripts": {
     "dev": "lite-server",
@@ -25,5 +24,6 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "web3-eth-personal": "^1.0.0-beta.36"
-  }
+  },
+  "description": ""
 }
