@@ -36,7 +36,7 @@ Password:
       </tr>
       <tr>
         <td>saleDate</td>
-        <td><input type = "text" name = "saleDate" id = =&quot;saleDate&quot;></td>
+        <td><input type = "text" name = "saleDate" id ="saleDate"></td>
       </tr>
     </table>
   </div>
@@ -47,8 +47,18 @@ Password:
   <p>&nbsp;</p>
 </form>
 <hr>
+<div class="ReportHistory" id="ReportHistory">
+  <h2 align="center">Roll History(销售商 -> 药店) </h2>
+  <p align="center">
+    <input type="button" value="search" onclick="sendMess1()">
+  </p>
+  <div id="rollResult"></div>
+</div>
+<hr>
 <p align="center">©<span data-boldtype="0">Calories Team</span></p>
 <p>&nbsp;</p>
 </body>
 </html>
-<script src="DrugStore.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/DrugStore.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/web3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/truffle-contract.js" type="text/javascript" charset="utf-8"></script>

@@ -25,9 +25,9 @@
     <input name="QuerysaleNumber" type="text" id="QuerysaleNumber">
     <input type="button" name="QuerySubmit" id="QuerySubmit" value="Submit" onclick="sendMess1()">
   </p>
-  <div class="QueryResult" id="QueryResult">
+  <div class="QueryResult" >
     <p>Result:</p>
-    <p>&nbsp;</p>
+    <div id="QueryResult"></div>
   </div>
 </div>
 <hr>
@@ -59,11 +59,16 @@
 <hr>
 <div class="ReportHistory" id="ReportHistory">
   <h2 align="center">Report History  </h2>
-  <p>&nbsp;</p>
+  <p align="center">
+    <input type="button" value="search" onclick="sendMess3()">
+  </p>
+  <div id="reportResult"></div>
 </div>
 <hr>
 <p align="center">©Calories Team</p>
 <p>&nbsp;</p>
 </body>
 </html>
-<script src="Customers.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/Customers.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/web3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/truffle-contract.js" type="text/javascript" charset="utf-8"></script>

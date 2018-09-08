@@ -15,42 +15,25 @@ var address = "0x16a726ec77337145024140404139d3610d35449b"
 
 instance = web3.eth.contract(abi).at(address);
 
-web3.eth.defaultAccount = '0x1f3c60417acd9ccb650a65a5495475822d56b945';
+web3.eth.defaultAccount = '0x867ba6108927eae5cdb99a1defd4091daf38a1e9';
 
 //web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, value:web3.toWei(10,'ether')});
 
-
-//交易4  from:Customer  to:Administrator 
+//交易3  from:Drugstore  to:Customer
 // var a = web3.eth.sendTransaction({from:web3.eth.defaultAccount , 
-//     to:"0xccef5daaed4187c4d79635879b69ed95a0ea6edf" , value:web3.toWei(300000,'wei') },function(err, address){
+//     to:"0x1f3c60417acd9ccb650a65a5495475822d56b945" , value:web3.toWei(3000000,'wei') },function(err, address){
 //         if(!err){
             
-//             instance.setReport.sendTransaction(address,
-//                 "0x42d990ea3ab6a92bec39c342c6026d66fb0ff16ba4c6d1a9bee2bddd69c225c6", "2018-09-20", "0xccef5daaed4187c4d79635879b69ed95a0ea6edf", "He lies!", 0 ,
+//             instance.setSale.sendTransaction(address,
+//                 "0xed152765181a31f87e5030ed3b4da311560e559b8f9e9b1a73852da490215b08",  "0x1f3c60417acd9ccb650a65a5495475822d56b945", 8 , "2018-09-20", 
 //                 {from:web3.eth.defaultAccount, gas:3000000});
             
 //             console.log(address);
-            
 //             web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, value:web3.toWei(1,'ether')});
 //         }
 //     });
-   
 
 
-// var info = instance.getSource('0x42d990ea3ab6a92bec39c342c6026d66fb0ff16ba4c6d1a9bee2bddd69c225c6');
-// console.log(info)
-
-// var info1 = instance.getSale(info[0]);
-
-// var info2 = instance.getRoll(info[1]);
-// //info2[4] 药店编号
-
-// var info3 = instance.getInflow(info[2]);
-// //info3[3] 销售商编号
-
-// var info4 = instance.getProduce(info[3]);
-// //info4[3] 生产厂商编号
-
-
-var info = instance.getReport("0x1c4eb6cc9fb5c46980bf0bf8dd9cae0efec1c0d7e6af9fde64faf387d3f4ec4d");
+var info = instance.getSale("0x6f719fc2a7f256334e648f97345edaa223a6040a6ff688f4c26ca7faedab9b08");
 console.log(info);
+       
