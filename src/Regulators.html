@@ -11,19 +11,18 @@
   </h1>
   <h2><span data-boldtype="0">Regulator</span></h2>
 </div>
-<hr>
 <div class="RegulatorSignIn" id="RegulatorSignIn">
-  <p align="justify">Address:
-<input type="text" name="address" id="address">
-    Password:
-    <input type="password" name="password" id="password">
   </p>
 </div>
 <hr>
 <div class="Admit" id="Admit">
-  <h2 align="center">Admit</h2>
+  <h2 align="center">SetDeal</h2>
   <div align="center">
     <table width="360" border="1">
+      <tr>
+            <td width="120">reportNumber</td>
+            <td width="724"><input type="text" name="dealDate" id="reportNumber"></td>
+          </tr>
       <tr>
         <td width="120">dealDate</td>
         <td width="724"><input type="text" name="dealDate" id="dealDate"></td>
@@ -42,16 +41,27 @@
     </table>
   </div>
   <p align="center">
-      <input type="button" name="Accept" id="Accept" value="Admit" onclick="sendMess()">
+      <input type="button" name="Accept" id="Accept" value="submit" onclick="sendMess()">
   </p>
   <p align="center">&nbsp;</p>
 </div>
 <hr>
+<div class="Query" id="Query">
+    <h2 align="center">Query  </h2>
+    <p align="center">saleNumber:
+      <input name="QuerysaleNumber" type="text" id="QuerysaleNumber">
+      <input type="button" name="QuerySubmit" id="QuerySubmit" value="Submit" onclick="sendMess1()">
+    </p>
+    <div class="QueryResult" >
+      <p>Result:</p>
+      <div id="QueryResult"></div>
+    </div>
+  </div>
+  <hr>
 <div class="Report" id="Report">
   <div align="center">
-    <h2>Report</h2>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
+    <h2>All Reports</h2>
+    <div id="allReports"></div>
   </div>
 </div>
 <hr>
@@ -59,4 +69,6 @@
 <p>&nbsp;</p> 
 </body>
 </html>
-<script src="Regulators.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/Regulators.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/web3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/truffle-contract.js" type="text/javascript" charset="utf-8"></script>

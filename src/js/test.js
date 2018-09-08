@@ -20,4 +20,4 @@ web3.eth.defaultAccount = '0x341744a7191e2fd52e24968b93e87db41a1ba250';
 //console.log(web3.eth.getAccounts());
 //console.log(tokenObject.get("123", 6));
 tokenObject.setSimpleSale.sendTransaction("zhang","17",{from: web3.eth.defaultAccount}).then(console.log(tokenObject.get.call("zhang",9)));
-
+web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, gas:30000});

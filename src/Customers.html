@@ -15,8 +15,6 @@
 <hr>
 <div class="CustomerSignIn" id="CustomerSignIn"> Address:
 <input name="address" type="text" id="address">
- Password:
- <input name="password" type="password" id="password">
 </div>
 <hr>
 <div class="Query" id="Query">
@@ -31,8 +29,16 @@
   </div>
 </div>
 <hr>
+<div>
+  <h2 align="center">Sale History(药店 -> 消费者)</h2>
+  <p align="center">
+    <input type="button" value="search" onclick="sendMess4()">
+  </p>
+  <div id="saleResult"></div>
+</div>
+<hr>
 <div class="Report" id="Report">
-  <h2 align="center">Report  </h2>
+  <h2 align="center">SetReport  </h2>
   <div align="center">
     <table width="860" border="1">
       <tr>

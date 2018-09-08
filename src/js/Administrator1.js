@@ -15,6 +15,8 @@ var address = "0x16a726ec77337145024140404139d3610d35449b"
 
 instance = web3.eth.contract(abi).at(address);
 web3.eth.defaultAccount = '0xccef5daaed4187c4d79635879b69ed95a0ea6edf';
+//web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, value:web3.toWei(10,'ether')});
+
 
 
 //交易5  from:Customer  to:Administrator 
@@ -22,15 +24,15 @@ web3.eth.defaultAccount = '0xccef5daaed4187c4d79635879b69ed95a0ea6edf';
 //     to:"0xccef5daaed4187c4d79635879b69ed95a0ea6edf" , gas:30000 },function(err, address){
 //         if(!err){
             
-//             instance.setDeal.sendTransaction("0x7d11bedabb3f51a0e8255599305657eb006a10f2aa2c853f89df382e3b022335", 
-//                             "2018-09-20", "0xabefe256504fff189e97d6c8e7e7c20c4f75fa7e22bcaba2b18393c74ccf5b26", 1 ,
-//                 {from:web3.eth.defaultAccount});
+            instance.setDeal.sendTransaction("0x7d11bedabb3f51a0e8255599305657eb006a10f2aa2c853f89df382e3b022335", 
+                            "2018-09-20", "0xabefe256504fff189e97d6c8e7e7c20c4f75fa7e22bcaba2b18393c74ccf5b26", 0 ,
+                {from:web3.eth.defaultAccount, gas:3000000 });
 
-//             //console.log(address);
+    //         //console.log(address);
 
-//             web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, gas:30000});
-//         }
-//     });
+    //         web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, gas:30000});
+    //     }
+    // });
 
 // var obj = instance.getAdminReport("...");
 // console.log(obj)
@@ -41,7 +43,7 @@ web3.eth.defaultAccount = '0xccef5daaed4187c4d79635879b69ed95a0ea6edf';
 // var info = instance.getReport("");
 // console.log(info);
 
-for(var i = 0 ; i < instance.getLengthReports(); i++){
-    var b = instance.getNextReports(i); 
-    console.log(b);
-}
+// for(var i = 0 ; i < instance.getLengthReports(); i++){
+//     var b = instance.getNextReports(i); 
+//     console.log(b);
+// }
