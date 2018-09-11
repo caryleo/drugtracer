@@ -4,14 +4,31 @@
 <title>PharmaceuticalFactoryDrugTracer</title>
 <body background="image/background.jpg">
 <div align="center">
-  <h1>Drug Tracer
-  </h1>
-  <h2>Pharmaceutical Factory</h2>
+  <h1><img src="image/factory_banner.jpg" width="1280" height="200"></h1>
 </div>
 <hr>
 <form>
-  Address:
-    <input type="text" name="address" id = "address">
+  <div class="RegulatorSignIn" id="RegulatorSignIn">
+    </p>
+    <div align="center">
+      <table width="847" border="0">
+        <tr>
+          <td width="119"><div align="center"><img src="image/factory.png" width="100" height="100"></div></td>
+          <td width="635"><p>Welcome!</p>
+            <p>Address:
+              <input type="text" name="address" id="address">
+              Password:
+              <input type="password" name="password" id="password">
+              <input type="button" name="SignIn" id="SignIn" value="Sign In">
+            </p></td>
+          <td width="71"><p>&nbsp;</p>
+            <p align="center">
+              <input type="button" name="Home" id="Home" value="Home" onclick="jumpPages('index.html')">
+            </p></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </form> 
 <hr align="center">
 <h2 align="center">setProduce</h2>
@@ -71,9 +88,14 @@
   <p align = "center">&nbsp;</p>
 </form>
 <hr>
-<p align="center">©<span data-boldtype="0">Calories Team</span></p>
+<p align="center"><span data-boldtype="0">Calories Team</span></p>
 </body>
 </html>
 <script src="js/PharmaceuticalFactory.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/web3.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/truffle-contract.js" type="text/javascript" charset="utf-8"></script>
+<script>
+function jumpPages(target){
+  window.location.href=target;
+}
+</script>

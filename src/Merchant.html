@@ -11,14 +11,28 @@ body {
 </head>
 <body>
 <div align="center">
-  <h1>Drug Tracer
-  </h1>
-  <h2>Merchant</h2>
+ <h1><img src="image/merchant_banner.jpg" width="1280" height="200"></h1>
 </div>
 <hr>
 <form>
-  Address:
-    <input type = "text" name = "address" id = "address">
+  <div align="center">
+    <table width="847" border="0">
+      <tr>
+        <td width="119"><div align="center"><img src="image/merchant.png" alt="" width="100" height="100"></div></td>
+        <td width="635"><p>Welcome!</p>
+          <p>Address:
+            <input type="text" name="address" id="address">
+            Password:
+            <input type="password" name="password" id="password">
+            <input type="button" name="SignIn" id="SignIn" value="Sign In">
+          </p></td>
+        <td width="71"><p>&nbsp;</p>
+          <p align="center">
+            <input type="button" name="Home" id="Home" value="Home" onclick="jumpPages('index.html')">
+          </p></td>
+      </tr>
+    </table>
+  </div>
 </form>
 <hr>
 <h2 align="center">setRoll</h2>
@@ -50,17 +64,22 @@ body {
 </form>
 <hr>
 <div class="ReportHistory" id="ReportHistory">
-  <h2 align="center">Inflow History(厂商 -> 销售商) </h2>
+  <h2 align="center">Inflow History </h2>
   <p align="center">
     <input type="button" value="search" onclick="sendMess1()">
   </p>
   <div id="inflowResult"></div>
 </div>
 <hr>
-<p align="center">©<span data-boldtype="0">Calories Team</span></p>
+<p align="center"><span data-boldtype="0">Calories Team</span></p>
 <p>&nbsp;</p>
 </body>
 </html>
 <script src="js/Merchant.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/web3.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/truffle-contract.js" type="text/javascript" charset="utf-8"></script>
+<script>
+function jumpPages(target){
+  window.location.href=target;
+}
+</script>

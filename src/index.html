@@ -3,37 +3,59 @@
 <head>
 <meta charset="utf-8">
 <title>DrugTracer</title>
+<style type="text/css">
+.Buttons div table tr td p {
+	font-size: 50px;
+}
+.indexbutton_yh {
+	font-size: 20px;
+}
+</style>
 </head>
 
 <body background="image/background.jpg">
-<div align="center">
-  <h1>Drug Tracer</h1>
-  <p>Index Page</p>
+<div align="center"><img src="image/index_banner.jpg" width="1280" height="200">
+ 
 </div>
 <hr>
+<p align="center" class="indexbutton_yh">Welcome! Please choose the character.</p>
 <div class="Buttons">
   <div align="center">
-    <p>&nbsp;    </p>
-    <p>
-      <input type="button" name="Customer" id="Customer" value="Customer" onclick="jumpPages('Customers.html')">
-    </p>
-    <p>
-      <input type="button" name="PharmaceuticalFactory" id="PharmaceuticalFactory" value="Pharmaceutical Factory" onclick="jumpPages('PharmaceuticalFactory.html')">
-    </p>
-    <p>
-      <input type="button" name="Merchant" id="Merchant" value="Merchant" onclick="jumpPages('Merchant.html')">
-    </p>
-    <p>
-      <input type="button" name="DrugStore" id="DrugStore" value="Drug Store" onclick="jumpPages('DrugStore.html')">
-    </p>
-    <p>
-      <input type="button" name="Regulator" id="Regulator" value="Regulator" onclick="jumpPages('Regulators.html')">
-    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table width="1522" border="0">
+      <tr>
+        <td width="300" height="233"><div align="center"><img src="image/customer.png" width="250" height="250" onclick="jumpPages('Customers.html')"></div></td>
+        <td width="300"><div align="center"><img src="image/factory.png" width="250" height="250" onclick="jumpPages('PharmaceuticalFactory.html')"></div></td>
+        <td width="300"><div align="center"><img src="image/merchant.png" width="250" height="250" onclick="jumpPages('Merchant.html')"></div></td>
+        <td width="300"><div align="center"><img src="image/drugstore.png" width="250" height="250" onclick="jumpPages('DrugStore.html')"></div></td>
+        <td width="300"><div align="center"><img src="image/regulator.png" width="250" height="250" onclick="jumpPages('Regulators.html')"></div></td>
+      </tr>
+      <tr>
+        <td><div align="center">
+          <input name="Customer" type="button" class="indexbutton_yh" id="Customer" onclick="jumpPages('Customers.html')" value="Customer">
+        </div></td>
+        <td><div align="center">
+          <input name="PharmaceuticalFactory" type="button" class="indexbutton_yh" id="PharmaceuticalFactory" onclick="jumpPages('PharmaceuticalFactory.html')" value="Pharmaceutical Factory">
+        </div></td>
+        <td><div align="center">
+          <input name="Merchant2" type="button" class="indexbutton_yh" id="Merchant2" onclick="jumpPages('Merchant.html')" value="Merchant">
+        </div></td>
+        <td><div align="center">
+          <input name="DrugStore" type="button" class="indexbutton_yh" id="DrugStore" onclick="jumpPages('DrugStore.html')" value="Drug Store">
+        </div></td>
+        <td><div align="center">
+          <input name="Regulator" type="button" class="indexbutton_yh" id="Regulator" onclick="jumpPages('Regulators.html')" value="Regulator">
+        </div></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
     <p>&nbsp;</p>
   </div>
 </div>
 <hr>
-<p align="center"><span data-boldtype="0">©Calories Team</span></p>
+<p align="center"><span data-boldtype="0">Calories Team</span></p>
 </body>
 </html>
 <script>
