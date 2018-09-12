@@ -52,5 +52,5 @@ web3.eth.defaultAccount = '0x1f3c60417acd9ccb650a65a5495475822d56b945';
 // //info4[3] 生产厂商编号
 
 
-var info = instance.getReport("0xf85e7c4ec30813a4e6de7e8ea4b7172aa232c3cf3b9860fef158fc31ae00b050");
-console.log(info);
+// var info = instance.getReport("0xf85e7c4ec30813a4e6de7e8ea4b7172aa232c3cf3b9860fef158fc31ae00b050");
+// console.log(info);
