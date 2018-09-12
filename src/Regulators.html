@@ -16,78 +16,77 @@ signin_yh {
 </div>
 <hr>
 <div class="RegulatorSignIn" id="RegulatorSignIn">
-  </p>
   <div align="center">
     <table width="847" border="0">
       <tr>
-        <td width="119"><div align="center"><img src="image/regulator.png" width="100" height="100"></div></td>
-        <td width="635"><p>Welcome!</p>
-          <p>Address:
-            <input type="text" name="address" id="address">
-            Password:
+        <td width="120"><div align="center"><img src="image/regulator.png" alt="" width="100" height="100"></div></td>
+        <td width="663"><p>欢迎使用!</p>
+          <p>地址:
+            <input name="address" type="text" id="address" size="45">
+            密码:
             <input type="password" name="password" id="password">
-            <input type="button" name="SignIn" id="SignIn" value="Sign In">
-        </p></td>
-        <td width="71"><p>&nbsp;</p>
+            <input type="button" name="SignIn" id="SignIn" value="登录">
+          </p></td>
+        <td width="50"><p>&nbsp;</p>
           <p align="center">
-            <input type="button" name="Home" id="Home" value="Home" onclick="jumpPages('index.html')">
-        </p></td>
+            <input type="button" name="Home" id="Home" value="主页" onclick="jumpPages('index.html')">
+          </p></td>
       </tr>
     </table>
   </div>
 </div>
 <hr>
 <div class="Admit" id="Admit">
-  <h2 align="center">SetDeal</h2>
+  <h2 align="center">举报信息受理</h2>
   <div align="center">
-    <table width="360" border="1">
+    <table width="460" border="1">
       <tr>
-            <td width="120">reportNumber</td>
-            <td width="724"><input type="text" name="dealDate" id="reportNumber"></td>
+            <td width="110"><div align="center">举报单号</div></td>
+            <td width="334"><input name="dealDate" type="text" id="reportNumber" size="45"></td>
       </tr>
       <tr>
-        <td width="120">dealDate</td>
-        <td width="724"><input type="text" name="dealDate" id="dealDate"></td>
+        <td width="110"><div align="center">受理日期</div></td>
+        <td width="334"><input name="dealDate" type="text" id="dealDate" size="45"></td>
       </tr>
       <tr>
-        <td>drugCode</td>
-        <td><input type="text" name="drugCode" id="drugCode"></td>
+        <td><div align="center">药品批号</div></td>
+        <td><input name="drugCode" type="text" id="drugCode" size="45"></td>
       </tr>
       <tr>
-        <td>result</td>
+        <td><div align="center">合格状态</div></td>
         <td><select name="result" id="result">
-          <option>Standard</option>
-          <option>Unstandard</option>
+          <option>合格</option>
+          <option>不合格</option>
         </select></td>
       </tr>
     </table>
   </div>
   <p align="center">
-      <input type="button" name="Accept" id="Accept" value="submit" onclick="sendMess()">
+      <input type="button" name="Accept" id="Accept" value="确认受理" onclick="sendMess()">
   </p>
   <p align="center">&nbsp;</p>
 </div>
 <hr>
 <div class="Query" id="Query">
-    <h2 align="center">Trace  </h2>
-    <p align="center">saleNumber:
-      <input name="QuerysaleNumber" type="text" id="QuerysaleNumber">
-      <input type="button" name="QuerySubmit" id="QuerySubmit" value="Trace" onclick="sendMess1()">
+     <h2 align="center">查询溯源</h2>
+    <p align="center">交易单号:
+      <input name="QuerysaleNumber" type="text" id="QuerysaleNumber" size="45">
+      <input type="button" name="QuerySubmit" id="QuerySubmit" value="溯源" onclick="sendMess1()">
     </p>
     <div class="QueryResult" >
-      <p>Result:</p>
+      <p>溯源结果：</p>
       <div id="QueryResult"></div>
     </div>
   </div>
   <hr>
 <div class="Report" id="Report">
   <div align="center">
-    <h2>All Reports</h2>
+    <h2>举报记录</h2>
     <div id="allReports"></div>
   </div>
 </div>
 <hr>
-<p align="center"><span data-boldtype="0">Calories Team</span></p>
+<p align="center"><span data-boldtype="0">卡路里小组</span></p>
 <p>&nbsp;</p> 
 </body>
 </html>
