@@ -2,28 +2,33 @@
 <html>
 <meta charset="utf-8">
 <title>PharmaceuticalFactoryDrugTracer</title>
-<body background="image/background.jpg">
+<style type="text/css">
+body {
+	background-image: url(image/background.jpg);
+	background-repeat: repeat;
+}
+</style>
+<body>
 <div align="center">
   <h1><img src="image/factory_banner.jpg" width="1280" height="200"></h1>
 </div>
 <hr>
 <form>
   <div class="RegulatorSignIn" id="RegulatorSignIn">
-    </p>
     <div align="center">
       <table width="847" border="0">
         <tr>
-          <td width="119"><div align="center"><img src="image/factory.png" width="100" height="100"></div></td>
-          <td width="635"><p>Welcome!</p>
-            <p>Address:
-              <input type="text" name="address" id="address">
-              Password:
+          <td width="120"><div align="center"><img src="image/factory.png" alt="" width="100" height="100"></div></td>
+          <td width="663"><p>欢迎使用!</p>
+            <p>地址:
+              <input name="address" type="text" id="address" size="45">
+              密码:
               <input type="password" name="password" id="password">
-              <input type="button" name="SignIn" id="SignIn" value="Sign In">
+              <input type="button" name="SignIn" id="SignIn" value="登录">
             </p></td>
-          <td width="71"><p>&nbsp;</p>
+          <td width="50"><p>&nbsp;</p>
             <p align="center">
-              <input type="button" name="Home" id="Home" value="Home" onclick="jumpPages('index.html')">
+              <input type="button" name="Home" id="Home" value="主页" onclick="jumpPages('index.html')">
             </p></td>
         </tr>
       </table>
@@ -31,64 +36,63 @@
   </div>
 </form> 
 <hr align="center">
-<h2 align="center">setProduce</h2>
+<h2 align="center">出厂登记</h2>
 <form>
   <div align="center">
-    <table width="360" border="1">
+    <table width="460" border="1">
       <tr>
-        <td width="120">drugCode</td>
-        <td width="224"><input type="text" name ="drugCode_produce" id = "drugCode_produce"></td>
+        <td width="110"><div align="center">药品批号</div></td>
+        <td width="334"><input name ="drugCode_produce" type="text" id = "drugCode_produce" size="45"></td>
       </tr>
       <tr>
-        <td>drug</td>
-        <td><input type="text" name = "drug" id = "drug"></td>
+        <td><div align="center">药品名称</div></td>
+        <td><input name = "drug" type="text" id = "drug" size="45"></td>
       </tr>
       <tr>
-        <td>produceDate</td>
-        <td><input type="text" name = "produceDate" id = "produceDate"></td>
+        <td><div align="center">生产日期</div></td>
+        <td><input name = "produceDate" type="text" id = "produceDate" size="45"></td>
       </tr>
       <tr>
-        <td>volume</td>
-        <td><input type="text" name = "volume_produce" id = "volume_produce"></td>
+        <td><div align="center">生产数量</div></td>
+        <td><input name = "volume_produce" type="text" id = "volume_produce" size="45"></td>
       </tr>
     </table>
   </div>
   <p align="center"><br>
-    <input type = "button" name = "submitsetProduce" value = "setProduce" id = "submitsetProduce" onclick="sendMess1()">
+    <input type = "button" name = "submitsetProduce" value = "确认登记" id = "submitsetProduce" onclick="sendMess1()">
   </p>
   <p align="center">&nbsp;</p>
 </form>
 <hr>
-<h2 align="center">setInflow</h2>
+<h2 align="center">流入市场</h2>
 <form>
   <div align="center">
-    <table width="360" border="1">
+    <table width="460" border="1">
       <tr>
-        <td width="120">drugCode</td>
-        <td width="224"><input type = "text" name = "drugCode_inflow" id ="drugCode_inflow"></td>
+        <td width="110"><div align="center">药品批号</div></td>
+        <td width="334"><input name = "drugCode_inflow" type = "text" id ="drugCode_inflow" size="45"></td>
       </tr>
       <tr>
-        <td>inflowDate</td>
-        <td><input type="text" name="inflowDate" id = "inflowDate"></td>
+        <td><div align="center">流入日期</div></td>
+        <td><input name="inflowDate" type="text" id = "inflowDate" size="45"></td>
       </tr>
       <tr>
-        <td>volume</td>
-        <td><input type ="text" name = "volume_inflow" id = "volume_inflow"></td>
+        <td><div align="center">流入数量</div></td>
+        <td><input name = "volume_inflow" type ="text" id = "volume_inflow" size="45"></td>
       </tr>
       <tr>
-        <td>toMerchant</td>
-        <td><input type ="text" name ="toMerchant" id = "toMerchant"></td>
+        <td><div align="center">销售商地址</div></td>
+        <td><input name ="toMerchant" type ="text" id = "toMerchant" size="45"></td>
       </tr>
     </table>
   </div>
   <p align="center"><br>
-    <input type = "button" name = "submitsetInflow" value = "setInflow" id = "submitsetInflow" onclick="sendMess2()">
+    <input type = "button" name = "submitsetInflow" value = "确认流入市场" id = "submitsetInflow" onclick="sendMess2()">
   </p>
-  <p align = "center">&nbsp;</p>
   <p align = "center">&nbsp;</p>
 </form>
 <hr>
-<p align="center"><span data-boldtype="0">Calories Team</span></p>
+<p align="center"><span data-boldtype="0">卡路里小组</span></p>
 </body>
 </html>
 <script src="js/PharmaceuticalFactory.js" type="text/javascript" charset="utf-8"></script>
