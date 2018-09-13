@@ -37,11 +37,11 @@ function sendMess1(){
                 {from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", gas:300000});
             
     
-            alert("setProduce successfully\n"); 
+            alert("Successfully\n"); 
             document.write("your drug hash is " + address);
         }else{
             alert(err);
-            alert("setProduce failed\n" + "check your input!");
+            alert("Failed\n" + "check your input!");
         }
     });
 }
@@ -86,11 +86,11 @@ function sendMess2(){
                 {from:web3.eth.defaultAccount, gas:3000000});
             web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, value:web3.toWei(1,'ether') });
                 
-            alert("setInflow successfully\n"); 
+            alert("Successfully\n"); 
             document.write("your drug hash is " + address);
         }else{
             alert(err);
-            alert("setInflow failed\n" + "check your input!");
+            alert("Failed\n" + "check your input!");
         }
     });
 }

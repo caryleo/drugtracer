@@ -22,33 +22,58 @@ function sendMess1(){
     var info2 = instance.getRoll(info[1]);
     var info3 = instance.getInflow(info[2]);
     var info4 = instance.getProduce(info[3]);
-    outputStr += "<br>-------------------  药店-->消费者  ---------------------------";
-    outputStr += "<br>交易单号 : " + info1[0];
-    outputStr += "<br>用户地址 : " + info1[2];
-    outputStr += "<br>交易量 : " + info1[3];
-    outputStr += "<br>交易日期 : " + info1[4];
-    outputStr += "<br>药店剩余量 : " + info2[5];
+    outputStr += "<table border='1px'>";
+    outputStr += "<caption>药店-->消费者</caption>";
+    outputStr += "<tr><th>销售单号</th><th>病患地址</th><th>数量</th><th>时间</th><th>病患药品剩余量</th></tr>";
+    outputStr += "<tr>"
+    outputStr += "<td style='word-break:break-all'>" + info1[0] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info1[2] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info1[3] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info1[4] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info2[5] + "</td>";
+    outputStr += "</tr>";
+    outputStr += "</table>";
+    outputStr += "<br><br>";
+
+    outputStr += "<table border='1px'>";
+    outputStr += "<caption>销售商-->药店</caption>";
+    outputStr += "<tr><th>交易单号</th><th>药店地址</th><th>交易量</th><th>交易日期</th><th>销售商剩余量</th></tr>";
+    outputStr += "<tr>"
+    outputStr += "<td style='word-break:break-all'>" + info2[0] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info2[4] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info2[3] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info2[2] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info3[4] + "</td>";
+    outputStr += "</tr>"
+    outputStr += "</table>"
+    outputStr += "<br><br>";
+
+    outputStr += "<table border='1px'>";
+    outputStr += "<caption>厂商-->销售商</caption>";
+    outputStr += "<tr><th>交易单号</th><th>销售商地址</th><th>交易量</th><th>产商剩余量</th></tr>";
+    outputStr += "<tr>"
+    outputStr += "<td style='word-break:break-all'>" + info3[0] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info3[3] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info3[2] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info4[6] + "</td>";
+    outputStr += "</tr>"
+    outputStr += "</table>"
+    outputStr += "<br><br>";
     
-    outputStr += "<br>-------------------  销售商-->药店  --------------------------";
-    outputStr += "<br>交易单号 : " + info2[0];
-    outputStr += "<br>药店地址 : " + info2[4];
-    outputStr += "<br>交易量 : " + info2[3];
-    outputStr += "<br>交易日期 : " + info2[2];
-    outputStr += "<br>销售商剩余量 : " + info3[4];
+    outputStr += "<table border='1px'>";
+    outputStr += "<caption>药品生产</caption>";
+    outputStr += "<tr><th>药品批号</th><th>药品名称</th><th>药品合格状态</th><th>厂商地址</th><th>生产日期</th><th>生产总量</th></tr>";
+    outputStr += "<tr>";
+    outputStr += "<td style='word-break:break-all'>" + info4[0] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info4[1] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info4[2] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info4[3] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info4[4] + "</td>";
+    outputStr += "<td style='word-break:break-all'>" + info4[5] + "</td>";
+    outputStr += "</tr>";
+    outputStr += "</table>";
+    outputStr += "<br><br>";
     
-    outputStr += "<br>-------------------  厂商-->销售商  --------------------------";
-    outputStr += "<br>交易单号 : " + info3[0];
-    outputStr += "<br>销售商地址 : " + info3[3];
-    outputStr += "<br>交易量 : " + info3[2];
-    outputStr += "<br>产商剩余量 : " + info4[6];
-    
-    outputStr += "<br>-------------------  药品生产  --------------------------";
-    outputStr += "<br>药品批号 : " + info4[0];
-    outputStr += "<br>药品名称 : " + info4[1];
-    outputStr += "<br>药品合格状态 : " + info4[2]; 
-    outputStr += "<br>厂商地址 : " + info4[3];
-    outputStr += "<br>生产日期 : " + info4[4];
-    outputStr += "<br>生产总量 : " + info4[5];
     resultDiv.innerHTML = outputStr;
 }
 function sendMess2(){
@@ -82,10 +107,10 @@ function sendMess2(){
                     {from:web3.eth.defaultAccount, gas:3000000});
                 
                 web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, value:web3.toWei(1,'ether')});
-                alert("SetReport Successfully!");
-                document.write("your hash is " + address);
+                alert("Successfully!");
+                document.write("你的hash值是 " + address);
             }else{
-                alert("SetReport failed!\n" + "check your input")
+                alert("Failed!\n" + "请检查你的输入！");
             }
         });
 }
@@ -107,19 +132,23 @@ function sendMess3(){
     
     var result = document.getElementById('reportResult')
     var outputResult = "";
+    outputResult += "<table border='1px'";
+    outputResult += "<tr><th>举报单号</th><th>被举报销售单号</th><th>举报日期</th><th>举报者地址</th><th>举报详情</th><th>受理状态</th></tr>";
     for(var i=0; i < instance.getLengthReport(address); i++){
         var outputStr = "";
         var b = instance.getNextReport(address, i);
         var info = instance.getReport(b);
-        outputStr += "<br>---------------- " + i + " --------------";
-        outputStr += "<br>举报单号 : " + info[0];
-        outputStr += "<br>被举报销售单号 : " + info[1];
-        outputStr += "<br>举报日期 : " + info[2];
-        outputStr += "<br>举报者地址 : " + info[3];
-        outputStr += "<br>举报详情 : " + info[4];
-        outputStr += "<br>受理状态 : " + info[5];
+        outputStr += "<tr>";
+        outputStr += "<td style='word-break:break-all'>" + info[0] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[1] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[2] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[3] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[4] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[5] + "</td>";
+        outputStr += "</tr>";
         outputResult += outputStr;
     }
+    outputResult += "</table>";
     result.innerHTML = outputResult;
 }
 
@@ -140,17 +169,22 @@ function sendMess4(){
     
     var result = document.getElementById('saleResult')
     var outputResult = "";
+
+    outputResult += "<table border='1px'";
+    outputResult += "<tr><th>销售单号</th><th>销售许可单号</th><th>病患地址</th><th>数量</th><th>时间</th></tr>";
     for(var i=0; i < instance.getLengthSale(address); i++){
         var outputStr = "";
         var b = instance.getNextSale(address, i);
         var info = instance.getSale(b);
-        outputStr += "<br>---------------- " + i + " --------------";
-        outputStr += "<br>交易单号 : " + info[0];
-        outputStr += "<br>上一级单号 : " + info[1];
-        outputStr += "<br>消费者地址 : " + info[2];
-        outputStr += "<br>交易量 : " + info[3];
-        outputStr += "<br>交易日期 : " + info[4];
+        outputStr += "<tr>";
+        outputStr += "<td style='word-break:break-all'>" + info[0] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[1] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[2] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[3] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[4] + "</td>";
+        outputStr += "</tr>";
         outputResult += outputStr;
     }
+    outputResult += "</table>"
     result.innerHTML = outputResult;
 }

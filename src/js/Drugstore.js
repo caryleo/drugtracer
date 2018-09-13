@@ -30,11 +30,12 @@ function sendMess(){
             instance.setSale.sendTransaction(address,
                 circulateNumber,  customerNumber, volume_int , saleDate, 
                 {from:web3.eth.defaultAccount, gas:3000000});
-            web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, value:web3.toWei(1,'ether')});
-            alert("setSale Successfully!");
+            web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd",
+                 to:web3.eth.defaultAccount, value:web3.toWei(1,'ether')});
+            alert("Successfully!");
             document.write("your hash is " + address);
         }else{
-            alert("setSale failed!\n" + "check your input");
+            alert("Failed!\n" + "check your input");
         }
     });
 }
@@ -56,19 +57,23 @@ function sendMess1(){
     web3.eth.defaultAccount = address;
 
     var resultDiv = document.getElementById('rollResult');
-    var outputResult = ""
+    var outputResult = "";
+    outputResult += "<table border='1px'>";
+    outputResult += "<tr><th>销售许可代号</th><th>投放市场编号</th><th>数量</th><th>销售时间</th><th>目标医院地址</th><th>目标医院剩余量</th></tr>";
     for(var i = 0; i < instance.getLengthRoll(address) ; i++){
-        var output = "";
+        var outputStr = "";
         var b = instance.getNextRoll(address, i);
         var info = instance.getRoll(b);
-        output += "<br>--------------" + i + "--------------";
-        output += "<br>交易单号 : " + info[0];
-        output += "<br>上一级单号 : " + info[1];
-        output += "<br>交易量 : " + info[3];
-        output += "<br>交易时间 : " + info[2];
-        output += "<br>药店地址 : " + info[4];
-        output += "<br>药店剩余量 : " + info[5];
-        outputResult += output;
+        outputStr += "<tr>";
+        outputStr += "<td style='word-break:break-all'>" + info[0] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[1] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[3] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[2] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[4] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[5] + "</td>";
+        outputStr += "</tr>";
+        outputResult += outputStr;
     }
+    outputResult += "</table>";
     resultDiv.innerHTML = outputResult;
 }

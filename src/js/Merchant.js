@@ -35,10 +35,10 @@ function sendMess(){
             
             console.log(address);
             web3.eth.sendTransaction({from:"0x0342bd23544ded0a902f8275206b333204cf8bfd", to:web3.eth.defaultAccount, value:web3.toWei(1,'ether')});
-            alert("setRoll successfully!");
-            document.write("your hash is " + address);
+            alert("Successfully!");
+            document.write("您的hash是 " + address);
         }else{
-            alert("setRoll failed!\n" + "check your input!");
+            alert("Failed!\n" + "Check your input!");
         }
     });
 }
@@ -60,19 +60,23 @@ function sendMess1(){
     web3.eth.defaultAccount = address;
     
     var resultDiv = document.getElementById('inflowResult');
-    var outputResult = ""
+    var outputResult = "";
+    outputResult += "<table border='1px'>";
+    outputResult += "<tr><th>投放市场单号</th><th>药品专利号</th><th>投放数量</th><th>医药代表地址</th><th>医药代表剩余量</th></tr>";
     for(var i = 0; i < instance.getLengthInflow(address) ; i++){
-        var output = "";
+        var outputStr = "";
         var b = instance.getNextInflow(address, i);
         var info = instance.getInflow(b);
-        output += "<br>--------------" + i + "--------------";
-        output += "<br>交易单号 : " + info[0];
-        output += "<br>药品批号 : " + info[1];
-        output += "<br>交易量 : " + info[2];
-        output += "<br>销售商地址 : " + info[3];
-        output += "<br>销售商剩余量 : " + info[4];
-        outputResult += output;
+        outputStr += "<tr>";
+        outputStr += "<td style='word-break:break-all'>" + info[0] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[1] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[2] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[3] + "</td>";
+        outputStr += "<td style='word-break:break-all'>" + info[4] + "</td>";
+        outputStr += "</tr>";
+        outputResult += outputStr;
     }
+    outputResult += "</table>"
     resultDiv.innerHTML = outputResult;
     
 }
