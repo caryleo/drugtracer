@@ -2,78 +2,66 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Customer Drug Tracer</title>
+<title>病患存证鉴权</title>
 
 <style type="text/css">
-.banner1 {
+.banner11 {	font-size: 66px;
 	font-family: "微软雅黑";
-	font-size: 64px;
 }
-.banner2 {
-	font-size: 24px;
-	font-family: "微软雅黑";
+.banner22 {
+	font-size: 36px;
 }
 </style>
 </head>
 
 <body background="image/background.jpg">
 <div align="center">
-  <h1 class="banner1"><strong>医药信息存证鉴权系统</strong></h1>
-  <p class="banner2">-消费者-</p>
+  <h1><span class="banner11">医药敏感信息存证鉴权系统</span></h1>
+  <p class="banner22">-病患-</p>
 </div>
 <hr>
 <div class="CustomerSignIn" id="CustomerSignIn">
   <div align="center">
-    <table width="847" border="0">
+    <table width="834" border="0">
       <tr>
-        <td width="120"><div align="center"><img src="image/customer.png" alt="" width="100" height="100"></div></td>
-        <td width="663"><p>欢迎使用!</p>
-          <p>地址:
-            <input name="address" type="text" id="address" size="45">
-            密码:
-            <input type="password" name="password" id="password">
-            <input type="button" name="SignIn" id="SignIn" value="登录">
-          </p></td>
-        <td width="50"><p>&nbsp;</p>
+        <td width="432" height="168"><div align="center"><img src="image/BH.png" alt="" width="300" height="150"></div></td>
+        <td width="392"><p align="center">欢迎使用，这里是病患主界面。</p>
+          <p align="center">地址:
+          <input name="address" type="text" id="address" size="45">
+          </p>
+          <p align="center">密码:
+            <input name="password" type="password" id="password" size="45">
+          </p>
           <p align="center">
-            <input type="button" name="Home" id="Home" value="主页" onclick="jumpPages('index.html')">
-          </p></td>
+            <input type="button" name="SignIn" id="SignIn" value="登录" onclick="alert('登陆成功！')">
+            　　　
+            <input type="button" name="Home" id="Home" value="回到首页" onclick="jumpPages('index.html')">
+        </p></td>
       </tr>
     </table>
   </div>
 </div>
 <hr>
-<div class="Query" id="Query">
-  <h2 align="center">查询溯源</h2>
-  <p align="center">交易单号:
-    <input name="QuerysaleNumber" type="text" id="QuerysaleNumber" size="45">
-    <input type="button" name="QuerySubmit" id="QuerySubmit" value="溯源" onclick="sendMess1()">
-  </p>
-  <div class="QueryResult" >
-    <p>溯源结果：</p>
-    <div id="QueryResult"></div>
-  </div>
-</div>
-<hr>
 <div>
-  <h2 align="center">交易历史</h2>
+  <h2 align="center">患者医药历史记录</h2>
   <p align="center">
-    <input type="button" value="查询交易历史" onclick="sendMess4()">
+    <input type="button" value="查询" onclick="sendMess4()">
   </p>
+  <p align="center">查询结果为：</p>
   <div id="saleResult"></div>
 </div>
 <hr>
 <div class="Report" id="Report">
-  <h2 align="center">举报</h2>
+  <h2 align="center">医药历史记录问题反馈</h2>
   <div align="center">
     <table width="860" border="1">
       <tr>
-        <td width="120"><div align="center">交易单号</div></td>
+        <td width="120"><div align="center">交易流水号</div></td>
         <td width="724">
         <input name="ReportsaleNumber" type="text" id="ReportsaleNumber" size="45"></td>
       </tr>
       <tr>
-        <td><div align="center">举报时间</div></td>
+        <td><div align="center">时间</div></td>
         <td><input name="reportDate" type="text" id="reportDate" size="45"></td>
       </tr>
       
@@ -90,13 +78,27 @@
 </div>
 <hr>
 <div class="ReportHistory" id="ReportHistory">
-  <h2 align="center">我的举报记录  </h2>
+  <h2 align="center">我的问题反馈记录  </h2>
   <p align="center">
-    <input type="button" value="查看举报记录" onclick="sendMess3()">
+    <input type="button" value="查看问题反馈记录" onclick="sendMess3()">
   </p>
   <div id="reportResult"></div>
 </div>
 <hr>
+<div class="Query" id="Query">
+  <h2 align="center">医药明细</h2>
+  <p align="center">交易流水号:
+    <input name="QuerysaleNumber" type="text" id="QuerysaleNumber" size="45">
+    <input type="button" name="QuerySubmit" id="QuerySubmit" value="搜索" onclick="sendMess1()">
+  </p>
+  <div class="QueryResult" >
+    <p align="center">结果：</p>
+    <div id="QueryResult"></div>
+  </div>
+</div>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
 <p align="center">卡路里小组</p>
 <p>&nbsp;</p>
 </body>

@@ -7,10 +7,10 @@
 signin_yh {
 	font-size: 30px;
 }
-.banner1 {	font-family: "微软雅黑";
-	font-size: 64px;
+.banner11 {font-size: 66px;
+	font-family: "微软雅黑";
 }
-.banner2 {	font-size: 24px;
+.banner22 {font-size: 36px;
 	font-family: "微软雅黑";
 }
 </style>
@@ -18,25 +18,27 @@ signin_yh {
 
 <body background="image/background.jpg">
 <div align="center">
-  <h1 class="banner1"><strong>医药信息存证鉴权系统</strong></h1>
-  <p class="banner2">-监管部门-</p>
+  <h1><span class="banner11">医药敏感信息存证鉴权系统</span></h1>
+  <p class="banner22">-监管部门-</p>
 </div>
 <hr>
 <div class="RegulatorSignIn" id="RegulatorSignIn">
   <div align="center">
-    <table width="847" border="0">
+    <table width="834" border="0">
       <tr>
-        <td width="120"><div align="center"><img src="image/regulator.png" alt="" width="100" height="100"></div></td>
-        <td width="663"><p>欢迎使用!</p>
-          <p>地址:
+        <td width="432" height="168"><div align="center"><img src="image/JG.png" alt="" width="300" height="150"></div></td>
+        <td width="392"><p align="center">欢迎使用，这里是监管部门主界面。</p>
+          <p align="center">地址:
             <input name="address" type="text" id="address" size="45">
-            密码:
-            <input type="password" name="password" id="password">
-            <input type="button" name="SignIn" id="SignIn" value="登录">
-          </p></td>
-        <td width="50"><p>&nbsp;</p>
+          </p>
+          <p align="center">密码:
+            <input name="password" type="password" id="password" size="45">
+          </p>
           <p align="center">
-            <input type="button" name="Home" id="Home" value="主页" onclick="jumpPages('index.html')">
+            <input type="button" name="SignIn" id="SignIn" value="登录" onclick="alert('登陆成功！')">
+　　　
+
+            <input type="button" name="Home" id="Home" value="回到首页" onclick="jumpPages('index.html')">
           </p></td>
       </tr>
     </table>
@@ -44,11 +46,11 @@ signin_yh {
 </div>
 <hr>
 <div class="Admit" id="Admit">
-  <h2 align="center">举报信息受理</h2>
+  <h2 align="center">问题信息处理</h2>
   <div align="center">
     <table width="460" border="1">
       <tr>
-            <td width="110"><div align="center">举报单号</div></td>
+            <td width="110"><div align="center">问题单号</div></td>
             <td width="334"><input name="dealDate" type="text" id="reportNumber" size="45"></td>
       </tr>
       <tr>
@@ -56,7 +58,7 @@ signin_yh {
         <td width="334"><input name="dealDate" type="text" id="dealDate" size="45"></td>
       </tr>
       <tr>
-        <td><div align="center">药品批号</div></td>
+        <td><div align="center">药品专利号</div></td>
         <td><input name="drugCode" type="text" id="drugCode" size="45"></td>
       </tr>
       <tr>
@@ -69,30 +71,31 @@ signin_yh {
     </table>
   </div>
   <p align="center">
-      <input type="button" name="Accept" id="Accept" value="确认受理" onclick="sendMess()">
+      <input type="button" name="Accept" id="Accept" value="确认处理" onclick="sendMess()">
   </p>
   <p align="center">&nbsp;</p>
 </div>
 <hr>
-<div class="Query" id="Query">
-     <h2 align="center">查询溯源</h2>
-    <p align="center">交易单号:
-      <input name="QuerysaleNumber" type="text" id="QuerysaleNumber" size="45">
-      <input type="button" name="QuerySubmit" id="QuerySubmit" value="溯源" onclick="sendMess1()">
-    </p>
-    <div class="QueryResult" >
-      <p>溯源结果：</p>
-      <div id="QueryResult"></div>
-    </div>
-  </div>
-  <hr>
 <div class="Report" id="Report">
   <div align="center">
-    <h2>举报记录</h2>
+    <h2>问题信息明细</h2>
     <div id="allReports"></div>
   </div>
 </div>
 <hr>
+<div class="Query" id="Query">
+  <h2 align="center">医药明细</h2>
+  <p align="center">交易流水号:
+    <input name="QuerysaleNumber" type="text" id="QuerysaleNumber" size="45">
+    <input type="button" name="QuerySubmit" id="QuerySubmit" value="搜索" onclick="sendMess1()">
+  </p>
+  <div class="QueryResult" >
+    <p>溯源结果：</p>
+    <div id="QueryResult"></div>
+  </div>
+</div>
+<hr>
+<p align="center">&nbsp;</p>
 <p align="center"><span data-boldtype="0">卡路里小组</span></p>
 <p>&nbsp;</p> 
 </body>

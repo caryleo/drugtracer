@@ -1,41 +1,43 @@
 ﻿<!DOCTYPE html>
 <html>
 <meta charset="utf-8">
-<title>PharmaceuticalFactoryDrugTracer</title>
+<title>药品科研单位</title>
 <style type="text/css">
 body {
 	background-image: url(image/background.jpg);
 	background-repeat: repeat;
 }
-.banner1 {	font-family: "微软雅黑";
-	font-size: 64px;
+.banner11 {font-size: 66px;
+	font-family: "微软雅黑";
 }
-.banner2 {	font-size: 24px;
+.banner22 {	font-size: 36px;
 	font-family: "微软雅黑";
 }
 </style>
 <body>
 <div align="center">
-  <h1 class="banner1"><strong>医药信息存证鉴权系统</strong></h1>
-  <p class="banner2">-药厂-</p>
+  <h1><span class="banner11">医药敏感信息存证鉴权系统</span></h1>
+  <p class="banner22">-药品科研单位-</p>
 </div>
 <hr>
 <form>
   <div class="RegulatorSignIn" id="RegulatorSignIn">
     <div align="center">
-      <table width="847" border="0">
+      <table width="834" border="0">
         <tr>
-          <td width="120"><div align="center"><img src="image/factory.png" alt="" width="100" height="100"></div></td>
-          <td width="663"><p>欢迎使用!</p>
-            <p>地址:
+          <td width="432" height="168"><div align="center"><img src="image/KY.png" alt="" width="300" height="150"></div></td>
+          <td width="392"><p align="center">欢迎使用，这里是药品科研单位主界面。</p>
+            <p align="center">地址:
               <input name="address" type="text" id="address" size="45">
-              密码:
-              <input type="password" name="password" id="password">
-              <input type="button" name="SignIn" id="SignIn" value="登录">
-            </p></td>
-          <td width="50"><p>&nbsp;</p>
+            </p>
+            <p align="center">密码:
+              <input name="password" type="password" id="password" size="45">
+            </p>
             <p align="center">
-              <input type="button" name="Home" id="Home" value="主页" onclick="jumpPages('index.html')">
+              <input type="button" name="SignIn" id="SignIn" value="登录" onclick="alert('登陆成功！')">
+　　　
+
+              <input type="button" name="Home" id="Home" value="回到首页" onclick="jumpPages('index.html')">
             </p></td>
         </tr>
       </table>
@@ -43,7 +45,7 @@ body {
   </div>
 </form> 
 <hr align="center">
-<h2 align="center">出厂登记</h2>
+<h2 align="center">研发登记</h2>
 <form>
   <div align="center">
     <table width="460" border="1">
@@ -52,11 +54,11 @@ body {
         <td width="334"><input name = "drug" type="text" id = "drug" size="45"></td>
       </tr>
       <tr>
-        <td><div align="center">生产日期</div></td>
+        <td><div align="center">研发日期</div></td>
         <td><input name = "produceDate" type="text" id = "produceDate" size="45"></td>
       </tr>
       <tr>
-        <td><div align="center">生产数量</div></td>
+        <td><div align="center">研发数量</div></td>
         <td><input name = "volume_produce" type="text" id = "volume_produce" size="45"></td>
       </tr>
     </table>
@@ -67,30 +69,30 @@ body {
   <p align="center">&nbsp;</p>
 </form>
 <hr>
-<h2 align="center">流入市场</h2>
+<h2 align="center">产品投放市场</h2>
 <form>
   <div align="center">
     <table width="460" border="1">
       <tr>
-        <td width="110"><div align="center">药品批号</div></td>
+        <td width="110"><div align="center">药品专利号</div></td>
         <td width="334"><input name = "drugCode_inflow" type = "text" id ="drugCode_inflow" size="45"></td>
       </tr>
       <tr>
-        <td><div align="center">流入日期</div></td>
+        <td><div align="center">投放日期</div></td>
         <td><input name="inflowDate" type="text" id = "inflowDate" size="45"></td>
       </tr>
       <tr>
-        <td><div align="center">流入数量</div></td>
+        <td><div align="center">投放数量</div></td>
         <td><input name = "volume_inflow" type ="text" id = "volume_inflow" size="45"></td>
       </tr>
       <tr>
-        <td><div align="center">销售商地址</div></td>
+        <td><div align="center">医药代表地址</div></td>
         <td><input name ="toMerchant" type ="text" id = "toMerchant" size="45"></td>
       </tr>
     </table>
   </div>
   <p align="center"><br>
-    <input type = "button" name = "submitsetInflow" value = "确认流入市场" id = "submitsetInflow" onclick="sendMess2()">
+    <input type = "button" name = "submitsetInflow" value = "确认投放市场" id = "submitsetInflow" onclick="sendMess2()">
   </p>
   <p align = "center">&nbsp;</p>
 </form>
